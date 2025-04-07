@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// Landing page
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/about-us', [HomeController::class, 'aboutUs']);
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

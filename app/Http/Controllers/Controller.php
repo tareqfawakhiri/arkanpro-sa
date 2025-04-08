@@ -14,7 +14,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
-    function change(Request $request)
+    function language(Request $request)
     {
         session()->put('locale', $request->lang);
         App::setLocale($request->lang);
@@ -29,6 +29,13 @@ class Controller extends BaseController
                 ];
             })->toJson();
         });
+
+        return redirect()->back();
+    }
+
+    function theme(Request $request)
+    {
+        session()->put('theme', $request->theme);
 
         return redirect()->back();
     }

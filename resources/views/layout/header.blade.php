@@ -275,8 +275,15 @@
                         </div>
                     </div>
                     <div class="header-right d-flex justify-content-end align-items-center">
-                        <a href="#0" class="search-trigger search-icon"><i class="fal fa-search"></i></a>
-                        <a href="#0"><i class="fa-solid fa-cart-shopping"></i></a>
+                        @if (session()->get('theme') == 'light')
+                            <a class="menu-thumb" href="/theme/change?theme=dark">
+                                <i class="fa-solid fa-moon"></i>
+                            </a>
+                        @else
+                            <a class="menu-thumb" href="/theme/change?theme=light">
+                                <i class="fa-solid fa-sun"></i>
+                            </a>
+                        @endif
 
                         @if (session()->get('locale') == 'en')
                             <a class="menu-thumb" href="/lang/change?lang=ar">
@@ -288,8 +295,9 @@
                             </a>
                         @endif
 
+
                         <div class="header-button ms-4">
-                            <a href="contact.html" class="gt-btn">
+                            <a href="#" class="gt-btn">
                            <span>
                               get A Quote
                               <i class="fa-solid fa-arrow-right-long"></i>

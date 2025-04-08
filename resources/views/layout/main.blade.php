@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}">
+<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}" data-bs-theme="{{ session()->get('theme') ?? 'light' }}">
 <head>
     <!-- ========== Meta Tags ========== -->
     <meta charset="UTF-8">

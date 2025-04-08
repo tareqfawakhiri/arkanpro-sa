@@ -20,7 +20,8 @@ use Illuminate\Support\Facades\Session;
 // Landing page
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about-us', [HomeController::class, 'aboutUs']);
-Route::get('lang/change', [Controller::class, 'change'])->name('changeLang');
+Route::get('lang/change', [Controller::class, 'language'])->name('changeLang');
+Route::get('theme/change', [Controller::class, 'theme'])->name('changeTheme');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

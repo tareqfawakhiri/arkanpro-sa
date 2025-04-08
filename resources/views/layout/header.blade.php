@@ -4,23 +4,23 @@
         <div class="spinner">
         </div>
         <div class="txt-loading">
-            <span data-text-preloader="E" class="letters-loading">
-               E
+            <span data-text-preloader="A" class="letters-loading">
+               A
             </span>
-            <span data-text-preloader="X" class="letters-loading">
-               X
+            <span data-text-preloader="R" class="letters-loading">
+               R
             </span>
-            <span data-text-preloader="T" class="letters-loading">
-               T
+            <span data-text-preloader="K" class="letters-loading">
+               K
             </span>
-            <span data-text-preloader="E" class="letters-loading">
-               E
+            <span data-text-preloader="A" class="letters-loading">
+               A
             </span>
-            <span data-text-preloader="C" class="letters-loading">
-               C
+            <span data-text-preloader="N" class="letters-loading">
+               N
             </span>
-            <span data-text-preloader="H" class="letters-loading">
-               H
+            <span data-text-preloader="PRO" class="letters-loading">
+               PRO
             </span>
         </div>
         <p class="text-center">Loading</p>
@@ -54,7 +54,7 @@
                 <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                     <div class="offcanvas__logo">
                         <a href="/">
-                            <img src="assets/img/logo.svg" alt="logo-img">
+                            <img src="assets/img/logo.png" alt="logo-img">
                         </a>
                     </div>
                     <div class="offcanvas__close">
@@ -132,7 +132,7 @@
                     <div class="header-left">
                         <div class="logo">
                             <a href="/" class="header-logo">
-                                <img src="assets/img/logo.svg" alt="logo-img">
+                                <img src="assets/img/logo.png" alt="logo-img">
                             </a>
                         </div>
                     </div>
@@ -277,6 +277,17 @@
                     <div class="header-right d-flex justify-content-end align-items-center">
                         <a href="#0" class="search-trigger search-icon"><i class="fal fa-search"></i></a>
                         <a href="#0"><i class="fa-solid fa-cart-shopping"></i></a>
+
+                        @if (session()->get('locale') == 'en')
+                            <a class="menu-thumb" href="/lang/change?lang=ar">
+                                <b>العربية</b>
+                            </a>
+                        @else
+                            <a class="menu-thumb" href="/lang/change?lang=en">
+                                <b>English</b>
+                            </a>
+                        @endif
+
                         <div class="header-button ms-4">
                             <a href="contact.html" class="gt-btn">
                            <span>

@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 // Landing page
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about-us', [HomeController::class, 'aboutUs']);
+Route::get('lang/change', [Controller::class, 'change'])->name('changeLang');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

@@ -23,20 +23,20 @@
                PRO
             </span>
         </div>
-        <p class="text-center">Loading</p>
+        <p class="text-center">{{ trans('general.loading') }}</p>
     </div>
     <div class="loader">
         <div class="row">
-            <div class="col-3 loader-section section-left">
+            <div class="col-3 loader-section section-{{ app()->currentLocale() == 'ar' ? 'right' : 'left' }}">
                 <div class="bg"></div>
             </div>
-            <div class="col-3 loader-section section-left">
+            <div class="col-3 loader-section section-{{ app()->currentLocale() == 'ar' ? 'right' : 'left' }}">
                 <div class="bg"></div>
             </div>
-            <div class="col-3 loader-section section-right">
+            <div class="col-3 loader-section section-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}">
                 <div class="bg"></div>
             </div>
-            <div class="col-3 loader-section section-right">
+            <div class="col-3 loader-section section-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}">
                 <div class="bg"></div>
             </div>
         </div>
@@ -108,7 +108,7 @@
                     </ul>
                     <div class="header-button mt-4">
                         <a href="contact.html" class="theme-btn text-center">
-                            <span>get A Quote<i class="fa-solid fa-arrow-right-long"></i></span>
+                            <span>get A Quote<i class="fa-solid fa-arrow-right-long me-2"></i></span>
                         </a>
                     </div>
                     <div class="social-icon d-flex align-items-center">
@@ -141,133 +141,24 @@
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li class="has-dropdown active menu-thumb">
-                                            <a href="/">
-                                                Home
-                                                <i class="fas fa-angle-down"></i>
-                                            </a>
-                                            <ul class="submenu has-homemenu">
-                                                <li>
-                                                    <div class="homemenu-items">
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb">
-                                                                <img src="assets/img/header/home-1.jpg" alt="img">
-                                                                <div class="demo-button">
-                                                                    <a href="/" class="theme-btn">
-                                                                        <span>Multi Page</span>
-                                                                    </a>
-                                                                    <a href="index-one-page.html" class="theme-btn">
-                                                                        <span>One Page</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    Home 01
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb mb-15">
-                                                                <img src="assets/img/header/home-2.jpg" alt="img">
-                                                                <div class="demo-button">
-                                                                    <a href="index-2.html" class="theme-btn">
-                                                                        <span>Multi Page</span>
-                                                                    </a>
-                                                                    <a href="index-two-page.html" class="theme-btn">
-                                                                        <span>One Page</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    Home 02
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb mb-15">
-                                                                <img src="assets/img/header/home-3.jpg" alt="img">
-                                                                <div class="demo-button">
-                                                                    <a href="index-3.html" class="theme-btn">
-                                                                        <span>Multi Page</span>
-                                                                    </a>
-                                                                    <a href="index-three-page.html" class="theme-btn">
-                                                                        <span>One Page</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    Home 03
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
 
-                                        <li>
-                                            <a href="abou-us">About</a>
+                                        <li class="active">
+                                            <a href="/">{{ trans('general.home') }}</a>
                                         </li>
                                         <li>
-                                            <a href="news.html">
-                                                Services
-                                                <i class="fas fa-angle-down"></i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li><a href="service.html">Services</a></li>
-                                                <li><a href="service-carousel.html">Service Carousel</a></li>
-                                                <li><a href="service-details.html">Service Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="news.html">
-                                                Pages
-                                                <i class="fas fa-angle-down"></i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li class="has-dropdown">
-                                                    <a href="project.html">
-                                                        Projects
-                                                        <i class="fas fa-angle-down"></i>
-                                                    </a>
-                                                    <ul class="submenu">
-                                                        <li><a href="project.html">Project</a></li>
-                                                        <li><a href="project-carousel.html">Project Carousel</a></li>
-                                                        <li><a href="project-details.html">Project Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="has-dropdown">
-                                                    <a href="team.html">
-                                                        Team
-                                                        <i class="fas fa-angle-down"></i>
-                                                    </a>
-                                                    <ul class="submenu">
-                                                        <li><a href="team.html">Our Team</a></li>
-                                                        <li><a href="team-carousel.html">Team Carousel</a></li>
-                                                        <li><a href="team-details.html">Team Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="pricing.html">Pricing</a></li>
-                                                <li><a href="faq.html">Faq's</a></li>
-                                                <li><a href="404.html">404 Page</a></li>
-                                            </ul>
+                                            <a href="/services">{{ trans('general.services') }}</a>
                                         </li>
                                         <li>
-                                            <a href="news.html">
-                                                Blog
-                                                <i class="fas fa-angle-down"></i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li><a href="news.html">Blog Grid</a></li>
-                                                <li><a href="news-standard.html">Blog Standard</a></li>
-                                                <li><a href="news-details.html">Blog Details</a></li>
-                                            </ul>
+                                            <a href="/products">{{ trans('general.products') }}</a>
                                         </li>
                                         <li>
-                                            <a href="contact.html">Contact</a>
+                                            <a href="/customer-service">{{ trans('general.customer-service') }}</a>
+                                        </li>
+                                        <li>
+                                            <a href="/blog">{{ trans('general.blog') }}</a>
+                                        </li>
+                                        <li>
+                                            <a href="/about-us">{{ trans('general.about-us') }}</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -297,11 +188,11 @@
 
 
                         <div class="header-button ms-4">
-                            <a href="#" class="gt-btn">
-                           <span>
-                              get A Quote
-                              <i class="fa-solid fa-arrow-right-long"></i>
-                           </span>
+                            <a href="/contact-us" class="gt-btn">
+                               <span>
+                                  {{ trans('general.contact-us') }}
+                                  <i class="fa-solid fa-arrow-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}-long me-2"></i>
+                               </span>
                             </a>
                         </div>
                         <div class="header__hamburger d-block d-xl-none my-auto">
@@ -315,17 +206,3 @@
         </div>
     </div>
 </header>
-
-<!-- Search Area Start -->
-<div class="search-wrap">
-    <div class="search-inner">
-        <i class="fas fa-times search-close" id="search-close"></i>
-        <div class="search-cell">
-            <form method="get">
-                <div class="search-field-holder">
-                    <input type="search" class="main-search-input" placeholder="Search...">
-                </div>
-            </form>
-        </div>
-    </div>
-</div>

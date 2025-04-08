@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}" data-bs-theme="{{ session()->get('theme') ?? 'light' }}">
+<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"
+      data-bs-theme="{{ session()->get('theme') ?? 'light' }}">
 <head>
     <!-- ========== Meta Tags ========== -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="" />
+    <meta name="description" content=""/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
 
     <meta name="author" content="ex-coders">
     <meta name="description" content="Extech - IT Solution & Technology HTML Template">
     <!-- ======== Page title ============ -->
-    <title>@yield('title', 'Default Title')</title>
+    <title>@yield('title', 'No Title')</title>
 
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="assets/img/favicon.svg">
     <!--<< Bootstrap min.css >>-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    @if(app()->getLocale() == 'ar')
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    @else
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    @endif
+
     <!--<< All Min Css >>-->
     <link rel="stylesheet" href="assets/css/all.min.css">
     <!--<< Animate.css >>-->
@@ -36,7 +41,11 @@
     <!--<< Nice Select.css >>-->
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
-    <link rel="stylesheet" href="assets/css/main.css">
+    @if(app()->getLocale() == 'ar')
+        <link rel="stylesheet" href="assets/css/rtl-main.css">
+    @else
+        <link rel="stylesheet" href="assets/css/main.css">
+    @endif
 </head>
 
 <body>

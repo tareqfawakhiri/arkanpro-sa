@@ -141,7 +141,6 @@
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
-
                                         <li class="active">
                                             <a href="/">{{ trans('general.home') }}</a>
                                         </li>

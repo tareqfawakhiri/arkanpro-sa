@@ -16,7 +16,7 @@
     <meta name="author" content="ex-coders">
     <meta name="description" content="Extech - IT Solution & Technology HTML Template">
     <!-- ======== Page title ============ -->
-    <title>@yield('title', 'No Title')</title>
+    <title>ArkanPro اركان الاحتراف| @yield('title', 'No Title')</title>
 
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="assets/img/favicon.svg">

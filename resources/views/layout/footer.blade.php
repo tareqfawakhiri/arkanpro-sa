@@ -8,9 +8,10 @@
                         <div class="widget footer-widget wow fadeInUp" data-wow-delay=".6s">
                             <div class="gt-widget-about">
                                 <div class="about-logo">
-                                    <a href="index.html"><img src="assets/img/footer-logo.svg" alt="extech"></a>
+                                    <a href="index.html"><img src="assets/img/logo.png" alt="extech"></a>
                                 </div>
-                                <p class="about-text"> Extexh IT is a Phasellus ultricies aliquam volutpat ullamcorper
+                                <p class="about-text">
+                                    Extexh IT is a Phasellus ultricies aliquam volutpat ullamcorper
                                     laoreet neque, a lacinia curabitur lacinia mollis
                                 </p>
                                 <div class="gt-social style2">
@@ -27,15 +28,11 @@
                             <h3 class="widget_title">Quick Links</h3>
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
-                                    <li><a href="about.html"><i class="fa-solid fa-chevrons-right"></i>Extech About</a>
-                                    </li>
-                                    <li><a href="service.html"><i class="fa-solid fa-chevrons-right"></i>Our Services</a>
-                                    </li>
-                                    <li><a href="news.html"><i class="fa-solid fa-chevrons-right"></i>Our
-                                            Blogs</a>
-                                    </li>
-                                    <li><a href="faq.html"><i class="fa-solid fa-chevrons-right"></i>FAQ’S</a></li>
-                                    <li><a href="contact.html"><i class="fa-solid fa-chevrons-right"></i>Contact Us</a>
+                                    <li><a href="/about-us"><i class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>{{ trans('general.about-us') }}</a></li>
+                                    <li><a href="/service"><i class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>Our Services</a></li>
+                                    <li><a href="/blog"><i class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>Our Blogs</a></li>
+                                    <li><a href="/faq"><i class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>FAQ’S</a></li>
+                                    <li><a href="contact.html"><i class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>Contact Us</a>
                                     </li>
                                 </ul>
                             </div>
@@ -93,7 +90,7 @@
                                 <div class="email-input-container">
                                     <input type="email" id="email" placeholder="Your email address" required="">
                                     <button type="submit" id="submitButton" disabled=""><i
-                                            class="fa-regular fa-arrow-right-long"></i></button>
+                                            class="fa-regular fa-arrow-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}-long"></i></button>
                                 </div>
                                 <form id="termsForm">
                                     <label class="custom-checkbox">
@@ -116,13 +113,14 @@
             <div class="copyright-layout">
                 <div class="layout-text wow fadeInUp" data-wow-delay=".3s">
                     <p class="copyright">
-                        <i class="fal fa-copyright"></i> All Copyright 2024 by <a href="index.html">Extech</a>
+                        <i class="fal fa-copyright"></i> All Copyright
+                        {{ date('Y') }} by <a href="/">ArkanPro</a>
                     </p>
                 </div>
                 <div class="layout-link wow fadeInUp" data-wow-delay=".6s">
                     <div class="link-wrapper">
-                        <a href="contact.html">Terms &amp; Condition </a>
-                        <a href="contact.html">Privacy Policy</a>
+                        <a href="/contact-us">Terms &amp; Condition </a>
+                        <a href="/contact-us">Privacy Policy</a>
                     </div>
                 </div>
             </div>

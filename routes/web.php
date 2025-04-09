@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServicesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,9 @@ Route::get('/theme/change', [Controller::class, 'theme'])->name('changeTheme');
 
 Route::get('/contact-us', [ContactUsController::class, 'index']);
 Route::post('/contact-us', [ContactUsController::class, 'send'])->name('contact.send');
+
+Route::get('/services', [ServicesController::class, 'index']);
+Route::get('/service-details', [ServicesController::class, 'details']);
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

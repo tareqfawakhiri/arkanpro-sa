@@ -15,7 +15,7 @@
                 <h1 class="wow fadeInUp" data-wow-delay=".3s">Services Details</h1>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
-                        <a href="index.html">
+                        <a href="/">
                             Home
                         </a>
                     </li>
@@ -43,15 +43,15 @@
                                 </div>
                                 <div class="widget-categories">
                                     <ul>
-                                        <li><a href="service-details.html">Database Security <i
+                                        <li><a href="service-details">Database Security <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        <li><a href="service-details.html">IT Consultancy <i
+                                        <li><a href="service-details">IT Consultancy <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        <li class="active"><a href="service-details.html">App Development <i
+                                        <li class="active"><a href="service-details">App Development <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        <li><a href="service-details.html">UI/UX Design <i
+                                        <li><a href="service-details">UI/UX Design <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        <li><a href="service-details.html">Cyber Security <i
+                                        <li><a href="service-details">Cyber Security <i
                                                     class="fa-solid fa-arrow-right-long"></i></a> </li>
                                     </ul>
                                 </div>

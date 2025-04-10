@@ -8,7 +8,7 @@
                 <img src="assets/img/shape/heroShape1_2.png" alt="shape">
             </div>
             <div class="shape1_3">
-                <a href="contact.html">
+                <a href="contact-us">
                     <img class="rotate360" src="assets/img/shape/heroShape1_3.png" alt="shape">
                 </a>
             </div>
@@ -51,7 +51,7 @@
                                     </div>
                                     <div class="contact-meta">
                                         <div class="btn-wrapper">
-                                            <a href="contact.html" class="gt-btn style4">get Started <i
+                                            <a href="contact-us" class="gt-btn style4">get Started <i
                                                     class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
                                         </div>
                                     </div>
@@ -218,10 +218,10 @@
                                             <img src="assets/img/icon/serviceIcon1_1.svg" alt="icon">
                                         </div>
                                         <div class="body">
-                                            <h3><a href="service-details.html">Data Guard Sentinel</a></h3>
+                                            <h3><a href="service-details">Data Guard Sentinel</a></h3>
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
-                                            <a href="service-details.html" class="link-btn style1">Read more <i
+                                            <a href="service-details" class="link-btn style1">Read more <i
                                                     class="fa-regular fa-chevrons-right"></i></a>
                                         </div>
                                     </div>
@@ -232,10 +232,10 @@
                                             <img src="assets/img/icon/serviceIcon1_2.svg" alt="icon">
                                         </div>
                                         <div class="body">
-                                            <h3><a href="service-details.html">Woo Commerce</a></h3>
+                                            <h3><a href="service-details">Woo Commerce</a></h3>
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
-                                            <a href="service-details.html" class="link-btn style1">Read more <i
+                                            <a href="service-details" class="link-btn style1">Read more <i
                                                     class="fa-regular fa-chevrons-right"></i></a>
                                         </div>
                                     </div>
@@ -246,10 +246,10 @@
                                             <img src="assets/img/icon/serviceIcon1_3.svg" alt="icon">
                                         </div>
                                         <div class="body">
-                                            <h3><a href="service-details.html">CRM Solutions</a></h3>
+                                            <h3><a href="service-details">CRM Solutions</a></h3>
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
-                                            <a href="service-details.html" class="link-btn style1">Read more <i
+                                            <a href="service-details" class="link-btn style1">Read more <i
                                                     class="fa-regular fa-chevrons-right"></i></a>
                                         </div>
                                     </div>
@@ -260,10 +260,10 @@
                                             <img src="assets/img/icon/serviceIcon1_4.svg" alt="icon">
                                         </div>
                                         <div class="body">
-                                            <h3><a href="service-details.html">Web Design</a></h3>
+                                            <h3><a href="service-details">Web Design</a></h3>
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
-                                            <a href="service-details.html" class="link-btn style1">Read more <i
+                                            <a href="service-details" class="link-btn style1">Read more <i
                                                     class="fa-regular fa-chevrons-right"></i></a>
                                         </div>
                                     </div>
@@ -274,10 +274,10 @@
                                             <img src="assets/img/icon/serviceIcon1_1.svg" alt="icon">
                                         </div>
                                         <div class="body">
-                                            <h3><a href="service-details.html">Data Guard Sentinel</a></h3>
+                                            <h3><a href="service-details">Data Guard Sentinel</a></h3>
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
-                                            <a href="service-details.html" class="link-btn style1">Read more <i
+                                            <a href="service-details" class="link-btn style1">Read more <i
                                                     class="fa-regular fa-chevrons-right"></i></a>
                                         </div>
                                     </div>
@@ -288,10 +288,10 @@
                                             <img src="assets/img/icon/serviceIcon1_2.svg" alt="icon">
                                         </div>
                                         <div class="body">
-                                            <h3><a href="service-details.html">Woo Commerce</a></h3>
+                                            <h3><a href="service-details">Woo Commerce</a></h3>
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
-                                            <a href="service-details.html" class="link-btn style1">Read more <i
+                                            <a href="service-details" class="link-btn style1">Read more <i
                                                     class="fa-regular fa-chevrons-right"></i></a>
                                         </div>
                                     </div>
@@ -302,10 +302,10 @@
                                             <img src="assets/img/icon/serviceIcon1_1.svg" alt="icon">
                                         </div>
                                         <div class="body">
-                                            <h3><a href="service-details.html">Data Guard Sentinel</a></h3>
+                                            <h3><a href="service-details">Data Guard Sentinel</a></h3>
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
-                                            <a href="service-details.html" class="link-btn style1">Read more <i
+                                            <a href="service-details" class="link-btn style1">Read more <i
                                                     class="fa-regular fa-chevrons-right"></i></a>
                                         </div>
                                     </div>
@@ -316,10 +316,10 @@
                                             <img src="assets/img/icon/serviceIcon1_2.svg" alt="icon">
                                         </div>
                                         <div class="body">
-                                            <h3><a href="service-details.html">Woo Commerce</a></h3>
+                                            <h3><a href="service-details">Woo Commerce</a></h3>
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
-                                            <a href="service-details.html" class="link-btn style1">Read more <i
+                                            <a href="service-details" class="link-btn style1">Read more <i
                                                     class="fa-regular fa-chevrons-right"></i></a>
                                         </div>
                                     </div>
@@ -360,7 +360,7 @@
                                      src="assets/img/about/aboutThumb1_2.png" alt="thumb">
                             </div>
 
-                            <div class="shape"><a href="contact.html"><img class="rotate360"
+                            <div class="shape"><a href="contact-us"><img class="rotate360"
                                                                            src="assets/img/shape/aboutShape1_4.png"
                                                                            alt="shape"></a></div>
                         </div>
@@ -544,7 +544,7 @@
                                     </svg>
                                 </div>
 
-                                <div class="shape"><a href="project-details.html"><img class="rotate360"
+                                <div class="shape"><a href="product-details"><img class="rotate360"
                                                                                        src="assets/img/shape/projectShape1_1.png"
                                                                                        alt="shape"></a></div>
                             </div>
@@ -711,7 +711,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-wrapper">
-                                            <a href="pricing.html" class="gt-btn style2 w-100">Get Started Now <i
+                                            <a href="pricing" class="gt-btn style2 w-100">Get Started Now <i
                                                     class="fa-sharp fa-light fa-arrow-right-long"></i></a>
                                         </div>
                                     </div>
@@ -776,7 +776,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-wrapper">
-                                            <a href="pricing.html" class="gt-btn style3 w-100">Get Started Now <i
+                                            <a href="pricing" class="gt-btn style3 w-100">Get Started Now <i
                                                     class="fa-sharp fa-light fa-arrow-right-long"></i></a>
                                         </div>
                                     </div>
@@ -841,7 +841,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-wrapper">
-                                            <a href="pricing.html" class="gt-btn style2 w-100">Get Started Now <i
+                                            <a href="pricing" class="gt-btn style2 w-100">Get Started Now <i
                                                     class="fa-sharp fa-light fa-arrow-right-long"></i></a>
                                         </div>
                                     </div>
@@ -910,7 +910,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-wrapper">
-                                            <a href="pricing.html" class="gt-btn style2 w-100">Get Started Now <i
+                                            <a href="pricing" class="gt-btn style2 w-100">Get Started Now <i
                                                     class="fa-sharp fa-light fa-arrow-right-long"></i></a>
                                         </div>
                                     </div>
@@ -975,7 +975,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-wrapper">
-                                            <a href="pricing.html" class="gt-btn style3 w-100">Get Started Now <i
+                                            <a href="pricing" class="gt-btn style3 w-100">Get Started Now <i
                                                     class="fa-sharp fa-light fa-arrow-right-long"></i></a>
                                         </div>
                                     </div>
@@ -1040,7 +1040,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-wrapper">
-                                            <a href="pricing.html" class="gt-btn style2 w-100">Get Started Now <i
+                                            <a href="pricing" class="gt-btn style2 w-100">Get Started Now <i
                                                     class="fa-sharp fa-light fa-arrow-right-long"></i></a>
                                         </div>
                                     </div>
@@ -1095,7 +1095,7 @@
                                         </div>
 
                                         <div class="team-content">
-                                            <h3><a href="team-details.html">Wade Warren</a></h3>
+                                            <h3><a href="team-details">Wade Warren</a></h3>
                                             <p>Medical Assistant</p>
                                         </div>
                                     </div>
@@ -1123,7 +1123,7 @@
                                         </div>
 
                                         <div class="team-content">
-                                            <h3><a href="team-details.html">Masirul Islam</a></h3>
+                                            <h3><a href="team-details">Masirul Islam</a></h3>
                                             <p>Manager Assistant</p>
                                         </div>
                                     </div>
@@ -1151,7 +1151,7 @@
                                         </div>
 
                                         <div class="team-content">
-                                            <h3><a href="team-details.html">Jenny Wilson</a></h3>
+                                            <h3><a href="team-details">Jenny Wilson</a></h3>
                                             <p>Web Designer</p>
                                         </div>
                                     </div>
@@ -1178,7 +1178,7 @@
                                         </div>
 
                                         <div class="team-content">
-                                            <h3><a href="team-details.html">Floyd Miles</a></h3>
+                                            <h3><a href="team-details">Floyd Miles</a></h3>
                                             <p>Head Assistant</p>
                                         </div>
                                     </div>
@@ -1206,7 +1206,7 @@
                                         </div>
 
                                         <div class="team-content">
-                                            <h3><a href="team-details.html">Wade Warren</a></h3>
+                                            <h3><a href="team-details">Wade Warren</a></h3>
                                             <p>Medical Assistant</p>
                                         </div>
                                     </div>
@@ -1234,7 +1234,7 @@
                                         </div>
 
                                         <div class="team-content">
-                                            <h3><a href="team-details.html">Masirul Islam</a></h3>
+                                            <h3><a href="team-details">Masirul Islam</a></h3>
                                             <p>Manager Assistant</p>
                                         </div>
                                     </div>
@@ -1262,7 +1262,7 @@
                                         </div>
 
                                         <div class="team-content">
-                                            <h3><a href="team-details.html">Jenny Wilson</a></h3>
+                                            <h3><a href="team-details">Jenny Wilson</a></h3>
                                             <p>Web Designer</p>
                                         </div>
                                     </div>
@@ -1290,7 +1290,7 @@
                                         </div>
 
                                         <div class="team-content">
-                                            <h3><a href="team-details.html">Floyd Miles</a></h3>
+                                            <h3><a href="team-details">Floyd Miles</a></h3>
                                             <p>Head Assistant</p>
                                         </div>
                                     </div>
@@ -1425,7 +1425,7 @@
                     </div>
                     <div class="col-xl-3 d-flex align-items-center">
                         <div class="btn-wrapper">
-                            <a class="gt-btn style5" href="contact.html">Talk to a Specialist<i
+                            <a class="gt-btn style5" href="contact-us">Talk to a Specialist<i
                                     class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
                         </div>
                     </div>
@@ -1686,7 +1686,7 @@
                                                 <div class="tag">Shared Hosting</div>
                                                 <div class="date">MARCH 24, 2024</div>
                                             </div>
-                                            <h3><a href="news-details.html">Attentive was born in 2015 help sales
+                                            <h3><a href="blog-details">Attentive was born in 2015 help sales
                                                     teams</a></h3>
                                             <div class="author-meta">
                                                 <div class="fancy-box style1">
@@ -1699,7 +1699,7 @@
                                                     </div>
                                                 </div>
 
-                                                <a class="link-btn style1" href="news-details.html"><i
+                                                <a class="link-btn style1" href="blog-details"><i
                                                         class="fa-solid fa-arrow-right"></i></a>
                                             </div>
                                         </div>
@@ -1715,7 +1715,7 @@
                                                 <div class="tag"> Uncategorized</div>
                                                 <div class="date">MARCH 14, 2024</div>
                                             </div>
-                                            <h3><a href="news-details.html">Best and fastest data server ever</a></h3>
+                                            <h3><a href="blog-details">Best and fastest data server ever</a></h3>
                                             <div class="author-meta">
                                                 <div class="fancy-box style1">
                                                     <div class="item"><img src="assets/img/blog/blogProfile1_2.png"
@@ -1727,7 +1727,7 @@
                                                     </div>
                                                 </div>
 
-                                                <a class="link-btn style1" href="news-details.html"><i
+                                                <a class="link-btn style1" href="blog-details"><i
                                                         class="fa-solid fa-arrow-right"></i></a>
                                             </div>
                                         </div>
@@ -1744,7 +1744,7 @@
                                                 <div class="tag">Technology</div>
                                                 <div class="date">MARCH 29, 2024</div>
                                             </div>
-                                            <h3><a href="news-details.html">Life won’t one beast air over above all</a>
+                                            <h3><a href="blog-details">Life won’t one beast air over above all</a>
                                             </h3>
                                             <div class="author-meta">
                                                 <div class="fancy-box style1">
@@ -1757,7 +1757,7 @@
                                                     </div>
                                                 </div>
 
-                                                <a class="link-btn style1" href="news-details.html"><i
+                                                <a class="link-btn style1" href="blog-details"><i
                                                         class="fa-solid fa-arrow-right"></i></a>
                                             </div>
                                         </div>
@@ -1773,7 +1773,7 @@
                                                 <div class="tag">Shared Hosting</div>
                                                 <div class="date">MARCH 24, 2024</div>
                                             </div>
-                                            <h3><a href="news-details.html">Attentive was born in 2015 help sales
+                                            <h3><a href="blog-details">Attentive was born in 2015 help sales
                                                     teams</a></h3>
                                             <div class="author-meta">
                                                 <div class="fancy-box style1">
@@ -1786,7 +1786,7 @@
                                                     </div>
                                                 </div>
 
-                                                <a class="link-btn style1" href="news-details.html"><i
+                                                <a class="link-btn style1" href="blog-details"><i
                                                         class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
                                             </div>
                                         </div>
@@ -1803,7 +1803,7 @@
                                                 <div class="tag"> Uncategorized</div>
                                                 <div class="date">MARCH 14, 2024</div>
                                             </div>
-                                            <h3><a href="news-details.html">Best and fastest data server ever</a></h3>
+                                            <h3><a href="blog-details">Best and fastest data server ever</a></h3>
                                             <div class="author-meta">
                                                 <div class="fancy-box style1">
                                                     <div class="item"><img src="assets/img/blog/blogProfile1_2.png"
@@ -1815,7 +1815,7 @@
                                                     </div>
                                                 </div>
 
-                                                <a class="link-btn style1" href="news-details.html"><i
+                                                <a class="link-btn style1" href="blog-details"><i
                                                         class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
                                             </div>
                                         </div>
@@ -1832,7 +1832,7 @@
                                                 <div class="tag">Technology</div>
                                                 <div class="date">MARCH 29, 2024</div>
                                             </div>
-                                            <h3><a href="news-details.html">Life won’t one beast air over above all</a>
+                                            <h3><a href="blog-details">Life won’t one beast air over above all</a>
                                             </h3>
                                             <div class="author-meta">
                                                 <div class="fancy-box style1">
@@ -1845,7 +1845,7 @@
                                                     </div>
                                                 </div>
 
-                                                <a class="link-btn style1" href="news-details.html"><i
+                                                <a class="link-btn style1" href="blog-details"><i
                                                         class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
                                             </div>
                                         </div>
@@ -1875,7 +1875,7 @@
                 <h3 class="cta-title text-white wow fadeInUp" data-wow-delay=".3s">Stay Connected With Cutting Edge IT
                 </h3>
                 <div class="btn-wrapper">
-                    <a class="gt-btn style5" href="contact.html">Talk to a Specialist<i
+                    <a class="gt-btn style5" href="contact-us">Talk to a Specialist<i
                             class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
                 </div>
             </div>

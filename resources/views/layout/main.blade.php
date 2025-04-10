@@ -19,7 +19,7 @@
     <title>ArkanPro اركان الاحتراف| @yield('title', 'No Title')</title>
 
     <!--<< Favcion >>-->
-    <link rel="shortcut icon" href="assets/img/favicon.svg">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
     <!--<< Bootstrap min.css >>-->
 
     @if(app()->getLocale() == 'ar')

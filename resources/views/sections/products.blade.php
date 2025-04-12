@@ -15,7 +15,7 @@
                 <h1 class="wow fadeInUp" data-wow-delay=".3s">Products</h1>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
-                        <a href="/">
+                        <a href="{{ route('home') }}">
                             Home
                         </a>
                     </li>
@@ -41,7 +41,7 @@
                             <div class="project-content style2">
                                 <p>Technology</p>
                                 <h4>
-                                    <a href="product-details">Platform Integration</a>
+                                    <a href="{{ route('product.details') }}">Platform Integration</a>
                                 </h4>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                             <div class="project-content style2">
                                 <p>Security</p>
                                 <h4>
-                                    <a href="product-details">Network Security</a>
+                                    <a href="{{ route('product.details') }}">Network Security</a>
                                 </h4>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                             <div class="project-content style2">
                                 <p>Solution</p>
                                 <h4>
-                                    <a href="product-details">Web Development</a>
+                                    <a href="{{ route('product.details') }}">Web Development</a>
                                 </h4>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                             <div class="project-content style2">
                                 <p>Technology</p>
                                 <h4>
-                                    <a href="product-details">IT Management</a>
+                                    <a href="{{ route('product.details') }}">IT Management</a>
                                 </h4>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                             <div class="project-content style2">
                                 <p>Technology</p>
                                 <h4>
-                                    <a href="product-details">Design Solutions</a>
+                                    <a href="{{ route('product.details') }}">Design Solutions</a>
                                 </h4>
                             </div>
                         </div>
@@ -106,7 +106,7 @@
                             <div class="project-content style2">
                                 <p>Technology</p>
                                 <h4>
-                                    <a href="product-details">Software Development</a>
+                                    <a href="{{ route('product.details') }}">Software Development</a>
                                 </h4>
                             </div>
                         </div>

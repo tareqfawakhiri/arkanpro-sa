@@ -14,7 +14,7 @@
                 <h1 class="wow fadeInUp" data-wow-delay=".3s">Services</h1>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
-                        <a href="/">
+                        <a href="{{ route('home') }}">
                             Home
                         </a>
                     </li>
@@ -47,14 +47,14 @@
                             </div>
                             <div class="content">
                                 <h4>
-                                    <a href="service-details">
+                                    <a href="{{ route('service.details') }}">
                                         Database Security
                                     </a>
                                 </h4>
                                 <p>
                                     Mauris ultrices ligula eget volutpat aliquet nullam
                                 </p>
-                                <a href="service-details" class="theme-btn-2 mt-3">
+                                <a href="{{ route('service.details') }}" class="theme-btn-2 mt-3">
                                     read More
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
@@ -68,14 +68,14 @@
                             </div>
                             <div class="content">
                                 <h4>
-                                    <a href="service-details">
+                                    <a href="{{ route('service.details') }}">
                                         IT Consultancy
                                     </a>
                                 </h4>
                                 <p>
                                     Mauris ultrices ligula eget volutpat aliquet nullam
                                 </p>
-                                <a href="service-details" class="theme-btn-2 mt-3">
+                                <a href="{{ route('service.details') }}" class="theme-btn-2 mt-3">
                                     read More
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
@@ -89,14 +89,14 @@
                             </div>
                             <div class="content">
                                 <h4>
-                                    <a href="service-details">
+                                    <a href="{{ route('service.details') }}">
                                         Cyber Security
                                     </a>
                                 </h4>
                                 <p>
                                     Mauris ultrices ligula eget volutpat aliquet nullam
                                 </p>
-                                <a href="service-details" class="theme-btn-2 mt-3">
+                                <a href="{{ route('service.details') }}" class="theme-btn-2 mt-3">
                                     read More
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
@@ -110,14 +110,14 @@
                             </div>
                             <div class="content">
                                 <h4>
-                                    <a href="service-details">
+                                    <a href="{{ route('service.details') }}">
                                         App Development
                                     </a>
                                 </h4>
                                 <p>
                                     Mauris ultrices ligula eget volutpat aliquet nullam
                                 </p>
-                                <a href="service-details" class="theme-btn-2 mt-3">
+                                <a href="{{ route('service.details') }}" class="theme-btn-2 mt-3">
                                     read More
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
@@ -131,14 +131,14 @@
                             </div>
                             <div class="content">
                                 <h4>
-                                    <a href="service-details">
+                                    <a href="{{ route('service.details') }}">
                                         UI/UX Design
                                     </a>
                                 </h4>
                                 <p>
                                     Mauris ultrices ligula eget volutpat aliquet nullam
                                 </p>
-                                <a href="service-details" class="theme-btn-2 mt-3">
+                                <a href="{{ route('service.details') }}" class="theme-btn-2 mt-3">
                                     read More
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
@@ -152,14 +152,14 @@
                             </div>
                             <div class="content">
                                 <h4>
-                                    <a href="service-details">
+                                    <a href="{{ route('service.details') }}">
                                         IT Management
                                     </a>
                                 </h4>
                                 <p>
                                     Mauris ultrices ligula eget volutpat aliquet nullam
                                 </p>
-                                <a href="service-details" class="theme-btn-2 mt-3">
+                                <a href="{{ route('service.details') }}" class="theme-btn-2 mt-3">
                                     read More
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
@@ -173,14 +173,14 @@
                             </div>
                             <div class="content">
                                 <h4>
-                                    <a href="service-details">
+                                    <a href="{{ route('service.details') }}">
                                         Digital Marketing
                                     </a>
                                 </h4>
                                 <p>
                                     Mauris ultrices ligula eget volutpat aliquet nullam
                                 </p>
-                                <a href="service-details" class="theme-btn-2 mt-3">
+                                <a href="{{ route('service.details') }}" class="theme-btn-2 mt-3">
                                     read More
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
@@ -194,14 +194,14 @@
                             </div>
                             <div class="content">
                                 <h4>
-                                    <a href="service-details">
+                                    <a href="{{ route('service.details') }}">
                                         Data Analysis
                                     </a>
                                 </h4>
                                 <p>
                                     Mauris ultrices ligula eget volutpat aliquet nullam
                                 </p>
-                                <a href="service-details" class="theme-btn-2 mt-3">
+                                <a href="{{ route('service.details') }}" class="theme-btn-2 mt-3">
                                     read More
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>

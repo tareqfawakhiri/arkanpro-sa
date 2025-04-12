@@ -21,22 +21,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Landing page
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/about-us', [HomeController::class, 'aboutUs']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/lang/change', [Controller::class, 'language'])->name('changeLang');
 Route::get('/theme/change', [Controller::class, 'theme'])->name('changeTheme');
 
 Route::get('/contact-us', [ContactUsController::class, 'index']);
 Route::post('/contact-us', [ContactUsController::class, 'send'])->name('contact.send');
 
-Route::get('/services', [ServicesController::class, 'index']);
-Route::get('/service-details', [ServicesController::class, 'details']);
+Route::get('/services', [ServicesController::class, 'index'])->name('services');
+Route::get('/service-details', [ServicesController::class, 'details'])->name('service.details');
 
-Route::get('/products', [ProductsController::class, 'index']);
-Route::get('/product-details', [ProductsController::class, 'details']);
+Route::get('/products', [ProductsController::class, 'index'])->name('products');
+Route::get('/product-details', [ProductsController::class, 'details'])->name('product.details');
 
 
-Route::get('/customer-service', [CustomerServiceControlller::class, 'index']);
+Route::get('/customer-service', [CustomerServiceControlller::class, 'index'])->name('customer.service');
 
 Route::get('/blog', [BlogControlller::class, 'index'])->name('blog.all');
 Route::get('/blog-details', [BlogControlller::class, 'details'])->name('blog.details');

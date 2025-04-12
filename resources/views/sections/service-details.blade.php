@@ -15,7 +15,7 @@
                 <h1 class="wow fadeInUp" data-wow-delay=".3s">Services Details</h1>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
-                        <a href="/">
+                        <a href="{{ route('home') }}">
                             Home
                         </a>
                     </li>
@@ -31,9 +31,9 @@
     </div>
 
     <!-- Service Details Section Start -->
-    <section class="service-details-section fix section-padding">
+    <section class="{{ route('service.details') }}-section fix section-padding">
         <div class="container">
-            <div class="service-details-wrapper">
+            <div class="{{ route('service.details') }}-wrapper">
                 <div class="row g-4">
                     <div class="col-12 col-lg-4 order-2 order-md-1">
                         <div class="main-sidebar">
@@ -43,15 +43,15 @@
                                 </div>
                                 <div class="widget-categories">
                                     <ul>
-                                        <li><a href="service-details">Database Security <i
+                                        <li><a href="{{ route('service.details') }}">Database Security <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        <li><a href="service-details">IT Consultancy <i
+                                        <li><a href="{{ route('service.details') }}">IT Consultancy <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        <li class="active"><a href="service-details">App Development <i
+                                        <li class="active"><a href="{{ route('service.details') }}">App Development <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        <li><a href="service-details">UI/UX Design <i
+                                        <li><a href="{{ route('service.details') }}">UI/UX Design <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        <li><a href="service-details">Cyber Security <i
+                                        <li><a href="{{ route('service.details') }}">Cyber Security <i
                                                     class="fa-solid fa-arrow-right-long"></i></a> </li>
                                     </ul>
                                 </div>
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-8 order-1 order-md-2">
-                        <div class="service-details-items">
+                        <div class="{{ route('service.details') }}-items">
                             <div class="details-image">
                                 <img src="assets/img/service/details-1.jpg" alt="img">
                             </div>

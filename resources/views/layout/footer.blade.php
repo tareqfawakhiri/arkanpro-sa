@@ -70,7 +70,7 @@
                         <div class="widget footer-widget wow fadeInUp" data-wow-delay=".6s">
                             <div class="gt-widget-about">
                                 <div class="about-logo">
-                                    <a href="/"><img src="assets/img/logo.png" alt="extech"></a>
+                                    <a href="{{ route('home') }}"><img src="assets/img/logo.png" alt="extech"></a>
                                 </div>
                                 <p class="about-text">
                                     Extexh IT is a Phasellus ultricies aliquam volutpat ullamcorper
@@ -176,7 +176,7 @@
                 <div class="layout-text wow fadeInUp" data-wow-delay=".3s">
                     <p class="copyright">
                         <i class="fal fa-copyright"></i> All Copyright
-                        {{ date('Y') }} by <a href="/">ArkanPro</a>
+                        {{ date('Y') }} by <a href="{{ route('home') }}">ArkanPro</a>
                     </p>
                 </div>
                 <div class="layout-link wow fadeInUp" data-wow-delay=".6s">

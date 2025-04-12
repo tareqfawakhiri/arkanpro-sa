@@ -15,7 +15,7 @@
                 <h1 class="wow fadeInUp" data-wow-delay=".3s">Product Details</h1>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
-                        <a href="/">
+                        <a href="{{ route('home') }}">
                             Home
                         </a>
                     </li>

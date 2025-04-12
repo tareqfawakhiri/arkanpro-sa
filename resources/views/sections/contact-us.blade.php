@@ -15,7 +15,7 @@
                 <h1 class="wow fadeInUp" data-wow-delay=".3s">{{ trans('general.contact-us') }}</h1>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
-                        <a href="/">
+                        <a href="{{ route('home') }}">
                             {{ trans('general.home') }}
                         </a>
                     </li>

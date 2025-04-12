@@ -53,7 +53,7 @@
             <div class="offcanvas__content">
                 <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                     <div class="offcanvas__logo">
-                        <a href="/">
+                        <a href="{{ route('home') }}">
                             <img src="assets/img/logo.png" alt="logo-img">
                         </a>
                     </div>
@@ -131,7 +131,7 @@
                 <div class="header-main style-2">
                     <div class="header-left">
                         <div class="logo">
-                            <a href="/" class="header-logo">
+                            <a href="{{ route('home') }}" class="header-logo">
                                 <img src="assets/img/logo.png" alt="logo-img">
                             </a>
                         </div>
@@ -142,22 +142,22 @@
                                 <nav id="mobile-menu">
                                     <ul>
                                         <li class="active">
-                                            <a href="/">{{ trans('general.home') }}</a>
+                                            <a href="{{ route('home') }}">{{ trans('general.home') }}</a>
                                         </li>
                                         <li>
-                                            <a href="/services">{{ trans('general.services') }}</a>
+                                            <a href="{{ route('services') }}">{{ trans('general.services') }}</a>
                                         </li>
                                         <li>
-                                            <a href="/products">{{ trans('general.products') }}</a>
+                                            <a href="{{ route('products') }}">{{ trans('general.products') }}</a>
                                         </li>
                                         <li>
-                                            <a href="/customer-service">{{ trans('general.customer-service') }}</a>
+                                            <a href="{{ route('customer.service') }}">{{ trans('general.customer-service') }}</a>
                                         </li>
                                         <li>
-                                            <a href="/blog">{{ trans('general.blog') }}</a>
+                                            <a href="{{ route('blog.all') }}">{{ trans('general.blog') }}</a>
                                         </li>
                                         <li>
-                                            <a href="/about-us">{{ trans('general.about-us') }}</a>
+                                            <a href="{{ route('about-us') }}">{{ trans('general.about-us') }}</a>
                                         </li>
                                     </ul>
                                 </nav>

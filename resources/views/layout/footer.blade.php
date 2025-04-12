@@ -70,7 +70,7 @@
                         <div class="widget footer-widget wow fadeInUp" data-wow-delay=".6s">
                             <div class="gt-widget-about">
                                 <div class="about-logo">
-                                    <a href="{{ route('home') }}"><img src="assets/img/logo.png" alt="extech"></a>
+                                    <a href="{{ route('home') }}"><img src="assets/img/logo-light.png" alt="extech"></a>
                                 </div>
                                 <p class="about-text">
                                     Extexh IT is a Phasellus ultricies aliquam volutpat ullamcorper

@@ -166,21 +166,21 @@
                     </div>
                     <div class="header-right d-flex justify-content-end align-items-center">
                         @if (session()->get('theme') == 'light')
-                            <a class="menu-thumb" href="/theme/change?theme=dark">
+                            <a class="menu-thumb" href="{{ route('change-theme') }}?theme=dark">
                                 <i class="fa-solid fa-moon"></i>
                             </a>
                         @else
-                            <a class="menu-thumb" href="/theme/change?theme=light">
+                            <a class="menu-thumb" href="{{ route('change-theme') }}?theme=light">
                                 <i class="fa-solid fa-sun"></i>
                             </a>
                         @endif
 
                         @if (session()->get('locale') == 'en')
-                            <a class="menu-thumb" href="/lang/change?lang=ar">
+                            <a class="menu-thumb" href="{{ route('change-language') }}?lang=ar">
                                 <b>العربية</b>
                             </a>
                         @else
-                            <a class="menu-thumb" href="/lang/change?lang=en">
+                            <a class="menu-thumb" href="{{ route('change-language') }}?lang=en">
                                 <b>English</b>
                             </a>
                         @endif

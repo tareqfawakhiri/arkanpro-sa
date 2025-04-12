@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\BlogControlller;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\CustomerServiceControlller;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ServicesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +34,13 @@ Route::get('/service-details', [ServicesController::class, 'details']);
 
 Route::get('/products', [ProductsController::class, 'index']);
 Route::get('/product-details', [ProductsController::class, 'details']);
+
+
+Route::get('/customer-service', [CustomerServiceControlller::class, 'index']);
+
+Route::get('/blog', [BlogControlller::class, 'index'])->name('blog.all');
+Route::get('/blog-details', [BlogControlller::class, 'details'])->name('blog.details');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

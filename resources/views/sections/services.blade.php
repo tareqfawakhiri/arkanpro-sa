@@ -1,7 +1,6 @@
 @extends('layout.main')
 @section('title', 'Services')
 @section('content')
-
     <!--<< Breadcrumb Section Start >>-->
     <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb.jpg');">
         <div class="border-shape">
@@ -34,8 +33,8 @@
     <section class="service-section fix section-padding">
         <div class="container">
             <div class="section-title title-area  mx-auto mb-20">
-                <div class="subtitle d-flex justify-content-center"> <img src="assets/img/icon/arrowLeft.svg"
-                        alt="icon"> <span> OUR SERVICES
+                <div class="subtitle d-flex justify-content-center"><img src="assets/img/icon/arrowLeft.svg"
+                                                                         alt="icon"> <span> OUR SERVICES
                     </span><img src="assets/img/icon/arrowRight.svg" alt="icon"></div>
                 <h2 class="title text-center"> We Provide the Best Quality </h2>
             </div>
@@ -235,7 +234,7 @@
                     <div class="col-lg-6">
                         <div class="faq-content style2">
                             <div class="section-title mb-40 mxw-650">
-                                <div class="subtitle"> <img src="assets/img/icon/arrowLeft.svg" alt="icon"> <span> See
+                                <div class="subtitle"><img src="assets/img/icon/arrowLeft.svg" alt="icon"> <span> See
                                         Our Faqs
                                     </span><img src="assets/img/icon/arrowRight.svg" alt="icon"></div>
                                 <h2 class="title"> Keep Your Business Safe & <br> Ensure High Availability </h2>
@@ -246,8 +245,9 @@
                                     <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".3s">
                                         <h5 class="accordion-header">
                                             <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true"
-                                                aria-controls="faq1">
+                                                    data-bs-toggle="collapse" data-bs-target="#faq1"
+                                                    aria-expanded="true"
+                                                    aria-controls="faq1">
                                                 How long should a business plan be?
                                             </button>
                                         </h5>
@@ -261,7 +261,7 @@
                                     <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".5s">
                                         <h5 class="accordion-header">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                                    data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
                                                 What is included in your services?
                                             </button>
                                         </h5>
@@ -275,8 +275,9 @@
                                     <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".7s">
                                         <h5 class="accordion-header">
                                             <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false"
-                                                aria-controls="faq3">
+                                                    data-bs-toggle="collapse" data-bs-target="#faq3"
+                                                    aria-expanded="false"
+                                                    aria-controls="faq3">
                                                 What type of company is measured?
                                             </button>
                                         </h5>
@@ -321,7 +322,7 @@
                     <div class="col-lg-6">
                         <div class="contact-content">
                             <div class="section-title mb-40 mxw-650">
-                                <div class="subtitle"> <img src="assets/img/icon/arrowLeftWhite.svg" alt="icon"> <span
+                                <div class="subtitle"><img src="assets/img/icon/arrowLeftWhite.svg" alt="icon"> <span
                                         class="text-white"> TALK TO US
                                     </span><img src="assets/img/icon/arrowRightWhite.svg" alt="icon"></div>
                                 <h2 class="title text-white"> How May We Help You! </h2>
@@ -345,7 +346,7 @@
                                         <div class="form-clt">
                                             <span>Message*</span>
                                             <textarea name="message" id="message"
-                                                placeholder="Write Message"></textarea>
+                                                      placeholder="Write Message"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-lg-7 wow fadeInUp" data-wow-delay=".9s">

@@ -94,7 +94,7 @@
                                     <li><a href="/service"><i class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>Our Services</a></li>
                                     <li><a href="/blog"><i class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>Our Blogs</a></li>
                                     <li><a href="/faq"><i class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>FAQ’S</a></li>
-                                    <li><a href="contact.html"><i class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>Contact Us</a>
+                                    <li><a href="/contact-us"><i class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>{{ trans('general.contact-us') }}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -139,7 +139,7 @@
                     </div>
                     <div class="col-xl-3 col-md-6 col-12">
                         <div class="widget widget_nav_menu footer-widget wow fadeInUp" data-wow-delay="1.6s">
-                            <h3 class="widget_title">Contact Us</h3>
+                            <h3 class="widget_title">{{ trans('general.contact-us') }}</h3>
                             <div class="checklist style2">
                                 <ul class="ps-0">
                                     <li class="text-white"><i class="fa-solid fa-envelope"></i></li>

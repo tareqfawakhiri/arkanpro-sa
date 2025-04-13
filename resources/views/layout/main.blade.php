@@ -23,7 +23,7 @@
     <!--<< Bootstrap min.css >>-->
 
     @if(app()->getLocale() == 'ar')
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/rtl-bootstrap.min.css">
     @else
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     @endif

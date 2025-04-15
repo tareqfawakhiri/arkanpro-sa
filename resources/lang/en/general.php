@@ -11,4 +11,8 @@ return [
     'blog' => 'Blog',
 
     'loading' => 'Loading',
+    'send-email' => 'Send Email',
+    'call-emergency' => 'Call Emergency',
+    'address' => 'Address',
+
 ];

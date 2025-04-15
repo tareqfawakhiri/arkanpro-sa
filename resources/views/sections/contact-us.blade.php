@@ -55,7 +55,8 @@
                                     <div class="content">
                                         <p>{{ trans('contact-us.call-us') }}</p>
                                         <h3>
-                                            <a href="tel:+2085550112" style="direction:ltr">+208-555-0112</a>
+                                            <a href="tel:{{ setting('contact-us.phone_number') }}"
+                                               style="direction:ltr">{{ setting('contact-us.phone_number') }}</a>
                                         </h3>
                                     </div>
                                 </div>
@@ -77,7 +78,7 @@
                                     <div class="content">
                                         <p>{{ trans('contact-us.make-quote') }}</p>
                                         <h3>
-                                            <a href="mailto:infotech@gmail.com">Infotech@gmail.com</a>
+                                            <a href="mailto:{{ setting('contact-us.email_address') }}">{{ setting('contact-us.email_address') }}</a>
                                         </h3>
                                     </div>
                                 </div>
@@ -96,7 +97,7 @@
                                     <div class="content">
                                         <p>{{ trans('contact-us.location') }}</p>
                                         <h3>
-                                            <p>{{ trans('contact-us.location-desc') }}</p>
+                                            <p>{{ setting('contact-us.location') }}</p>
                                         </h3>
                                     </div>
                                 </div>
@@ -104,8 +105,7 @@
                             <div class="video-image">
                                 <img src="assets/img/video.jpg" alt="img">
                                 <div class="video-box">
-                                    <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I"
-                                       class="video-btn ripple popup-video">
+                                    <a href="{{ setting('contact-us.video_contact_us') }}" class="video-btn ripple popup-video">
                                         <i class="fa-solid fa-play"></i>
                                     </a>
                                 </div>
@@ -116,19 +116,22 @@
                         <div class="contact-content">
                             <h2>{{ trans('contact-us.get-ready') }}</h2>
                             <p>{{ trans('contact-us.get-ready-desc') }}</p>
-                            <form action="{{ route('contact.send') }}" id="contact-form" method="POST" class="contact-form-items">
+                            <form action="{{ route('contact.send') }}" id="contact-form" method="POST"
+                                  class="contact-form-items">
                                 @csrf
                                 <div class="row g-4">
                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                                         <div class="form-clt">
                                             <span>{{ trans('contact-us.your-name') }}*</span>
-                                            <input type="text" name="name" id="name" placeholder="{{ trans('contact-us.your-name') }}">
+                                            <input type="text" name="name" id="name"
+                                                   placeholder="{{ trans('contact-us.your-name') }}">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
                                         <div class="form-clt">
                                             <span>{{ trans('contact-us.your-email') }}*</span>
-                                            <input type="text" name="email" id="email" placeholder="{{ trans('contact-us.your-email') }}">
+                                            <input type="text" name="email" id="email"
+                                                   placeholder="{{ trans('contact-us.your-email') }}">
                                         </div>
                                     </div>
                                     <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
@@ -140,7 +143,8 @@
                                     </div>
                                     <div class="col-lg-7 wow fadeInUp" data-wow-delay=".9s">
                                         <button type="submit" class="theme-btn">
-                                            {{ trans('contact-us.send') }} <i class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
+                                            {{ trans('contact-us.send') }} <i
+                                                class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
                                         </button>
                                     </div>
                                 </div>

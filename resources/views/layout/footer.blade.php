@@ -16,9 +16,9 @@
 
                     </div>
                     <div class="content">
-                        <p>Address</p>
+                        <p>{{ trans('general.address') }}</p>
                         <h3>
-                            4648 Rocky Road Philadelphia PA
+                            {{ setting('contact-us.location') }}
                         </h3>
                     </div>
                 </div>
@@ -37,9 +37,9 @@
                         </svg>
                     </div>
                     <div class="content">
-                        <p>Send Email</p>
+                        <p>{{ trans('general.send-email') }}</p>
                         <h3>
-                            <a href="mailto:infotech@gmail.com">info@exmple.com</a>
+                            <a href="mailto:{{ setting('contact-us.email_address') }}">{{ setting('contact-us.email_address') }}</a>
                         </h3>
                     </div>
                 </div>
@@ -55,9 +55,9 @@
                         </svg>
                     </div>
                     <div class="content">
-                        <p>Call Emergency</p>
+                        <p>{{ trans('general.call-emergency') }}</p>
                         <h3>
-                            <a href="tel:+2085550112">+88 0123 654 99</a>
+                            <a style="direction:ltr" href="tel:{{ setting('contact-us.phone_number') }}">{{ setting('contact-us.phone_number') }}</a>
                         </h3>
                     </div>
                 </div>
@@ -73,15 +73,9 @@
                                     <a href="{{ route('home') }}"><img src="assets/img/logo-light.png" alt="extech"></a>
                                 </div>
                                 <p class="about-text">
-                                    Extexh IT is a Phasellus ultricies aliquam volutpat ullamcorper
-                                    laoreet neque, a lacinia curabitur lacinia mollis
+                                    {{ setting('site.description') }}
                                 </p>
                                 <div class="gt-social style2">
-                                    {{--                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>--}}
-                                    {{--                                    <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>--}}
-                                    {{--                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>--}}
-                                    {{--                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>--}}
-
                                     @if(setting('social-media.facebook_url'))
                                         <a href="{{ setting('social-media.facebook_url') }}" target="_blank"><i
                                                 class="fab fa-facebook"></i></a>
@@ -177,11 +171,11 @@
                             <div class="checklist style2">
                                 <ul class="ps-0">
                                     <li class="text-white"><i class="fa-solid fa-envelope"></i></li>
-                                    <li class="text-white">info@example.com</li>
+                                    <li class="text-white">{{ setting('contact-us.email_address') }}</li>
                                 </ul>
                                 <ul class="ps-0">
                                     <li class="text-white"><i class="fa-solid fa-phone"></i></li>
-                                    <li class="text-white">+208-6666-0112</li>
+                                    <li class="text-white" style="direction:ltr">{{ setting('contact-us.phone_number') }}</li>
                                 </ul>
                                 <div class="email-input-container">
                                     <input type="email" id="email" placeholder="Your email address" required="">
@@ -189,15 +183,15 @@
                                             class="fa-regular fa-arrow-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
                                     </button>
                                 </div>
-                                <form id="termsForm">
-                                    <label class="custom-checkbox">
-                                        <input type="checkbox" name="agree" id="agreeCheckbox">
-                                        <span class="checkmark"></span>
-                                        I agree to the <a class="text-underline" href="contact.html" target="_blank">Privacy
-                                            Policy.</a>
-                                    </label>
-                                    <br>
-                                </form>
+{{--                                <form id="termsForm">--}}
+{{--                                    <label class="custom-checkbox">--}}
+{{--                                        <input type="checkbox" name="agree" id="agreeCheckbox">--}}
+{{--                                        <span class="checkmark"></span>--}}
+{{--                                        I agree to the <a class="text-underline" href="contact.html" target="_blank">Privacy--}}
+{{--                                            Policy.</a>--}}
+{{--                                    </label>--}}
+{{--                                    <br>--}}
+{{--                                </form>--}}
                             </div>
                         </div>
                     </div>
@@ -210,13 +204,12 @@
             <div class="copyright-layout">
                 <div class="layout-text wow fadeInUp" data-wow-delay=".3s">
                     <p class="copyright">
-                        <i class="fal fa-copyright"></i> All Copyright
-                        {{ date('Y') }} by <a href="{{ route('home') }}">ArkanPro</a>
+                        <i class="fal fa-copyright"></i> All Copyright {{ date('Y') }} by <a href="{{ route('home') }}"> ArkanPro</a>
                     </p>
                 </div>
                 <div class="layout-link wow fadeInUp" data-wow-delay=".6s">
                     <div class="link-wrapper">
-                        <a href="/contact-us">Terms &amp; Condition </a>
+                        <a href="/contact-us">Terms &amp; Condition</a>
                         <a href="/contact-us">Privacy Policy</a>
                     </div>
                 </div>

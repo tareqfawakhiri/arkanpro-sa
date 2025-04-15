@@ -80,6 +80,7 @@
                                 <a target="_blank" href="#">Main Street, Melbourne, Australia</a>
                             </div>
                         </li>
+
                         <li class="d-flex align-items-center">
                             <div class="offcanvas__contact-icon mr-15">
                                 <i class="fal fa-envelope"></i>

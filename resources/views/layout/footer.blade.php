@@ -39,7 +39,7 @@
                     <div class="content">
                         <p>{{ trans('general.send-email') }}</p>
                         <h3>
-                            <a href="mailto:{{ setting('contact-us.email_address') }}">{{ setting('contact-us.email_address') }}</a>
+                            <a style="direction:ltr" href="mailto:{{ setting('contact-us.email_address') }}">{{ setting('contact-us.email_address') }}</a>
                         </h3>
                     </div>
                 </div>

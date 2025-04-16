@@ -15,4 +15,5 @@ return [
     'send-email' => 'بريد إلكتروني',
     'call-emergency' => 'اتصل بخدمات',
     'address' => 'العنوان',
+    'read-more' => 'اقرا المزيد',
 ];

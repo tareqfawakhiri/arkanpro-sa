@@ -39,7 +39,7 @@ Route::get('/product-details', [ProductsController::class, 'details'])->name('pr
 Route::get('/customer-service', [CustomerServiceControlller::class, 'index'])->name('customer.service');
 
 Route::get('/blog', [BlogControlller::class, 'index'])->name('blog.all');
-Route::get('/blog-details', [BlogControlller::class, 'details'])->name('blog.details');
+Route::get('/blog/{slug}/details', [BlogControlller::class, 'details'])->name('blog.details');
 
 
 Route::group(['prefix' => 'admin'], function () {

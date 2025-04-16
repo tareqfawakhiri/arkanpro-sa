@@ -14,5 +14,5 @@ return [
     'send-email' => 'Send Email',
     'call-emergency' => 'Call Emergency',
     'address' => 'Address',
-
+    'read-more' => 'Read More',
 ];

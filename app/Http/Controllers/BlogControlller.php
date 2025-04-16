@@ -2,15 +2,24 @@
 
 namespace App\Http\Controllers;
 
+//use TCG\Voyager\Models\Post;
+
+use App\Models\Post;
+
 class BlogControlller extends Controller
 {
     function index()
     {
-        return view('sections.blog');
+          $posts = Post::with(['category', 'author'])
+            ->where('status', 'published')
+            ->orderBy('created_at', 'desc')
+            ->paginate(12);
+        return view('sections.blog', compact('posts'));
     }
 
-    function details()
+    function details($slug)
     {
-        return view('sections.blog-details');
+        dd('xx xxx');
+        return view('sections.blog-details', compact('post'));
     }
 }

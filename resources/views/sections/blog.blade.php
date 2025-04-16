@@ -11,18 +11,18 @@
         </div>
         <div class="container">
             <div class="page-heading">
-                <h1 class="wow fadeInUp" data-wow-delay=".3s">Blog</h1>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">{{ trans('general.blog') }}</h1>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
                         <a href="{{ route('home') }}">
-                            Home
+                            {{ trans('general.home') }}
                         </a>
                     </li>
                     <li>
-                        <i class="fas fa-chevron-right"></i>
+                        <i class="fas fa-chevron-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"></i>
                     </li>
                     <li>
-                        Blog
+                        {{ trans('general.blog') }}
                     </li>
                 </ul>
             </div>
@@ -32,206 +32,44 @@
     <section class="news-section-4 fix section-padding">
         <div class="container">
             <div class="row g-4">
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="news-card-items style-2 mt-0 pb-0">
-                        <div class="news-image">
-                            <img src="assets/img/news/04.jpg" alt="news-img">
-                            <div class="post-date">
+                @foreach($posts as $post)
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="news-card-items style-2 mt-0 pb-0">
+                            <div class="news-image">
+                                <img src="{{ Voyager::image($post->thumbnail('cropped')) }}" alt="news-img"
+                                     style="height:240px">
+                                <div class="post-date">
+                                    <h3>{!! $post->getDateTime !!}</h3>
+                                </div>
+                            </div>
+                            <div class="news-content">
+                                <ul>
+                                    <li>
+                                        <i class="fa-regular fa-user"></i>
+                                        {{ $post->author->name ?? '' }}
+                                    </li>
+                                    @if($post->category)
+                                        <li>
+                                            <i class="fa-solid fa-tag"></i>
+                                            {{ $post->category->name }}
+                                        </li>
+                                    @endif
+                                </ul>
                                 <h3>
-                                    17 <br>
-                                    <span>Feb</span>
+                                    <a href="{{ route('blog.details',$post->getTranslatedAttribute('slug')) }}">{{ $post->getTranslatedAttribute('title') }}</a>
                                 </h3>
+                                <a href="{{ route('blog.details',$post->getTranslatedAttribute('slug')) }}"
+                                   class="theme-btn-2 mt-3">
+                                    {{ trans('general.read-more') }}
+                                    <i class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="news-content">
-                            <ul>
-                                <li>
-                                    <i class="fa-regular fa-user"></i>
-                                    By Admin
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-tag"></i>
-                                    IT Services
-                                </li>
-                            </ul>
-                            <h3>
-                                <a href="blog-details">Simplify Streamline Succeed IT Solutions</a>
-                            </h3>
-                            <a href="blog-details" class="theme-btn-2 mt-3">
-                                read More
-                                <i class="fa-solid fa-arrow-right-long"></i>
-                            </a>
-                        </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="news-card-items style-2 mt-0 pb-0">
-                        <div class="news-image">
-                            <img src="assets/img/news/07.jpg" alt="news-img">
-                            <div class="post-date">
-                                <h3>
-                                    20 <br>
-                                    <span>May</span>
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="news-content">
-                            <ul>
-                                <li>
-                                    <i class="fa-regular fa-user"></i>
-                                    By Admin
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-tag"></i>
-                                    UI/UX Design
-                                </li>
-                            </ul>
-                            <h3>
-                                <a href="blog-details">Unlocking Potential Through Technology</a>
-                            </h3>
-                            <a href="blog-details" class="theme-btn-2 mt-3">
-                                read More
-                                <i class="fa-solid fa-arrow-right-long"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                    <div class="news-card-items style-2 mt-0 pb-0">
-                        <div class="news-image">
-                            <img src="assets/img/news/08.jpg" alt="news-img">
-                            <div class="post-date">
-                                <h3>
-                                    10 <br>
-                                    <span>Feb</span>
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="news-content">
-                            <ul>
-                                <li>
-                                    <i class="fa-regular fa-user"></i>
-                                    By Admin
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-tag"></i>
-                                    Cyber Security
-                                </li>
-                            </ul>
-                            <h3>
-                                <a href="blog-details">Supervisor Disapproved of Latest Work.</a>
-                            </h3>
-                            <a href="blog-details" class="theme-btn-2 mt-3">
-                                read More
-                                <i class="fa-solid fa-arrow-right-long"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="news-card-items style-2 mt-0 pb-0">
-                        <div class="news-image">
-                            <img src="assets/img/news/08.jpg" alt="news-img">
-                            <div class="post-date">
-                                <h3>
-                                    10 <br>
-                                    <span>Feb</span>
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="news-content">
-                            <ul>
-                                <li>
-                                    <i class="fa-regular fa-user"></i>
-                                    By Admin
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-tag"></i>
-                                    Cyber Security
-                                </li>
-                            </ul>
-                            <h3>
-                                <a href="blog-details">Supervisor Disapproved of Latest Work.</a>
-                            </h3>
-                            <a href="blog-details" class="theme-btn-2 mt-3">
-                                read More
-                                <i class="fa-solid fa-arrow-right-long"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="news-card-items style-2 mt-0 pb-0">
-                        <div class="news-image">
-                            <img src="assets/img/news/04.jpg" alt="news-img">
-                            <div class="post-date">
-                                <h3>
-                                    17 <br>
-                                    <span>Feb</span>
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="news-content">
-                            <ul>
-                                <li>
-                                    <i class="fa-regular fa-user"></i>
-                                    By Admin
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-tag"></i>
-                                    IT Services
-                                </li>
-                            </ul>
-                            <h3>
-                                <a href="blog-details">Simplify Streamline Succeed IT Solutions</a>
-                            </h3>
-                            <a href="blog-details" class="theme-btn-2 mt-3">
-                                read More
-                                <i class="fa-solid fa-arrow-right-long"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                    <div class="news-card-items style-2 mt-0 pb-0">
-                        <div class="news-image">
-                            <img src="assets/img/news/07.jpg" alt="news-img">
-                            <div class="post-date">
-                                <h3>
-                                    20 <br>
-                                    <span>May</span>
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="news-content">
-                            <ul>
-                                <li>
-                                    <i class="fa-regular fa-user"></i>
-                                    By Admin
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-tag"></i>
-                                    UI/UX Design
-                                </li>
-                            </ul>
-                            <h3>
-                                <a href="blog-details">Unlocking Potential Through Technology</a>
-                            </h3>
-                            <a href="blog-details" class="theme-btn-2 mt-3">
-                                read More
-                                <i class="fa-solid fa-arrow-right-long"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="page-nav-wrap pt-5 text-center wow fadeInUp" data-wow-delay=".3s">
-                <ul>
-                    <li><a class="page-numbers" href="#">01</a></li>
-                    <li><a class="page-numbers" href="#">02</a></li>
-                    <li><a class="page-numbers" href="#">03</a></li>
-                    <li><a class="page-numbers" href="#"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                </ul>
+                {!! $posts->links()  !!}
             </div>
         </div>
     </section>

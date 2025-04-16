@@ -56,9 +56,9 @@
                                     @endif
                                 </ul>
                                 <h3>
-                                    <a href="{{ route('blog.details',$post->getTranslatedAttribute('slug')) }}">{{ $post->getTranslatedAttribute('title') }}</a>
+                                    <a href="{{ route('blog.details',$post->slug) }}">{{ $post->getTranslatedAttribute('title') }}</a>
                                 </h3>
-                                <a href="{{ route('blog.details',$post->getTranslatedAttribute('slug')) }}"
+                                <a href="{{ route('blog.details',$post->slug) }}"
                                    class="theme-btn-2 mt-3">
                                     {{ trans('general.read-more') }}
                                     <i class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>

@@ -9,7 +9,7 @@ class Post extends \TCG\Voyager\Models\Post
 {
     use Translatable, Resizable;
 
-    protected $translatable = ['title', 'body', 'slug']; // fields that are translatable
+    protected $translatable = ['title', 'body']; // fields that are translatable
 
     protected $appends = [
         'getDateTime'

@@ -26,7 +26,9 @@ class BlogControlller extends Controller
      */
     function details($slug)
     {
-        return $post = Post::where('slug', $slug)->firstOrFail();
+        $post = Post::where('slug', $slug)
+            ->where('status', 'published')
+            ->firstOrFail();
         return view('sections.blog-details', compact('post'));
     }
 }

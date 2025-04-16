@@ -16,4 +16,5 @@ return [
     'call-emergency' => 'اتصل بخدمات',
     'address' => 'العنوان',
     'read-more' => 'اقرا المزيد',
+    'Blog Details' => 'Blog Details'
 ];

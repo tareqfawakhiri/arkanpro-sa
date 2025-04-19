@@ -12,191 +12,108 @@
         </div>
         <div class="swiper hero-slider">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="slider-image bg-cover" style="background-image: url('assets/img/hero/hero-1-2.png');">
-                        <div class="mask-shape" data-animation="slideInDown" data-duration="3s" data-delay="2s">
-                            <img src="assets/img/hero/mask-shape-2.png" alt="shape-img">
+                @foreach($slider as $slide)
+                    <div class="swiper-slide">
+                        <div class="slider-image bg-cover" style="background-image: url('{{ Voyager::image($slide->bk_image) }}');">
+                            <div class="mask-shape" data-animation="slideInDown" data-duration="3s" data-delay="2s">
+                                <img src="assets/img/hero/mask-shape-2.png" alt="shape-img"  xxxx>
+                            </div>
+                            <div class="border-shape" data-animation="slideInRight" data-duration="3s"
+                                 data-delay="2.2s">
+                                <img src="assets/img/hero/border-shape.png" alt="shape-img">
+                            </div>
+                            <div class="circle-shape" data-animation="slideInRight" data-duration="3s"
+                                 data-delay="2.1s">
+                                <img src="assets/img/choose/circle.png" alt="shape-img">
+                            </div>
+                            <div class="frame" data-animation="slideInLeft" data-duration="3s" data-delay="2.2s">
+                                <img src="assets/img/frame.png" alt="shape-img">
+                            </div>
                         </div>
-                        <div class="border-shape" data-animation="slideInRight" data-duration="3s" data-delay="2.2s">
-                            <img src="assets/img/hero/border-shape.png" alt="shape-img">
-                        </div>
-                        <div class="circle-shape" data-animation="slideInRight" data-duration="3s" data-delay="2.1s">
-                            <img src="assets/img/choose/circle.png" alt="shape-img">
-                        </div>
-                        <div class="frame" data-animation="slideInLeft" data-duration="3s" data-delay="2.2s">
-                            <img src="assets/img/frame.png" alt="shape-img">
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row g-4 align-items-center">
-                            <div class="col-lg-7">
-                                <div class="hero-content">
-                                    <h5 data-animation="slideInRight" data-duration="2s"
-                                        data-delay=".3s">{{ trans('slider.subtitle-1')}}</h5>
-                                    <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s">
-                                        {{ trans('slider.headline-1')}}
-                                    </h1>
-                                    <p data-animation="slideInRight" data-duration="2s" data-delay=".9s">
-                                        {{ trans('slider.paragraph-1')}}
-                                    </p>
-                                    <div class="hero-button">
-                                        <a href="about-us" data-animation="slideInRight" data-duration="2s"
-                                           data-delay=".9s" class="theme-btn hover-white">
-                                            {{ trans('slider.explore-more')}}
-                                            <i class="fa-solid fa-arrow-right-long"></i>
-                                        </a>
-                                        <a href="contact-us" data-animation="slideInRight" data-duration="2s"
-                                           data-delay=".9s" class="theme-btn border-white">
-                                            {{ trans('general.contact-us') }}
-                                            <i class="fa-solid fa-arrow-right-long"></i>
-                                        </a>
+                        <div class="container">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-lg-7">
+                                    <div class="hero-content">
+                                        <h5 data-animation="slideInRight" data-duration="2s"
+                                            data-delay=".3s">{{ $slide->getTranslatedAttribute('sub_title') }}</h5>
+                                        <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s">
+                                            {{ $slide->getTranslatedAttribute('title') }}
+                                        </h1>
+                                        <p data-animation="slideInRight" data-duration="2s" data-delay=".9s">
+                                            {!! $slide->getTranslatedAttribute('body') !!}
+                                        </p>
+{{--                                        <div class="hero-button">--}}
+{{--                                            <a href="about-us" data-animation="slideInRight" data-duration="2s"--}}
+{{--                                               data-delay=".9s" class="theme-btn hover-white">--}}
+{{--                                                {{ trans('slider.explore-more')}}--}}
+{{--                                                <i class="fa-solid fa-arrow-right-long"></i>--}}
+{{--                                            </a>--}}
+{{--                                            <a href="contact-us" data-animation="slideInRight" data-duration="2s"--}}
+{{--                                               data-delay=".9s" class="theme-btn border-white">--}}
+{{--                                                {{ trans('general.contact-us') }}--}}
+{{--                                                <i class="fa-solid fa-arrow-right-long"></i>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="contact-wrapper-2">
-                                    <div class="contact-left-items">
-                                        <div class="contact-info-area-2">
-                                            <form action="{{ route('contact.send') }}" id="contact-form" method="POST"
-                                                  class="contact-form-items">
-                                                @csrf
-                                                <div class="row g-4">
-                                                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                                                        <div class="form-clt">
-                                                            <span>{{ trans('contact-us.your-name') }}*</span>
-                                                            <input type="text" name="name" id="name"
-                                                                   value="{{ old('name') }}"
-                                                                   placeholder="{{ trans('contact-us.your-name') }}">
-                                                            @error('name')
-                                                            <div style="color: red;">{{ $message }}</div>@enderror
+                                <div class="col-lg-5">
+                                    <div class="contact-wrapper-2">
+                                        <div class="contact-left-items">
+                                            <div class="contact-info-area-2">
+                                                <form action="{{ route('contact.send') }}" id="contact-form"
+                                                      method="POST"
+                                                      class="contact-form-items">
+                                                    @csrf
+                                                    <div class="row g-4">
+                                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                                            <div class="form-clt">
+                                                                <span>{{ trans('contact-us.your-name') }}*</span>
+                                                                <input type="text" name="name" id="name"
+                                                                       value="{{ old('name') }}"
+                                                                       placeholder="{{ trans('contact-us.your-name') }}">
+                                                                @error('name')
+                                                                <div style="color: red;">{{ $message }}</div>@enderror
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                                                        <div class="form-clt">
-                                                            <span>{{ trans('contact-us.your-email') }}*</span>
-                                                            <input type="text" name="email" id="email"
-                                                                   value="{{ old('email') }}"
-                                                                   placeholder="{{ trans('contact-us.your-email') }}">
-                                                            @error('email')
-                                                            <div style="color: red;">{{ $message }}</div>@enderror
+                                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                                            <div class="form-clt">
+                                                                <span>{{ trans('contact-us.your-email') }}*</span>
+                                                                <input type="text" name="email" id="email"
+                                                                       value="{{ old('email') }}"
+                                                                       placeholder="{{ trans('contact-us.your-email') }}">
+                                                                @error('email')
+                                                                <div style="color: red;">{{ $message }}</div>@enderror
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
-                                                        <div class="form-clt">
-                                                            <span>{{ trans('contact-us.your-message') }}*</span>
-                                                            <textarea name="message" id="message"
-                                                                      placeholder="{{ trans('contact-us.your-message') }}">{{ old('message') }}</textarea>
-                                                            @error('message')
-                                                            <div style="color: red;">{{ $message }}</div>@enderror
+                                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
+                                                            <div class="form-clt">
+                                                                <span>{{ trans('contact-us.your-message') }}*</span>
+                                                                <textarea name="message" id="message"
+                                                                          placeholder="{{ trans('contact-us.your-message') }}">{{ old('message') }}</textarea>
+                                                                @error('message')
+                                                                <div style="color: red;">{{ $message }}</div>@enderror
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    @if(session('success'))
-                                                        <div style="color: green;">{{ session('success') }}</div>
-                                                    @endif
+                                                        @if(session('success'))
+                                                            <div style="color: green;">{{ session('success') }}</div>
+                                                        @endif
 
-                                                    <div class="col-lg-7 wow fadeInUp" data-wow-delay=".9s">
-                                                        <button type="submit" class="theme-btn">
-                                                            {{ trans('contact-us.send') }} <i
-                                                                class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
-                                                        </button>
+                                                        <div class="col-lg-7 wow fadeInUp" data-wow-delay=".9s">
+                                                            <button type="submit" class="theme-btn">
+                                                                {{ trans('contact-us.send') }} <i
+                                                                    class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
+                                                            </button>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </form>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-image bg-cover" style="background-image: url('assets/img/hero/hero-2-2.png');">
-                        <div class="mask-shape" data-animation="slideInDown" data-duration="3s" data-delay="2s">
-                            <img src="assets/img/hero/mask-shape-2.png" alt="shape-img">
-                        </div>
-                        <div class="border-shape" data-animation="slideInRight" data-duration="3s" data-delay="2.2s">
-                            <img src="assets/img/hero/border-shape.png" alt="shape-img">
-                        </div>
-                        <div class="circle-shape" data-animation="slideInRight" data-duration="3s" data-delay="2.1s">
-                            <img src="assets/img/choose/circle.png" alt="shape-img">
-                        </div>
-                        <div class="frame" data-animation="slideInLeft" data-duration="3s" data-delay="2.2s">
-                            <img src="assets/img/frame.png" alt="shape-img">
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row g-4 align-items-center">
-                            <div class="col-lg-8">
-                                <div class="hero-content">
-                                    <h5 data-animation="slideInRight" data-duration="2s"
-                                        data-delay=".3s">{{ trans('slider.subtitle-2')}}</h5>
-                                    <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s">
-                                        {{ trans('slider.headline-2')}}
-                                    </h1>
-                                    <p data-animation="slideInRight" data-duration="2s" data-delay=".9s">
-                                        {{ trans('slider.paragraph-2')}}
-                                    </p>
-                                    <div class="hero-button">
-                                        <a href="about-us" data-animation="slideInRight" data-duration="2s"
-                                           data-delay=".9s" class="theme-btn hover-white">
-                                            {{ trans('slider.explore-more')}}
-                                            <i class="fa-solid fa-arrow-right-long"></i>
-                                        </a>
-                                        <a href="contact-us" data-animation="slideInRight" data-duration="2s"
-                                           data-delay=".9s" class="theme-btn border-white">
-                                            {{ trans('general.contact-us') }}
-                                            <i class="fa-solid fa-arrow-right-long"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-image bg-cover" style="background-image: url('assets/img/hero/hero-3-2.jpg');">
-                        <div class="mask-shape" data-animation="slideInDown" data-duration="3s" data-delay="2s">
-                            <img src="assets/img/hero/mask-shape-2.png" alt="shape-img">
-                        </div>
-                        <div class="border-shape" data-animation="slideInRight" data-duration="3s" data-delay="2.2s">
-                            <img src="assets/img/hero/border-shape.png" alt="shape-img">
-                        </div>
-                        <div class="circle-shape" data-animation="slideInRight" data-duration="3s" data-delay="2.1s">
-                            <img src="assets/img/choose/circle.png" alt="shape-img">
-                        </div>
-                        <div class="frame" data-animation="slideInLeft" data-duration="3s" data-delay="2.2s">
-                            <img src="assets/img/frame.png" alt="shape-img">
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row g-4 align-items-center">
-                            <div class="col-lg-8">
-                                <div class="hero-content">
-                                    <h5 data-animation="slideInRight" data-duration="2s"
-                                        data-delay=".3s">{{ trans('slider.subtitle-3')}}</h5>
-                                    <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s">
-                                        {{ trans('slider.headline-3')}}
-                                    </h1>
-                                    <p data-animation="slideInRight" data-duration="2s" data-delay=".9s">
-                                        {{ trans('slider.paragraph-3')}}
-                                    </p>
-                                    <div class="hero-button">
-                                        <a href="about-us" data-animation="slideInRight" data-duration="2s"
-                                           data-delay=".9s" class="theme-btn hover-white">
-                                            {{ trans('slider.explore-more')}}
-                                            <i class="fa-solid fa-arrow-right-long"></i>
-                                        </a>
-                                        <a href="contact-us" data-animation="slideInRight" data-duration="2s"
-                                           data-delay=".9s" class="theme-btn border-white">
-                                            {{ trans('general.contact-us') }}
-                                            <i class="fa-solid fa-arrow-right-long"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

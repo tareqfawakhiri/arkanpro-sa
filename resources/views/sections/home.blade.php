@@ -29,26 +29,80 @@
                     </div>
                     <div class="container">
                         <div class="row g-4 align-items-center">
-                            <div class="col-lg-8">
+                            <div class="col-lg-7">
                                 <div class="hero-content">
-                                    <h5 data-animation="slideInRight" data-duration="2s" data-delay=".3s">{{ trans('slider.subtitle-1')}}</h5>
+                                    <h5 data-animation="slideInRight" data-duration="2s"
+                                        data-delay=".3s">{{ trans('slider.subtitle-1')}}</h5>
                                     <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s">
-                                    {{ trans('slider.headline-1')}}
+                                        {{ trans('slider.headline-1')}}
                                     </h1>
                                     <p data-animation="slideInRight" data-duration="2s" data-delay=".9s">
                                         {{ trans('slider.paragraph-1')}}
                                     </p>
                                     <div class="hero-button">
                                         <a href="about-us" data-animation="slideInRight" data-duration="2s"
-                                            data-delay=".9s" class="theme-btn hover-white">
+                                           data-delay=".9s" class="theme-btn hover-white">
                                             {{ trans('slider.explore-more')}}
                                             <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
                                         <a href="contact-us" data-animation="slideInRight" data-duration="2s"
-                                            data-delay=".9s" class="theme-btn border-white">
+                                           data-delay=".9s" class="theme-btn border-white">
                                             {{ trans('general.contact-us') }}
                                             <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="contact-wrapper-2">
+                                    <div class="contact-left-items">
+                                        <div class="contact-info-area-2">
+                                            <form action="{{ route('contact.send') }}" id="contact-form" method="POST"
+                                                  class="contact-form-items">
+                                                @csrf
+                                                <div class="row g-4">
+                                                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                                        <div class="form-clt">
+                                                            <span>{{ trans('contact-us.your-name') }}*</span>
+                                                            <input type="text" name="name" id="name"
+                                                                   value="{{ old('name') }}"
+                                                                   placeholder="{{ trans('contact-us.your-name') }}">
+                                                            @error('name')
+                                                            <div style="color: red;">{{ $message }}</div>@enderror
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                                        <div class="form-clt">
+                                                            <span>{{ trans('contact-us.your-email') }}*</span>
+                                                            <input type="text" name="email" id="email"
+                                                                   value="{{ old('email') }}"
+                                                                   placeholder="{{ trans('contact-us.your-email') }}">
+                                                            @error('email')
+                                                            <div style="color: red;">{{ $message }}</div>@enderror
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
+                                                        <div class="form-clt">
+                                                            <span>{{ trans('contact-us.your-message') }}*</span>
+                                                            <textarea name="message" id="message"
+                                                                      placeholder="{{ trans('contact-us.your-message') }}">{{ old('message') }}</textarea>
+                                                            @error('message')
+                                                            <div style="color: red;">{{ $message }}</div>@enderror
+                                                        </div>
+                                                    </div>
+                                                    @if(session('success'))
+                                                        <div style="color: green;">{{ session('success') }}</div>
+                                                    @endif
+
+                                                    <div class="col-lg-7 wow fadeInUp" data-wow-delay=".9s">
+                                                        <button type="submit" class="theme-btn">
+                                                            {{ trans('contact-us.send') }} <i
+                                                                class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -74,21 +128,22 @@
                         <div class="row g-4 align-items-center">
                             <div class="col-lg-8">
                                 <div class="hero-content">
-                                    <h5 data-animation="slideInRight" data-duration="2s" data-delay=".3s">{{ trans('slider.subtitle-2')}}</h5>
+                                    <h5 data-animation="slideInRight" data-duration="2s"
+                                        data-delay=".3s">{{ trans('slider.subtitle-2')}}</h5>
                                     <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s">
-                                    {{ trans('slider.headline-2')}}
+                                        {{ trans('slider.headline-2')}}
                                     </h1>
                                     <p data-animation="slideInRight" data-duration="2s" data-delay=".9s">
                                         {{ trans('slider.paragraph-2')}}
                                     </p>
                                     <div class="hero-button">
                                         <a href="about-us" data-animation="slideInRight" data-duration="2s"
-                                            data-delay=".9s" class="theme-btn hover-white">
+                                           data-delay=".9s" class="theme-btn hover-white">
                                             {{ trans('slider.explore-more')}}
                                             <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
                                         <a href="contact-us" data-animation="slideInRight" data-duration="2s"
-                                            data-delay=".9s" class="theme-btn border-white">
+                                           data-delay=".9s" class="theme-btn border-white">
                                             {{ trans('general.contact-us') }}
                                             <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
@@ -117,21 +172,22 @@
                         <div class="row g-4 align-items-center">
                             <div class="col-lg-8">
                                 <div class="hero-content">
-                                    <h5 data-animation="slideInRight" data-duration="2s" data-delay=".3s">{{ trans('slider.subtitle-3')}}</h5>
+                                    <h5 data-animation="slideInRight" data-duration="2s"
+                                        data-delay=".3s">{{ trans('slider.subtitle-3')}}</h5>
                                     <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s">
-                                    {{ trans('slider.headline-3')}}
+                                        {{ trans('slider.headline-3')}}
                                     </h1>
                                     <p data-animation="slideInRight" data-duration="2s" data-delay=".9s">
                                         {{ trans('slider.paragraph-3')}}
                                     </p>
                                     <div class="hero-button">
                                         <a href="about-us" data-animation="slideInRight" data-duration="2s"
-                                            data-delay=".9s" class="theme-btn hover-white">
+                                           data-delay=".9s" class="theme-btn hover-white">
                                             {{ trans('slider.explore-more')}}
                                             <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
                                         <a href="contact-us" data-animation="slideInRight" data-duration="2s"
-                                            data-delay=".9s" class="theme-btn border-white">
+                                           data-delay=".9s" class="theme-btn border-white">
                                             {{ trans('general.contact-us') }}
                                             <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
@@ -152,31 +208,14 @@
                 <h6 class="text-center wow fadeInUp" data-wow-delay=".3s">{{ trans('brands.partners-success')}}</h6>
                 <div class="swiper brand-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="brand-image">
-                                <img src="assets/img/brand-1.png" alt="brand-img">
+                        @foreach($partners as $partner)
+                            <div class="swiper-slide">
+                                <div class="brand-image">
+                                    <img src="{{ Voyager::image($partner->logo) }}"
+                                         alt="{{ $partner->title }}">
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image">
-                                <img src="assets/img/brand-2.png" alt="brand-img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image">
-                                <img src="assets/img/brand-3.png" alt="brand-img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image">
-                                <img src="assets/img/brand-4.png" alt="brand-img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image">
-                                <img src="assets/img/brand-5.png" alt="brand-img">
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -355,8 +394,8 @@
                             </div>
 
                             <div class="shape"><a href="contact-us"><img class="rotate360"
-                                                                           src="assets/img/shape/aboutShape1_4.png"
-                                                                           alt="shape"></a></div>
+                                                                         src="assets/img/shape/aboutShape1_4.png"
+                                                                         alt="shape"></a></div>
                         </div>
                     </div>
                     <div class="col-xl-6">
@@ -539,8 +578,8 @@
                                 </div>
 
                                 <div class="shape"><a href="product-details"><img class="rotate360"
-                                                                                       src="assets/img/shape/projectShape1_1.png"
-                                                                                       alt="shape"></a></div>
+                                                                                  src="assets/img/shape/projectShape1_1.png"
+                                                                                  alt="shape"></a></div>
                             </div>
                         </div>
                     </div>
@@ -1036,256 +1075,6 @@
                                         <div class="btn-wrapper">
                                             <a href="pricing" class="gt-btn style2 w-100">Get Started Now <i
                                                     class="fa-sharp fa-light fa-arrow-right-long"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section   S T A R T -->
-    <section class="team-section  fix">
-        <div class="team-wrapper space style1" data-bg-src="assets/img/bg/teamBg1_1.png">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-flex justify-content-center">
-                        <div class="section-title title-area  mx-auto mb-45">
-                            <div class="subtitle d-flex justify-content-center"><img src="assets/img/icon/arrowLeft.svg"
-                                                                                     alt="icon"> <span> Our Expert
-                        </span><img src="assets/img/icon/arrowRight.svg" alt="icon"></div>
-                            <h2 class="title text-center">See Our Skilled Expert Team</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="slider-area">
-                        <div class="swiper gt-slider teamSliderOne" id="teamSliderOne"
-                             data-slider-options='{"loop": true, "breakpoints":{"0":{"slidesPerView":1,"centeredSlides":true},"576":{"slidesPerView":2,"centeredSlides":true},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1300":{"slidesPerView":4}}}'>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="team-card style1 img-custom-anim-left wow fadeInUp"
-                                         data-wow-delay=".4s">
-                                        <div class="team-card-thumb">
-                                            <div class="shape1"><img src="assets/img/shape/teamCardShape1_1.png"
-                                                                     alt="shape"></div>
-                                            <div class="shape2"><img src="assets/img/shape/teamCardShape1_2.png"
-                                                                     alt="shape"></div>
-
-                                            <img class="thumbimg" src="assets/img/team/teamThumb1_1.png" alt="thumb">
-
-
-                                            <!-- SVG Mask -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"
-                                                 style="position: absolute;">
-                                                <clipPath id="teamCardMask">
-                                                    <path
-                                                        d="M0 12C0 5.37259 5.37258 0 12 0H318C324.627 0 330 5.37258 330 12V399C330 405.627 324.627 411 318 411H298.949C291.398 411 284.875 405.72 283.301 398.335L275.699 362.665C274.125 355.28 267.602 350 260.051 350H174H82.7439C75.2862 350 68.8175 355.152 67.1493 362.421L58.8507 398.579C57.1825 405.848 50.7138 411 43.2561 411H12C5.37258 411 0 405.627 0 399V12Z"/>
-                                                </clipPath>
-                                            </svg>
-                                        </div>
-
-                                        <div class="team-content">
-                                            <h3><a href="team-details">Wade Warren</a></h3>
-                                            <p>Medical Assistant</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="team-card style1 img-custom-anim-left wow fadeInUp"
-                                         data-wow-delay=".6s">
-                                        <div class="team-card-thumb">
-                                            <div class="shape1"><img src="assets/img/shape/teamCardShape1_1.png"
-                                                                     alt="shape"></div>
-                                            <div class="shape2"><img src="assets/img/shape/teamCardShape1_2.png"
-                                                                     alt="shape"></div>
-
-                                            <img class="thumbimg" src="assets/img/team/teamThumb1_2.png" alt="thumb">
-
-
-                                            <!-- SVG Mask -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"
-                                                 style="position: absolute;">
-                                                <clipPath id="teamCardMask2">
-                                                    <path
-                                                        d="M0 12C0 5.37259 5.37258 0 12 0H318C324.627 0 330 5.37258 330 12V399C330 405.627 324.627 411 318 411H298.949C291.398 411 284.875 405.72 283.301 398.335L275.699 362.665C274.125 355.28 267.602 350 260.051 350H174H82.7439C75.2862 350 68.8175 355.152 67.1493 362.421L58.8507 398.579C57.1825 405.848 50.7138 411 43.2561 411H12C5.37258 411 0 405.627 0 399V12Z"/>
-                                                </clipPath>
-                                            </svg>
-                                        </div>
-
-                                        <div class="team-content">
-                                            <h3><a href="team-details">Masirul Islam</a></h3>
-                                            <p>Manager Assistant</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="team-card style1 img-custom-anim-left wow fadeInUp"
-                                         data-wow-delay=".8s">
-                                        <div class="team-card-thumb">
-                                            <div class="shape1"><img src="assets/img/shape/teamCardShape1_1.png"
-                                                                     alt="shape"></div>
-                                            <div class="shape2"><img src="assets/img/shape/teamCardShape1_2.png"
-                                                                     alt="shape"></div>
-
-                                            <img class="thumbimg" src="assets/img/team/teamThumb1_3.png" alt="thumb">
-
-
-                                            <!-- SVG Mask -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"
-                                                 style="position: absolute;">
-                                                <clipPath id="teamCardMask3">
-                                                    <path
-                                                        d="M0 12C0 5.37259 5.37258 0 12 0H318C324.627 0 330 5.37258 330 12V399C330 405.627 324.627 411 318 411H298.949C291.398 411 284.875 405.72 283.301 398.335L275.699 362.665C274.125 355.28 267.602 350 260.051 350H174H82.7439C75.2862 350 68.8175 355.152 67.1493 362.421L58.8507 398.579C57.1825 405.848 50.7138 411 43.2561 411H12C5.37258 411 0 405.627 0 399V12Z"/>
-                                                </clipPath>
-                                            </svg>
-                                        </div>
-
-                                        <div class="team-content">
-                                            <h3><a href="team-details">Jenny Wilson</a></h3>
-                                            <p>Web Designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="team-card style1 img-custom-anim-left wow fadeInUp" data-wow-delay="1s">
-                                        <div class="team-card-thumb">
-                                            <div class="shape1"><img src="assets/img/shape/teamCardShape1_1.png"
-                                                                     alt="shape"></div>
-                                            <div class="shape2"><img src="assets/img/shape/teamCardShape1_2.png"
-                                                                     alt="shape"></div>
-
-                                            <img class="thumbimg" src="assets/img/team/teamThumb1_4.png" alt="thumb">
-
-
-                                            <!-- SVG Mask -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"
-                                                 style="position: absolute;">
-                                                <clipPath id="teamCardMask4">
-                                                    <path
-                                                        d="M0 12C0 5.37259 5.37258 0 12 0H318C324.627 0 330 5.37258 330 12V399C330 405.627 324.627 411 318 411H298.949C291.398 411 284.875 405.72 283.301 398.335L275.699 362.665C274.125 355.28 267.602 350 260.051 350H174H82.7439C75.2862 350 68.8175 355.152 67.1493 362.421L58.8507 398.579C57.1825 405.848 50.7138 411 43.2561 411H12C5.37258 411 0 405.627 0 399V12Z"/>
-                                                </clipPath>
-                                            </svg>
-                                        </div>
-
-                                        <div class="team-content">
-                                            <h3><a href="team-details">Floyd Miles</a></h3>
-                                            <p>Head Assistant</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="team-card style1 img-custom-anim-left wow fadeInUp"
-                                         data-wow-delay=".4s">
-                                        <div class="team-card-thumb">
-                                            <div class="shape1"><img src="assets/img/shape/teamCardShape1_1.png"
-                                                                     alt="shape"></div>
-                                            <div class="shape2"><img src="assets/img/shape/teamCardShape1_2.png"
-                                                                     alt="shape"></div>
-
-                                            <img class="thumbimg" src="assets/img/team/teamThumb1_1.png" alt="thumb">
-
-
-                                            <!-- SVG Mask -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"
-                                                 style="position: absolute;">
-                                                <clipPath id="teamCardMask5">
-                                                    <path
-                                                        d="M0 12C0 5.37259 5.37258 0 12 0H318C324.627 0 330 5.37258 330 12V399C330 405.627 324.627 411 318 411H298.949C291.398 411 284.875 405.72 283.301 398.335L275.699 362.665C274.125 355.28 267.602 350 260.051 350H174H82.7439C75.2862 350 68.8175 355.152 67.1493 362.421L58.8507 398.579C57.1825 405.848 50.7138 411 43.2561 411H12C5.37258 411 0 405.627 0 399V12Z"/>
-                                                </clipPath>
-                                            </svg>
-                                        </div>
-
-                                        <div class="team-content">
-                                            <h3><a href="team-details">Wade Warren</a></h3>
-                                            <p>Medical Assistant</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="team-card style1 img-custom-anim-left wow fadeInUp"
-                                         data-wow-delay=".8s">
-                                        <div class="team-card-thumb">
-                                            <div class="shape1"><img src="assets/img/shape/teamCardShape1_1.png"
-                                                                     alt="shape"></div>
-                                            <div class="shape2"><img src="assets/img/shape/teamCardShape1_2.png"
-                                                                     alt="shape"></div>
-
-                                            <img class="thumbimg" src="assets/img/team/teamThumb1_2.png" alt="thumb">
-
-
-                                            <!-- SVG Mask -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"
-                                                 style="position: absolute;">
-                                                <clipPath id="teamCardMask6">
-                                                    <path
-                                                        d="M0 12C0 5.37259 5.37258 0 12 0H318C324.627 0 330 5.37258 330 12V399C330 405.627 324.627 411 318 411H298.949C291.398 411 284.875 405.72 283.301 398.335L275.699 362.665C274.125 355.28 267.602 350 260.051 350H174H82.7439C75.2862 350 68.8175 355.152 67.1493 362.421L58.8507 398.579C57.1825 405.848 50.7138 411 43.2561 411H12C5.37258 411 0 405.627 0 399V12Z"/>
-                                                </clipPath>
-                                            </svg>
-                                        </div>
-
-                                        <div class="team-content">
-                                            <h3><a href="team-details">Masirul Islam</a></h3>
-                                            <p>Manager Assistant</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="team-card style1 img-custom-anim-left wow fadeInUp"
-                                         data-wow-delay=".4s">
-                                        <div class="team-card-thumb">
-                                            <div class="shape1"><img src="assets/img/shape/teamCardShape1_1.png"
-                                                                     alt="shape"></div>
-                                            <div class="shape2"><img src="assets/img/shape/teamCardShape1_2.png"
-                                                                     alt="shape"></div>
-
-                                            <img class="thumbimg" src="assets/img/team/teamThumb1_3.png" alt="thumb">
-
-
-                                            <!-- SVG Mask -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"
-                                                 style="position: absolute;">
-                                                <clipPath id="teamCardMask7">
-                                                    <path
-                                                        d="M0 12C0 5.37259 5.37258 0 12 0H318C324.627 0 330 5.37258 330 12V399C330 405.627 324.627 411 318 411H298.949C291.398 411 284.875 405.72 283.301 398.335L275.699 362.665C274.125 355.28 267.602 350 260.051 350H174H82.7439C75.2862 350 68.8175 355.152 67.1493 362.421L58.8507 398.579C57.1825 405.848 50.7138 411 43.2561 411H12C5.37258 411 0 405.627 0 399V12Z"/>
-                                                </clipPath>
-                                            </svg>
-                                        </div>
-
-                                        <div class="team-content">
-                                            <h3><a href="team-details">Jenny Wilson</a></h3>
-                                            <p>Web Designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="team-card style1 img-custom-anim-left wow fadeInUp"
-                                         data-wow-delay=".6s">
-                                        <div class="team-card-thumb">
-                                            <div class="shape1"><img src="assets/img/shape/teamCardShape1_1.png"
-                                                                     alt="shape"></div>
-                                            <div class="shape2"><img src="assets/img/shape/teamCardShape1_2.png"
-                                                                     alt="shape"></div>
-
-                                            <img class="thumbimg" src="assets/img/team/teamThumb1_4.png" alt="thumb">
-
-
-                                            <!-- SVG Mask -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"
-                                                 style="position: absolute;">
-                                                <clipPath id="teamCardMask8">
-                                                    <path
-                                                        d="M0 12C0 5.37259 5.37258 0 12 0H318C324.627 0 330 5.37258 330 12V399C330 405.627 324.627 411 318 411H298.949C291.398 411 284.875 405.72 283.301 398.335L275.699 362.665C274.125 355.28 267.602 350 260.051 350H174H82.7439C75.2862 350 68.8175 355.152 67.1493 362.421L58.8507 398.579C57.1825 405.848 50.7138 411 43.2561 411H12C5.37258 411 0 405.627 0 399V12Z"/>
-                                                </clipPath>
-                                            </svg>
-                                        </div>
-
-                                        <div class="team-content">
-                                            <h3><a href="team-details">Floyd Miles</a></h3>
-                                            <p>Head Assistant</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1875,4 +1664,25 @@
             </div>
         </div>
     </section>
+
+
+    <div class="brand-section fix pt-0">
+        <div class="container">
+            <div class="brand-wrapper">
+                <h6 class="text-center wow fadeInUp" data-wow-delay=".3s">{{ trans('brands.clients-success')}}</h6>
+                <div class="swiper brand-slider">
+                    <div class="swiper-wrapper">
+                        @foreach($clients as $client)
+                            <div class="swiper-slide">
+                                <div class="brand-image">
+                                    <img src="{{ Voyager::image($client->logo) }}"
+                                         alt="{{ $client->title }}">
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

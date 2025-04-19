@@ -1,6 +1,7 @@
 <!-- Footer Area   S T A R T -->
 <footer class="footer-area">
     <div class="widget-area style1  pt-100 pb-80">
+        @if(!isset($isHome))
         <div class="container">
             <div class="contact-info-area">
                 <div class="contact-info-items wow fadeInUp" data-wow-delay=".7s">
@@ -63,6 +64,8 @@
                 </div>
             </div>
         </div>
+        @endif
+
         <div class="container">
             <div class="footer-layout style1">
                 <div class="row">

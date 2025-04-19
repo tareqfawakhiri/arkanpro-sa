@@ -1,3 +1,4 @@
+@if(isset($isHome) && $isHome == true)
 <!-- Preloader Start -->
 <div id="preloader" class="preloader">
     <div class="animation-preloader">
@@ -42,6 +43,7 @@
         </div>
     </div>
 </div>
+@endif
 <!--<< Mouse Cursor Start >>-->
 <div class="mouse-cursor cursor-outer"></div>
 <div class="mouse-cursor cursor-inner"></div>

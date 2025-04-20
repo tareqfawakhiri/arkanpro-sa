@@ -1,7 +1,6 @@
 <!-- Footer Area   S T A R T -->
 <footer class="footer-area">
     <div class="widget-area style1  pt-100 pb-80">
-        @if(!isset($isHome))
         <div class="container">
             <div class="contact-info-area">
                 <div class="contact-info-items wow fadeInUp" data-wow-delay=".7s">
@@ -40,7 +39,8 @@
                     <div class="content">
                         <p>{{ trans('general.send-email') }}</p>
                         <h3>
-                            <a style="direction:ltr" href="mailto:{{ setting('contact-us.email_address') }}">{{ setting('contact-us.email_address') }}</a>
+                            <a style="direction:ltr"
+                               href="mailto:{{ setting('contact-us.email_address') }}">{{ setting('contact-us.email_address') }}</a>
                         </h3>
                     </div>
                 </div>
@@ -58,13 +58,13 @@
                     <div class="content">
                         <p>{{ trans('general.call-emergency') }}</p>
                         <h3>
-                            <a style="direction:ltr" href="tel:{{ setting('contact-us.phone_number') }}">{{ setting('contact-us.phone_number') }}</a>
+                            <a style="direction:ltr"
+                               href="tel:{{ setting('contact-us.phone_number') }}">{{ setting('contact-us.phone_number') }}</a>
                         </h3>
                     </div>
                 </div>
             </div>
         </div>
-        @endif
 
         <div class="container">
             <div class="footer-layout style1">
@@ -178,7 +178,8 @@
                                 </ul>
                                 <ul class="ps-0">
                                     <li class="text-white"><i class="fa-solid fa-phone"></i></li>
-                                    <li class="text-white" style="direction:ltr">{{ setting('contact-us.phone_number') }}</li>
+                                    <li class="text-white"
+                                        style="direction:ltr">{{ setting('contact-us.phone_number') }}</li>
                                 </ul>
                                 <div class="email-input-container">
                                     <input type="email" id="email" placeholder="Your email address" required="">
@@ -186,15 +187,15 @@
                                             class="fa-regular fa-arrow-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
                                     </button>
                                 </div>
-{{--                                <form id="termsForm">--}}
-{{--                                    <label class="custom-checkbox">--}}
-{{--                                        <input type="checkbox" name="agree" id="agreeCheckbox">--}}
-{{--                                        <span class="checkmark"></span>--}}
-{{--                                        I agree to the <a class="text-underline" href="contact.html" target="_blank">Privacy--}}
-{{--                                            Policy.</a>--}}
-{{--                                    </label>--}}
-{{--                                    <br>--}}
-{{--                                </form>--}}
+                                {{--                                <form id="termsForm">--}}
+                                {{--                                    <label class="custom-checkbox">--}}
+                                {{--                                        <input type="checkbox" name="agree" id="agreeCheckbox">--}}
+                                {{--                                        <span class="checkmark"></span>--}}
+                                {{--                                        I agree to the <a class="text-underline" href="contact.html" target="_blank">Privacy--}}
+                                {{--                                            Policy.</a>--}}
+                                {{--                                    </label>--}}
+                                {{--                                    <br>--}}
+                                {{--                                </form>--}}
                             </div>
                         </div>
                     </div>
@@ -207,13 +208,15 @@
             <div class="copyright-layout">
                 <div class="layout-text wow fadeInUp" data-wow-delay=".3s">
                     <p class="copyright">
-                        <i class="fal fa-copyright"></i> All Copyright {{ date('Y') }} by <a href="{{ route('home') }}"> ArkanPro</a>
+                        <i class="fal fa-copyright"></i> All Copyright {{ date('Y') }} by <a href="{{ route('home') }}">
+                            ArkanPro</a>
                     </p>
                 </div>
                 <div class="layout-link wow fadeInUp" data-wow-delay=".6s">
                     <div class="link-wrapper">
-                        <a href="/contact-us">Terms &amp; Condition</a>
-                        <a href="/contact-us">Privacy Policy</a>
+                        <a href="{{ route('page',['terms-condition']) }}">Terms &amp; Condition</a>
+                        <a href="{{ route('page',['privacy-policy']) }}">Privacy Policy</a>
+                        <a href="{{ route('contact') }}">{{ trans('general.contact-us') }}</a>
                     </div>
                 </div>
             </div>

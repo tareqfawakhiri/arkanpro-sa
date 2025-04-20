@@ -4,111 +4,92 @@
     <!-- Hero Section Start -->
     <section class="hero-section fix hero-3">
         <div class="bottom-shape">
-            <img src="assets/img/hero/bottom-shape.png" alt="shape-img">
+            <img src="{{ asset('assets/img/hero/bottom-shape.png') }}" alt="shape-img">
         </div>
         <div class="array-button">
-            <button class="array-prev"><i class="fal fa-arrow-right"></i></button>
-            <button class="array-next"><i class="fal fa-arrow-left"></i></button>
+            <button class="array-prev"><i class="fal fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"></i>
+            </button>
+            <button class="array-next"><i class="fal fa-arrow-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}"></i>
+            </button>
         </div>
         <div class="swiper hero-slider">
             <div class="swiper-wrapper">
                 @foreach($slider as $slide)
                     <div class="swiper-slide">
-                        <div class="slider-image bg-cover" style="background-image: url('{{ Voyager::image($slide->bk_image) }}');">
+                        <div class="slider-image bg-cover"
+                             style="background-image: url('{{ Voyager::image($slide->bk_image) }}');">
                             <div class="mask-shape" data-animation="slideInDown" data-duration="3s" data-delay="2s">
-                                <img src="assets/img/hero/mask-shape-2.png" alt="shape-img"  xxxx>
+                                <img src="{{ asset('assets/img/hero/mask-shape-2.png') }}" alt="shape-img" xxxx>
                             </div>
-                            <div class="border-shape" data-animation="slideInRight" data-duration="3s"
+                            <div class="border-shape"
+                                 data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
+                                 data-duration="3s"
                                  data-delay="2.2s">
-                                <img src="assets/img/hero/border-shape.png" alt="shape-img">
+                                <img src="{{ asset('assets//img/hero/border-shape.png') }}" alt="shape-img">
                             </div>
-                            <div class="circle-shape" data-animation="slideInRight" data-duration="3s"
+                            <div class="circle-shape"
+                                 data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
+                                 data-duration="3s"
                                  data-delay="2.1s">
-                                <img src="assets/img/choose/circle.png" alt="shape-img">
+                                <img src="{{ asset('assets//img/choose/circle.png') }}" alt="shape-img">
                             </div>
                             <div class="frame" data-animation="slideInLeft" data-duration="3s" data-delay="2.2s">
-                                <img src="assets/img/frame.png" alt="shape-img">
+                                <img src="{{ asset('assets//img/frame.png') }}" alt="shape-img">
                             </div>
                         </div>
                         <div class="container">
                             <div class="row g-4 align-items-center">
                                 <div class="col-lg-7">
                                     <div class="hero-content">
-                                        <h5 data-animation="slideInRight" data-duration="2s"
+                                        <h5 data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
+                                            data-duration="2s"
                                             data-delay=".3s">{{ $slide->getTranslatedAttribute('sub_title') }}</h5>
-                                        <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s">
+                                        <h1 data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
+                                            data-duration="2s" data-delay=".5s">
                                             {{ $slide->getTranslatedAttribute('title') }}
                                         </h1>
-                                        <p data-animation="slideInRight" data-duration="2s" data-delay=".9s">
+                                        <p data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
+                                           data-duration="2s" data-delay=".9s">
                                             {!! $slide->getTranslatedAttribute('body') !!}
                                         </p>
-{{--                                        <div class="hero-button">--}}
-{{--                                            <a href="about-us" data-animation="slideInRight" data-duration="2s"--}}
-{{--                                               data-delay=".9s" class="theme-btn hover-white">--}}
-{{--                                                {{ trans('slider.explore-more')}}--}}
-{{--                                                <i class="fa-solid fa-arrow-right-long"></i>--}}
-{{--                                            </a>--}}
-{{--                                            <a href="contact-us" data-animation="slideInRight" data-duration="2s"--}}
-{{--                                               data-delay=".9s" class="theme-btn border-white">--}}
-{{--                                                {{ trans('general.contact-us') }}--}}
-{{--                                                <i class="fa-solid fa-arrow-right-long"></i>--}}
-{{--                                            </a>--}}
-{{--                                        </div>--}}
+                                        <div class="hero-button">
+                                            @if(!is_null($slide->external_link) && $slide->external_link != '')
+                                                <a href="{{ $slide->external_link }}"
+                                                   data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
+                                                   data-duration="2s" data-delay=".9s" class="theme-btn hover-white">
+                                                    {{ trans('slider.explore-more')}}
+                                                    <i class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
+                                                </a>
+                                            @endif
+                                            <a href="{{ route('contact') }}"
+                                               data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
+                                               data-duration="2s"
+                                               data-delay=".9s" class="theme-btn border-white">
+                                                {{ trans('general.contact-us') }}
+                                                <i class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-5">
-                                    <div class="contact-wrapper-2">
-                                        <div class="contact-left-items">
-                                            <div class="contact-info-area-2">
-                                                <form action="{{ route('contact.send') }}" id="contact-form"
-                                                      method="POST"
-                                                      class="contact-form-items">
-                                                    @csrf
-                                                    <div class="row g-4">
-                                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                                                            <div class="form-clt">
-                                                                <span>{{ trans('contact-us.your-name') }}*</span>
-                                                                <input type="text" name="name" id="name"
-                                                                       value="{{ old('name') }}"
-                                                                       placeholder="{{ trans('contact-us.your-name') }}">
-                                                                @error('name')
-                                                                <div style="color: red;">{{ $message }}</div>@enderror
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                                                            <div class="form-clt">
-                                                                <span>{{ trans('contact-us.your-email') }}*</span>
-                                                                <input type="text" name="email" id="email"
-                                                                       value="{{ old('email') }}"
-                                                                       placeholder="{{ trans('contact-us.your-email') }}">
-                                                                @error('email')
-                                                                <div style="color: red;">{{ $message }}</div>@enderror
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
-                                                            <div class="form-clt">
-                                                                <span>{{ trans('contact-us.your-message') }}*</span>
-                                                                <textarea name="message" id="message"
-                                                                          placeholder="{{ trans('contact-us.your-message') }}">{{ old('message') }}</textarea>
-                                                                @error('message')
-                                                                <div style="color: red;">{{ $message }}</div>@enderror
-                                                            </div>
-                                                        </div>
-                                                        @if(session('success'))
-                                                            <div style="color: green;">{{ session('success') }}</div>
-                                                        @endif
-
-                                                        <div class="col-lg-7 wow fadeInUp" data-wow-delay=".9s">
-                                                            <button type="submit" class="theme-btn">
-                                                                {{ trans('contact-us.send') }} <i
-                                                                    class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
+                                    @if($slide->type == 'VIDEO' || $slide->type == 'IMAGE')
+                                        <div class="hero-thumb style2">
+                                            @if($slide->type == 'VIDEO')
+                                                <div class="video-box">
+                                                    <a href="{{ $slide->media }}"
+                                                       class="play-btn popup-video">
+                                                        <img class="rotate360" src="assets/img/shape/heroShape2_1.png"
+                                                             alt="shape">
+                                                    </a>
+                                                </div>
+                                            @else
+                                                <img src="{{ Voyager::image($slide->file_media_path_original) }}"
+                                                     alt="shape">
+                                            @endif
                                         </div>
-                                    </div>
+                                    @elseif($slide->type == 'FORM')
+                                        @include('sections.slider-form')
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -117,27 +98,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Brand Section Start -->
-    <div class="brand-section fix pt-0">
-        <div class="container">
-            <div class="brand-wrapper">
-                <h6 class="text-center wow fadeInUp" data-wow-delay=".3s">{{ trans('brands.partners-success')}}</h6>
-                <div class="swiper brand-slider">
-                    <div class="swiper-wrapper">
-                        @foreach($partners as $partner)
-                            <div class="swiper-slide">
-                                <div class="brand-image">
-                                    <img src="{{ Voyager::image($partner->logo) }}"
-                                         alt="{{ $partner->title }}">
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Service Section    S T A R T -->
     <section class="service-section space fix">
@@ -172,7 +132,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-right"></i></a>
+                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +146,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-right"></i></a>
+                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -200,7 +160,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-right"></i></a>
+                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -214,7 +174,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-right"></i></a>
+                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -228,7 +188,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-right"></i></a>
+                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -242,7 +202,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-right"></i></a>
+                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -256,7 +216,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-right"></i></a>
+                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -270,7 +230,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-right"></i></a>
+                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -281,6 +241,27 @@
             </div>
         </div>
     </section>
+
+    <!-- Brand Section Start -->
+    <div class="brand-section fix space">
+        <div class="container">
+            <div class="brand-wrapper">
+                <h6 class="text-center wow fadeInUp" data-wow-delay=".3s">{{ trans('brands.partners-success')}}</h6>
+                <div class="swiper brand-slider">
+                    <div class="swiper-wrapper">
+                        @foreach($partners as $partner)
+                            <div class="swiper-slide">
+                                <div class="brand-image">
+                                    <img src="{{ Voyager::image($partner->logo) }}"
+                                         alt="{{ $partner->title }}">
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- About Section    S T A R T -->
     <section class="about-section space fix bg-theme-color">
@@ -477,7 +458,8 @@
                                             </div>
                                         </div>
                                         <div class="col-xl-3">
-                                            <div class="project-content-right">
+                                            <div
+                                                class="project-content-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}">
                                                 <img class="img-custom-anim-right wow fadeInUp" data-wow-delay=".6s"
                                                      src="assets/img/project/projectThumb1_2.png" alt="thumb">
                                             </div>
@@ -1400,7 +1382,7 @@
                                                 </div>
 
                                                 <a class="link-btn style1" href="blog-details"><i
-                                                        class="fa-solid fa-arrow-right"></i></a>
+                                                        class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -1428,7 +1410,7 @@
                                                 </div>
 
                                                 <a class="link-btn style1" href="blog-details"><i
-                                                        class="fa-solid fa-arrow-right"></i></a>
+                                                        class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -1458,7 +1440,7 @@
                                                 </div>
 
                                                 <a class="link-btn style1" href="blog-details"><i
-                                                        class="fa-solid fa-arrow-right"></i></a>
+                                                        class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -1559,29 +1541,6 @@
         </div>
     </section>
 
-    <!-- Cta Section   S T A R T -->
-    <section class="cta-section space pb-0 mt-n150 mb-n116 z-5">
-        <div class="container">
-            <div class="cta-wrap style2">
-                <div class="shape1_1 rotate360 d-none d-xl-block"><img src="assets/img/shape/ctaShape2_1.png"
-                                                                       alt="shape">
-                </div>
-                <div class="shape1_2 d-none d-xl-block"><img src="assets/img/shape/ctaShape2_2.png" alt="shape"></div>
-                <div class="shape1_3 d-none d-xl-block"><img src="assets/img/shape/ctaShape2_3.png" alt="shape"></div>
-                <div class="shape1_4 d-none d-xl-block"><img src="assets/img/shape/ctaShape2_4.png" alt="shape"></div>
-                <div class="cta-thumb d-none d-xl-block">
-                    <img src="assets/img/cta/ctaThumb.png" alt="thumb">
-                </div>
-                <h3 class="cta-title text-white wow fadeInUp" data-wow-delay=".3s">Stay Connected With Cutting Edge IT
-                </h3>
-                <div class="btn-wrapper">
-                    <a class="gt-btn style5" href="contact-us">Talk to a Specialist<i
-                            class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <div class="brand-section fix pt-0">
         <div class="container">
@@ -1592,7 +1551,7 @@
                         @foreach($clients as $client)
                             <div class="swiper-slide">
                                 <div class="brand-image">
-                                    <img src="{{ Voyager::image($client->logo) }}"
+                                    <img src="{{ Voyager::image($client->image) }}"
                                          alt="{{ $client->title }}">
                                 </div>
                             </div>

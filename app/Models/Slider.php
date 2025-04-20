@@ -13,4 +13,13 @@ class Slider extends Model
 
     protected $table = 'slider';
     protected $translatable = ['title', 'body', 'sub_title'];
+
+    protected $appends = ['file_media_path_original'];
+
+    function getFileMediaPathOriginalAttribute()
+    {
+        $media = json_decode($this->media);
+        $media = $media[0] ?? null;
+        return $media->download_link ?? null;
+    }
 }

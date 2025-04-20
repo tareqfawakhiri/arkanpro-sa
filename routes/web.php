@@ -27,7 +27,7 @@ Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/lang/change', [Controller::class, 'language'])->name('change-language');
 Route::get('/theme/change', [Controller::class, 'theme'])->name('change-theme');
 
-Route::get('/contact-us', [ContactUsController::class, 'index']);
+Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact');
 Route::post('/contact-us', [ContactUsController::class, 'send'])->name('contact.send');
 
 Route::get('/services', [ServicesController::class, 'index'])->name('services');

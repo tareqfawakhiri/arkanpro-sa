@@ -10,9 +10,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $partners = Partner::all();
-        $clients = Client::all();
-        $slider = Slider::where('status', 'published')->get();
+        $partners = Partner::orderByDesc('created_at')->get();
+        $clients = Client::orderByDesc('created_at')->get();
+        $slider = Slider::where('status', 'published')->orderByDesc('created_at')->get();
         $isHome = true;
         return view('sections.home', compact('partners', 'clients', 'slider', 'isHome'));
     }

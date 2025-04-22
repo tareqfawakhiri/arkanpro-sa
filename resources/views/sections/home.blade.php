@@ -2,14 +2,16 @@
 @section('title', trans('general.home'))
 @section('content')
     <!-- Hero Section Start -->
-    <section class="hero-section fix hero-3">
+    <section class="hero-section  hero-3">
         <div class="bottom-shape">
             <img src="{{ asset('assets/img/hero/bottom-shape.png') }}" alt="shape-img">
         </div>
         <div class="array-button">
-            <button class="array-prev"><i class="fal fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"></i>
+            <button class="array-prev">
+                <i class="fal fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"></i>
             </button>
-            <button class="array-next"><i class="fal fa-arrow-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}"></i>
+            <button class="array-next">
+                <i class="fal fa-arrow-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}"></i>
             </button>
         </div>
         <div class="swiper hero-slider">
@@ -18,56 +20,37 @@
                     <div class="swiper-slide">
                         <div class="slider-image bg-cover"
                              style="background-image: url('{{ Voyager::image($slide->bk_image) }}');">
-                            <div class="mask-shape" data-animation="slideInDown" data-duration="3s" data-delay="2s">
-                                <img src="{{ asset('assets/img/hero/mask-shape-2.png') }}" alt="shape-img" xxxx>
+                            <div class="mask-shape">
+                                <img src="{{ asset('assets/img/hero/mask-shape-2.png') }}" alt="shape-img">
                             </div>
-                            <div class="border-shape"
-                                 data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
-                                 data-duration="3s"
-                                 data-delay="2.2s">
+                            <div class="border-shape">
                                 <img src="{{ asset('assets//img/hero/border-shape.png') }}" alt="shape-img">
                             </div>
-                            <div class="circle-shape"
-                                 data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
-                                 data-duration="3s"
-                                 data-delay="2.1s">
-                                <img src="{{ asset('assets//img/choose/circle.png') }}" alt="shape-img">
+                            <div class="circle-shape">
+                                <img src="{{ asset('assets/img/choose/circle.png') }}" alt="shape-img">
                             </div>
                             <div class="frame" data-animation="slideInLeft" data-duration="3s" data-delay="2.2s">
-                                <img src="{{ asset('assets//img/frame.png') }}" alt="shape-img">
+                                <img src="{{ asset('assets/img/frame.png') }}" alt="shape-img">
                             </div>
                         </div>
                         <div class="container">
                             <div class="row g-4 align-items-center">
                                 <div class="col-lg-7">
                                     <div class="hero-content">
-                                        <h5 data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
-                                            data-duration="2s"
-                                            data-delay=".3s">{{ $slide->getTranslatedAttribute('sub_title') }}</h5>
-                                        <h1 data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
-                                            data-duration="2s" data-delay=".5s">
+                                        <h5>{{ $slide->getTranslatedAttribute('sub_title') }}</h5>
+                                        <h1>
                                             {{ $slide->getTranslatedAttribute('title') }}
                                         </h1>
-                                        <p data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
-                                           data-duration="2s" data-delay=".9s">
+                                        <p>
                                             {!! $slide->getTranslatedAttribute('body') !!}
                                         </p>
                                         <div class="hero-button">
                                             @if(!is_null($slide->external_link) && $slide->external_link != '')
-                                                <a href="{{ $slide->external_link }}"
-                                                   data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
-                                                   data-duration="2s" data-delay=".9s" class="theme-btn hover-white">
+                                                <a href="{{ $slide->external_link }}" class="theme-btn hover-white">
                                                     {{ trans('slider.explore-more')}}
                                                     <i class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
                                                 </a>
                                             @endif
-                                            <a href="{{ route('contact') }}"
-                                               data-animation="slideIn{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"
-                                               data-duration="2s"
-                                               data-delay=".9s" class="theme-btn border-white">
-                                                {{ trans('general.contact-us') }}
-                                                <i class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>

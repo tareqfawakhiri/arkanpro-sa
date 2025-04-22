@@ -16,13 +16,14 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
+| routes are loaded by the RouteServiceProvider, and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
 */
 
 // Landing page
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/send-quotation-request', [HomeController::class, 'quotation'])->name('contact.send-quotation-request');
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/lang/change', [Controller::class, 'language'])->name('change-language');
 Route::get('/theme/change', [Controller::class, 'theme'])->name('change-theme');
@@ -35,7 +36,6 @@ Route::get('/service-details', [ServicesController::class, 'details'])->name('se
 
 Route::get('/products', [ProductsController::class, 'index'])->name('products');
 Route::get('/product-details', [ProductsController::class, 'details'])->name('product.details');
-
 
 Route::get('/customer-service', [CustomerServiceControlller::class, 'index'])->name('customer.service');
 

@@ -1,14 +1,12 @@
-<div class="xxx-contact-wrapper-2">
-    <div class="contact-left-items">
-        <div class="contact-info-area-2">
-            <form action="{{ route('contact.send') }}" id="contact-form"
-                  method="POST"
-                  class="contact-form-items">
+<div class="">
+    <div class="">
+        <div class="slider-form">
+            <form action="{{ route('contact.send-quotation-request') }}" id="contact-form"
+                  method="POST">
                 @csrf
                 <div class="row g-4">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
                         <div class="form-clt">
-                            <span>{{ trans('contact-us.your-name') }}*</span>
                             <input type="text" name="name" id="name"
                                    value="{{ old('name') }}"
                                    placeholder="{{ trans('contact-us.your-name') }}">
@@ -16,13 +14,24 @@
                             <div style="color: red;">{{ $message }}</div>@enderror
                         </div>
                     </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay=".5s">
                         <div class="form-clt">
-                            <span>{{ trans('contact-us.your-email') }}*</span>
-                            <input type="text" name="email" id="email"
-                                   value="{{ old('email') }}"
-                                   placeholder="{{ trans('contact-us.your-email') }}">
-                            @error('email')
+                            <input type="tel" name="phone" id="phone"
+                                   value="{{ old('phone') }}"
+                                   placeholder="{{ trans('contact-us.your-phone') }}">
+                            @error('phone')
+                            <div style="color: red;">{{ $message }}</div>@enderror
+                        </div>
+                    </div>
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="form-clt">
+{{--                            <span style="color: var(--header);">{{ trans('contact-us.your-company-type') }}</span>--}}
+                            <select name="type" class="form-select">
+                                @foreach($types as $key => $value)
+                                    <option value="{{ $key }}">{{ trans('establishment-types.'.$value) }}</option>
+                                @endforeach
+                            </select>
+                            @error('type')
                             <div style="color: red;">{{ $message }}</div>@enderror
                         </div>
                     </div>

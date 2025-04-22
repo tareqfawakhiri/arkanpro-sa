@@ -71,7 +71,7 @@ Js TABLE OF CONTENTS
         //>> Hero-1 Slider Start <<//
         const sliderActive2 = ".hero-slider";
         const sliderInit2 = new Swiper(sliderActive2, {
-            loop: true,
+            loop: false,
             slidesPerView: 1,
             effect: "fade",
             speed: 3000,

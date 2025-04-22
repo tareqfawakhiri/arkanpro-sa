@@ -8,4 +8,6 @@ return [
     'your-email' => 'بريدك الإلكتروني',
     'your-message' => 'اكتب الرسالة',
     'send' => 'إرسال رسالة',
+    'your-phone' => 'رقم هاتفك',
+    'your-company-type' => 'طبيعة الشركه',
 ];

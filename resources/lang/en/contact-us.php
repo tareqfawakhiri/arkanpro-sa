@@ -10,4 +10,6 @@ return [
     'your-email' => 'Your Email',
     'your-message' => 'Write Message',
     'send' => 'Send Message',
+    'your-phone' => 'Your Phone',
+    'your-company-type' => 'Company Type',
 ];

@@ -12,4 +12,5 @@ return [
     'send' => 'Send Message',
     'your-phone' => 'Your Phone',
     'your-company-type' => 'Company Type',
+    'your-business' => 'Your Business',
 ];

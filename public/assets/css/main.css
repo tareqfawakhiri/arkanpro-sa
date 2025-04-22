@@ -16280,14 +16280,3 @@ input.main-search-input::placeholder {
 }
 
 /*# sourceMappingURL=main.css.map */
-
-.slider-form {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 15px;
-    border: 2px solid #5024c4;
-}
-
-.slider-form input {
-    color: black;
-}

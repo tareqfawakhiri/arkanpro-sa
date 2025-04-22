@@ -1,0 +1,38 @@
+.btn-text-right {
+    text-align: right;
+}
+
+.btn-text-left {
+    text-align: left;
+}
+
+.btn-text-center {
+    text-align: center;
+}
+
+.btn-text-justify {
+    text-align: justify;
+}
+
+.slider-form {
+    padding: 20px;
+    background-color: white;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+}
+
+.slider-form input {
+    color: black;
+}
+.iti.iti--allow-dropdown {
+    width: 100%;
+}
+.iti__country-name {
+    color: black;
+}

@@ -10,4 +10,5 @@ return [
     'send' => 'إرسال رسالة',
     'your-phone' => 'رقم هاتفك',
     'your-company-type' => 'طبيعة الشركه',
+    'your-business' => 'Your Business name',
 ];

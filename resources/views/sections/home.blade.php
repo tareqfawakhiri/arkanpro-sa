@@ -62,12 +62,12 @@
                                                     <a href="{{ $slide->media }}"
                                                        class="play-btn popup-video">
                                                         <img class="rotate360" src="assets/img/shape/heroShape2_1.png"
-                                                             alt="shape">
+                                                             alt="{{ $slide->getTranslatedAttribute('title')  }}">
                                                     </a>
                                                 </div>
                                             @else
                                                 <img src="{{ Voyager::image($slide->file_media_path_original) }}"
-                                                     alt="shape">
+                                                     alt="{{ $slide->getTranslatedAttribute('title')  }}">
                                             @endif
                                         </div>
                                     @elseif($slide->type == 'FORM')

@@ -21,12 +21,17 @@
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}">
     <!--<< Bootstrap min.css >>-->
 
+    <link rel="stylesheet" href="{{ asset('assets/css/general.css') }}">
+
+
     @if(app()->getLocale() == 'ar')
         <link rel="stylesheet" href="{{ asset('assets/css/rtl-bootstrap.min.css') }}">
     @else
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     @endif
 
+    <link rel="stylesheet"
+          href="https://old.formvalidation.io/vendor/intl-tel-input/build/css/intlTelInput.css">
     <!--<< All Min Css >>-->
     <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
     <!--<< Animate.css >>-->
@@ -73,8 +78,32 @@
 <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
 <!--<< Wow Animation Js >>-->
 <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput-jquery.min.js"
+        integrity="sha512-QK4ymL3xaaWUlgFpAuxY+6xax7QuxPB3Ii/99nykNP/PlK3NTQa/f/UbQQnWsM4h5yjQoMjWUhCJbYgWamtL6g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <!--<< Main.js >>-->
 <script src="{{ asset('assets/js/main.js') }}"></script>
+<script>
+    $(document).ready(function () {
+        // $('#phone').intlTelInput({
+        //     // utilsScript: '/vendor/intl-tel-input/lib/libphonenumber/build/utils.js',
+        //     autoPlaceholder: true,
+        //     preferredCountries: ['ksa','jo']
+        // });
+        //
+        // intlTelInput
+
+        const iti = $("#phone").intlTelInput({
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+            autoPlaceholder: true,
+            preferredCountries: ['sa']
+        });
+    });
+
+</script>
 </body>
 
 </html>

@@ -15,5 +15,8 @@ return [
     'call-emergency' => 'Call Emergency',
     'address' => 'Address',
     'read-more' => 'Read More',
-    'Blog Details' => 'Blog Details'
+    'Blog Details' => 'Blog Details',
+    'system-features' => 'System Features',
+    'elevating-businesses-with-it-ingenuity' => 'Elevating Businesses with IT Ingenuity',
+    'our-services' => 'Our Services'
 ];

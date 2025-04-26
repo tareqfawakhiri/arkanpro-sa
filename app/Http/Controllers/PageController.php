@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use TCG\Voyager\Models\Page;
+use App\Models\Service;
 
 class PageController extends Controller
 {
-    function index($slug)
+    function index($title)
     {
-        $page = Page::where('slug', $slug)->first();
-        if (view()->exists('sections.page.' . $slug))
-            return view('sections.page.' . $slug, compact('page'));
+        $section = Service::where('title', $title)
+            ->with('features')
+            ->first();
+
+        $title = str_replace('', '_', $section->title);
+        if (view()->exists('sections.page.' . $title))
+            return view('sections.page.' . $title, compact('section'));
         else
-            return view('sections.page.index', compact('page'));
+            return view('sections.page.index', compact('section'));
     }
 
 }

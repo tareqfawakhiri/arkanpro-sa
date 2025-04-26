@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Client;
 use App\Models\Partner;
 use App\Models\Quotation;
+use App\Models\Service;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -16,18 +17,12 @@ class HomeController extends Controller
         $clients = Client::orderByDesc('created_at')->get();
         $slider = Slider::where('status', 'published')->orderByDesc('created_at')->get();
         $isHome = true;
+        $service = Service::where('status', 'ACTIVE')
+            ->WHERE('add_to_home_page_banner', 'YES')
+            ->orderBy('created_at', 'desc')
+            ->first();
 
-
-        $types = [
-            'educational' => 'educational',
-            'professional' => 'professional',
-            'medical' => 'medical',
-            'tourism' => 'tourism',
-            'technology' => 'technology',
-            'contracting' => 'contracting',
-            'governmental' => 'governmental'
-        ];
-        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'types'));
+        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'service'));
     }
 
     public function aboutus()
@@ -42,7 +37,7 @@ class HomeController extends Controller
             'phone' => 'required',
             'type' => 'required'
         ]);
-        
+
         Quotation::create([
             'name' => $request->name,
             'phone' => $request->phone,

@@ -16,5 +16,8 @@ return [
     'call-emergency' => 'اتصل بخدمات',
     'address' => 'العنوان',
     'read-more' => 'اقرا المزيد',
-    'Blog Details' => 'Blog Details'
+    'Blog Details' => 'Blog Details',
+    'system-features' => 'System Features',
+    'elevating-businesses-with-it-ingenuity' => 'Elevating Businesses with IT Ingenuity',
+    'our-services' => 'Our Services'
 ];

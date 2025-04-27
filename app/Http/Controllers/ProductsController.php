@@ -2,15 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+
 class ProductsController extends Controller
 {
     function index()
     {
-        return view('sections.products');
+        $products = Product::where('status', 'ACTIVE')
+            ->orderBy('created_at', 'desc')
+            ->paginate(12);
+        return view('sections.products', compact('products'));
     }
 
-    function details()
+    function details($slug)
     {
-        return view('sections.product-details');
+        $product = Product::where('slug', $slug)
+            ->where('status', 'ACTIVE')
+            ->firstOrFail();
+        return view('sections.product-details', compact('product'));
     }
 }

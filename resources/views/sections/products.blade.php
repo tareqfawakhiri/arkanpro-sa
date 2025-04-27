@@ -12,18 +12,18 @@
         </div>
         <div class="container">
             <div class="page-heading">
-                <h1 class="wow fadeInUp" data-wow-delay=".3s">Products</h1>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">{{ trans('general.products') }}</h1>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
                         <a href="{{ route('home') }}">
-                            Home
+                        {{ trans('general.home') }}
                         </a>
                     </li>
                     <li>
                         <i class="fas fa-chevron-right"></i>
                     </li>
                     <li>
-                        Products
+                    {{ trans('general.products') }}
                     </li>
                 </ul>
             </div>
@@ -34,84 +34,22 @@
     <section class="project-section section-padding fix">
         <div class="container">
             <div class="row g-4">
+                @foreach($products as $product)
                 <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="project-items">
                         <div class="project-image">
-                            <img src="assets/img/project/01.jpg" alt="project-img">
+                            <img src="{{ Voyager::image($product->thumbnail('cropped')) }}" alt="project-img">
                             <div class="project-content style2">
-                                <p>Technology</p>
+                                <p>{{ $product->getTranslatedAttribute('excerpt') }}</p>
                                 <h4>
-                                    <a href="{{ route('product.details') }}">Platform Integration</a>
+                                    <a href="{{ route('product.details',$product->slug) }}">{{ $product->getTranslatedAttribute('title') }}</a>
                                 </h4>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="project-items">
-                        <div class="project-image">
-                            <img src="assets/img/project/02.jpg" alt="project-img">
-                            <div class="project-content style2">
-                                <p>Security</p>
-                                <h4>
-                                    <a href="{{ route('product.details') }}">Network Security</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                    <div class="project-items">
-                        <div class="project-image">
-                            <img src="assets/img/project/03.jpg" alt="project-img">
-                            <div class="project-content style2">
-                                <p>Solution</p>
-                                <h4>
-                                    <a href="{{ route('product.details') }}">Web Development</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="project-items">
-                        <div class="project-image">
-                            <img src="assets/img/project/04.jpg" alt="project-img">
-                            <div class="project-content style2">
-                                <p>Technology</p>
-                                <h4>
-                                    <a href="{{ route('product.details') }}">IT Management</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="project-items">
-                        <div class="project-image">
-                            <img src="assets/img/project/10.jpg" alt="project-img">
-                            <div class="project-content style2">
-                                <p>Technology</p>
-                                <h4>
-                                    <a href="{{ route('product.details') }}">Design Solutions</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                    <div class="project-items">
-                        <div class="project-image">
-                            <img src="assets/img/project/11.jpg" alt="project-img">
-                            <div class="project-content style2">
-                                <p>Technology</p>
-                                <h4>
-                                    <a href="{{ route('product.details') }}">Software Development</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </section>

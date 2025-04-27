@@ -73,7 +73,7 @@
                         <div class="widget footer-widget wow fadeInUp" data-wow-delay=".6s">
                             <div class="gt-widget-about">
                                 <div class="about-logo">
-                                    <a href="{{ route('home') }}"><img src="assets/img/logo-light.png" alt="extech"></a>
+                                    <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo-light.png') }}" alt="extech"></a>
                                 </div>
                                 <p class="about-text">
                                     {{ setting('site.description') }}
@@ -118,8 +118,6 @@
                                     <li><a href="/blog"><i
                                                 class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>Our
                                             Blogs</a></li>
-                                    <li><a href="/faq"><i
-                                                class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>FAQ’S</a>
                                     </li>
                                     <li><a href="/contact-us"><i
                                                 class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>{{ trans('general.contact-us') }}

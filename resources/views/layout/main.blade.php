@@ -88,14 +88,6 @@
 <script src="{{ asset('assets/js/main.js') }}"></script>
 <script>
     $(document).ready(function () {
-        // $('#phone').intlTelInput({
-        //     // utilsScript: '/vendor/intl-tel-input/lib/libphonenumber/build/utils.js',
-        //     autoPlaceholder: true,
-        //     preferredCountries: ['ksa','jo']
-        // });
-        //
-        // intlTelInput
-
         const iti = $("#phone").intlTelInput({
             utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
             autoPlaceholder: true,

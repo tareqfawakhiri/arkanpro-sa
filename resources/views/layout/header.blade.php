@@ -1,48 +1,48 @@
 @if(isset($isHome) && $isHome == true)
-<!-- Preloader Start -->
-<div id="preloader" class="preloader">
-    <div class="animation-preloader">
-        <div class="spinner">
-        </div>
-        <div class="txt-loading">
+    <!-- Preloader Start -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">
+            </div>
+            <div class="txt-loading">
             <span data-text-preloader="A" class="letters-loading">
                A
             </span>
-            <span data-text-preloader="R" class="letters-loading">
+                <span data-text-preloader="R" class="letters-loading">
                R
             </span>
-            <span data-text-preloader="K" class="letters-loading">
+                <span data-text-preloader="K" class="letters-loading">
                K
             </span>
-            <span data-text-preloader="A" class="letters-loading">
+                <span data-text-preloader="A" class="letters-loading">
                A
             </span>
-            <span data-text-preloader="N" class="letters-loading">
+                <span data-text-preloader="N" class="letters-loading">
                N
             </span>
-            <span data-text-preloader="PRO" class="letters-loading">
+                <span data-text-preloader="PRO" class="letters-loading">
                PRO
             </span>
+            </div>
+            <p class="text-center">{{ trans('general.loading') }}</p>
         </div>
-        <p class="text-center">{{ trans('general.loading') }}</p>
-    </div>
-    <div class="loader">
-        <div class="row">
-            <div class="col-3 loader-section section-{{ app()->currentLocale() == 'ar' ? 'right' : 'left' }}">
-                <div class="bg"></div>
-            </div>
-            <div class="col-3 loader-section section-{{ app()->currentLocale() == 'ar' ? 'right' : 'left' }}">
-                <div class="bg"></div>
-            </div>
-            <div class="col-3 loader-section section-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}">
-                <div class="bg"></div>
-            </div>
-            <div class="col-3 loader-section section-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}">
-                <div class="bg"></div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-{{ app()->currentLocale() == 'ar' ? 'right' : 'left' }}">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-{{ app()->currentLocale() == 'ar' ? 'right' : 'left' }}">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}">
+                    <div class="bg"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 @endif
 <!--<< Mouse Cursor Start >>-->
 <div class="mouse-cursor cursor-outer"></div>
@@ -148,7 +148,7 @@
                                             <a href="{{ route('home') }}">{{ trans('general.home') }}</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('services') }}">{{ trans('general.services') }}</a>
+                                            <a href="{{ route('service',['quroosh']) }}">{{ trans('general.quroosh') }}</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('products') }}">{{ trans('general.products') }}</a>

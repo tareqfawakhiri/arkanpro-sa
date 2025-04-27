@@ -94,9 +94,9 @@
                     </div>
                     <div class="arrow-btn text-end wow fadeInUp" data-wow-delay=".9s">
                         <button data-slider-prev="#serviceSliderOne" class="slider-arrow style1"><i
-                                class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
+                                    class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
                         <button data-slider-next="#serviceSliderOne" class="slider-arrow style1 slider-next"><i
-                                class="fa-regular fa-arrow-right-long"></i></button>
+                                    class="fa-regular fa-arrow-right-long"></i></button>
                     </div>
                 </div>
 
@@ -115,7 +115,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
+                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -129,7 +129,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
+                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
+                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
+                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -171,7 +171,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
+                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -185,7 +185,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
+                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -199,7 +199,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
+                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -213,7 +213,7 @@
                                             <p>Collaboratively formulate principle capital. Progressively evolve user
                                                 revolutionary hosting services.</p>
                                             <a href="service-details" class="link-btn style1">Read more <i
-                                                    class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
+                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -267,7 +267,7 @@
                                          style="position: absolute;">
                                         <clipPath id="aboutThumbdMask1">
                                             <path
-                                                d="M0 20C0 8.95431 8.9543 0 20 0H395.5C423.114 0 445.5 22.3858 445.5 50V72.5C445.5 100.114 467.886 122.5 495.5 122.5H520C547.614 122.5 570 144.886 570 172.5V321.5L562.197 537.223C561.808 547.98 552.975 556.5 542.21 556.5H20C8.95432 556.5 0 547.546 0 536.5V20Z"/>
+                                                    d="M0 20C0 8.95431 8.9543 0 20 0H395.5C423.114 0 445.5 22.3858 445.5 50V72.5C445.5 100.114 467.886 122.5 495.5 122.5H520C547.614 122.5 570 144.886 570 172.5V321.5L562.197 537.223C561.808 547.98 552.975 556.5 542.21 556.5H20C8.95432 556.5 0 547.546 0 536.5V20Z"/>
                                         </clipPath>
                                     </svg>
                                 </div>
@@ -277,9 +277,9 @@
                             <div class="about-content">
                                 <div class="section-title mxw-560">
                                     <div class="subtitle text-white wow fadeInUp" data-wow-delay=".3s"><img
-                                            src="assets/img/icon/arrowLeftWhite.svg" alt="icon">
+                                                src="assets/img/icon/arrowLeftWhite.svg" alt="icon">
                                         <span
-                                            class="text-white"> {{ trans('general.our-services') }}
+                                                class="text-white"> {{ trans('general.our-services') }}
                                         </span>
                                         <img src="assets/img/icon/arrowRightWhite.svg" alt="icon">
                                     </div>
@@ -399,7 +399,7 @@
                                         </div>
                                         <div class="col-xl-3">
                                             <div
-                                                class="project-content-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}">
+                                                    class="project-content-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}">
                                                 <img class="img-custom-anim-right wow fadeInUp" data-wow-delay=".6s"
                                                      src="assets/img/project/projectThumb1_2.png" alt="thumb">
                                             </div>
@@ -411,7 +411,7 @@
                                          style="position: absolute;">
                                         <clipPath id="projectContentdMask">
                                             <path
-                                                d="M0 16C0 7.16344 7.16344 0 16 0H746C754.837 0 762 7.16344 762 16V354C762 362.837 754.837 370 746 370H454.326C432.82 370 412.992 358.378 402.484 339.614L401.681 338.18C379.099 297.856 320.881 298.393 299.048 339.127C288.859 358.136 269.04 370 247.472 370H16C7.16344 370 0 362.837 0 354V16Z"/>
+                                                    d="M0 16C0 7.16344 7.16344 0 16 0H746C754.837 0 762 7.16344 762 16V354C762 362.837 754.837 370 746 370H454.326C432.82 370 412.992 358.378 402.484 339.614L401.681 338.18C379.099 297.856 320.881 298.393 299.048 339.127C288.859 358.136 269.04 370 247.472 370H16C7.16344 370 0 362.837 0 354V16Z"/>
                                         </clipPath>
                                     </svg>
                                 </div>
@@ -419,504 +419,6 @@
                                 <div class="shape"><a href="product-details"><img class="rotate360"
                                                                                   src="assets/img/shape/projectShape1_1.png"
                                                                                   alt="shape"></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Section    S T A R T -->
-    <div class="video-box-area wow fadeInUp" data-wow-delay="0.6s">
-        <div class="video-wrap style1 img-custom-anim-left wow fadeInUp" data-wow-delay=".6s">
-            <div class="container">
-                <div class="video-box fix background-image" data-bg-src="assets/img/video/videoThumb1_1.png">
-                    <a href="https://www.youtube.com/watch?v=f2Gzr8sAGB8" class="play-btn popup-video"><i
-                            class="fa-sharp fa-solid fa-play"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Work Process Section   S T A R T -->
-    <section class="work-process-section space bg-theme-color2 fix">
-        <div class="work-process-wrapper style1 space pb-0">
-            <div class="container">
-                <div class="row gy-5">
-                    <div class="col-xl-3">
-                        <div class="work-process-card style1 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="number">01</div>
-                            <h3 class="title">Requirement</h3>
-                            <p class="text">There are many variations of passages of Lorem Ipsum available, but the
-                                majority
-                                have suffered alteration.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-3">
-                        <div class="work-process-card style1 active wow fadeInUp" data-wow-delay=".4s">
-                            <div class="number">02</div>
-                            <h3 class="title">UI/UX Desing</h3>
-                            <p class="text">There are many variations of passages of Lorem Ipsum available, but the
-                                majority
-                                have suffered alteration.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-3">
-                        <div class="work-process-card style1 wow fadeInUp" data-wow-delay=".6s">
-                            <div class="number">03</div>
-                            <h3 class="title">Prototype</h3>
-                            <p class="text">There are many variations of passages of Lorem Ipsum available, but the
-                                majority
-                                have suffered alteration.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-3">
-                        <div class="work-process-card style1 wow fadeInUp" data-wow-delay=".8s">
-                            <div class="number">04</div>
-                            <h3 class="title">Development</h3>
-                            <p class="text">There are many variations of passages of Lorem Ipsum available, but the
-                                majority
-                                have suffered alteration.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section   S T A R T -->
-    <section class="pricing-section fix section-padding">
-        <div class="pricing-wrapper style1">
-            <div class="shape1 d-none d-xxl-block"><img src="assets/img/shape/pricingShape1_1.png" alt="shape"></div>
-            <div class="shape2 d-none d-xxl-block"><img src="assets/img/shape/pricingShape1_2.png" alt="shape"></div>
-            <div class="container">
-                <div class="section-title title-area  mx-auto mb-25">
-                    <div class="subtitle d-flex justify-content-center"><img src="assets/img/icon/arrowLeft.svg"
-                                                                             alt="icon">
-                        <span> Our Pricing
-                  </span><img src="assets/img/icon/arrowRight.svg" alt="icon">
-                    </div>
-                    <h2 class="title text-center">Our Awesome Pricing Plans</h2>
-
-                    <div class="tab-section d-flex justify-content-center align-items-center">
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-monthly-tab" data-bs-toggle="pill"
-                                        data-bs-target="#pills-monthly" type="button" role="tab"
-                                        aria-controls="pills-monthly"
-                                        aria-selected="true">Monthly
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-yearly-tab" data-bs-toggle="pill"
-                                        data-bs-target="#pills-yearly" type="button" role="tab"
-                                        aria-controls="pills-yearly"
-                                        aria-selected="false">Yearly
-                                </button>
-                            </li>
-                        </ul>
-                        <img src="assets/img/icon/pricingIcon1_2.svg" alt="icon">
-                        <span class="save">Save 25%</span>
-                    </div>
-                </div>
-                <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade active show" id="pills-monthly" role="tabpanel"
-                         aria-labelledby="pills-monthly-tab">
-                        <div class="row gy-5">
-                            <div class="col-xl-4 col-md-6">
-                                <div class="pricing-card style1">
-                                    <div class="pricing-card_header">
-                                        <div class="item">
-                                            <h4>Regular Plans</h4>
-                                            <div class="price">
-                                                <h2>$49</h2> <span>/ Month</span>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="assets/img/icon/pricingIcon1_1.svg" alt="icon">
-                                        </div>
-                                    </div>
-                                    <div class="pricing-card_body">
-                                        <div class="checklist-wrapper">
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> 100 GB SSD
-                                                    Storage
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Weekly
-                                                    Backups
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Unlimited
-                                                    Free SSL
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> 24/7 system
-                                                    Monitoring
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Free Domain
-                                                    ($9.99
-                                                    value)
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/crossIcon.svg" alt="icon"> Frame 164236
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/crossIcon.svg" alt="icon"> 20+ Payment
-                                                    Methods
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                        </div>
-                                        <div class="btn-wrapper">
-                                            <a href="pricing" class="gt-btn style2 w-100">Get Started Now <i
-                                                    class="fa-sharp fa-light fa-arrow-right-long"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="pricing-card style2">
-                                    <div class="pricing-card_header">
-                                        <div class="item">
-                                            <h4>Regular Plans</h4>
-                                            <div class="price">
-                                                <h2>$49</h2> <span>/ Month</span>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="assets/img/icon/pricingIcon1_1.svg" alt="icon">
-                                        </div>
-                                    </div>
-                                    <div class="pricing-card_body">
-                                        <div class="checklist-wrapper">
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> 100 GB SSD
-                                                    Storage
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Weekly
-                                                    Backups
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Unlimited
-                                                    Free SSL
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> 24/7 system
-                                                    Monitoring
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Free Domain
-                                                    ($9.99
-                                                    value)
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/crossIcon.svg" alt="icon"> Frame 164236
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/crossIcon.svg" alt="icon"> 20+ Payment
-                                                    Methods
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                        </div>
-                                        <div class="btn-wrapper">
-                                            <a href="pricing" class="gt-btn style3 w-100">Get Started Now <i
-                                                    class="fa-sharp fa-light fa-arrow-right-long"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="pricing-card style1">
-                                    <div class="pricing-card_header">
-                                        <div class="item">
-                                            <h4>Regular Plans</h4>
-                                            <div class="price">
-                                                <h2>$49</h2> <span>/ Month</span>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="assets/img/icon/pricingIcon1_1.svg" alt="icon">
-                                        </div>
-                                    </div>
-                                    <div class="pricing-card_body">
-                                        <div class="checklist-wrapper">
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> 100 GB SSD
-                                                    Storage
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Weekly
-                                                    Backups
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Unlimited
-                                                    Free SSL
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> 24/7 system
-                                                    Monitoring
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Free Domain
-                                                    ($9.99
-                                                    value)
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/crossIcon.svg" alt="icon"> Frame 164236
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/crossIcon.svg" alt="icon"> 20+ Payment
-                                                    Methods
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                        </div>
-                                        <div class="btn-wrapper">
-                                            <a href="pricing" class="gt-btn style2 w-100">Get Started Now <i
-                                                    class="fa-sharp fa-light fa-arrow-right-long"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-yearly" role="tabpanel" aria-labelledby="pills-yearly-tab">
-                        <div class="row gy-5">
-                            <div class="col-xl-4 col-md-6">
-                                <div class="pricing-card style1">
-                                    <div class="pricing-card_header">
-                                        <div class="item">
-                                            <h4>Regular Plans</h4>
-                                            <div class="price">
-                                                <h2>$49</h2> <span>/ Month</span>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="assets/img/icon/pricingIcon1_1.svg" alt="icon">
-                                        </div>
-                                    </div>
-                                    <div class="pricing-card_body">
-                                        <div class="checklist-wrapper">
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> 100 GB SSD
-                                                    Storage
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Weekly
-                                                    Backups
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Unlimited
-                                                    Free SSL
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> 24/7 system
-                                                    Monitoring
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Free Domain
-                                                    ($9.99
-                                                    value)
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/crossIcon.svg" alt="icon"> Frame 164236
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/crossIcon.svg" alt="icon"> 20+ Payment
-                                                    Methods
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                        </div>
-                                        <div class="btn-wrapper">
-                                            <a href="pricing" class="gt-btn style2 w-100">Get Started Now <i
-                                                    class="fa-sharp fa-light fa-arrow-right-long"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="pricing-card style2">
-                                    <div class="pricing-card_header">
-                                        <div class="item">
-                                            <h4>Regular Plans</h4>
-                                            <div class="price">
-                                                <h2>$49</h2> <span>/ Month</span>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="assets/img/icon/pricingIcon1_1.svg" alt="icon">
-                                        </div>
-                                    </div>
-                                    <div class="pricing-card_body">
-                                        <div class="checklist-wrapper">
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> 100 GB SSD
-                                                    Storage
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Weekly
-                                                    Backups
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Unlimited
-                                                    Free SSL
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> 24/7 system
-                                                    Monitoring
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Free Domain
-                                                    ($9.99
-                                                    value)
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/crossIcon.svg" alt="icon"> Frame 164236
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/crossIcon.svg" alt="icon"> 20+ Payment
-                                                    Methods
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                        </div>
-                                        <div class="btn-wrapper">
-                                            <a href="pricing" class="gt-btn style3 w-100">Get Started Now <i
-                                                    class="fa-sharp fa-light fa-arrow-right-long"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="pricing-card style1">
-                                    <div class="pricing-card_header">
-                                        <div class="item">
-                                            <h4>Regular Plans</h4>
-                                            <div class="price">
-                                                <h2>$49</h2> <span>/ Month</span>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="assets/img/icon/pricingIcon1_1.svg" alt="icon">
-                                        </div>
-                                    </div>
-                                    <div class="pricing-card_body">
-                                        <div class="checklist-wrapper">
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> 100 GB SSD
-                                                    Storage
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Weekly
-                                                    Backups
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Unlimited
-                                                    Free SSL
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> 24/7 system
-                                                    Monitoring
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/checkmarkIcon.svg" alt="icon"> Free Domain
-                                                    ($9.99
-                                                    value)
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/crossIcon.svg" alt="icon"> Frame 164236
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                            <ul class="checklist style1">
-                                                <li><img src="assets/img/icon/crossIcon.svg" alt="icon"> 20+ Payment
-                                                    Methods
-                                                </li>
-                                                <li><img src="assets/img/icon/questionIcon.svg" alt="icon"></li>
-                                            </ul>
-                                        </div>
-                                        <div class="btn-wrapper">
-                                            <a href="pricing" class="gt-btn style2 w-100">Get Started Now <i
-                                                    class="fa-sharp fa-light fa-arrow-right-long"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -933,21 +435,21 @@
                 <div class="row gy-5">
                     <div class="col-xl-3">
                         <div class="cta-thumb img-custom-anim-left wow fadeInUp" data-wow-delay=".4s">
-                            <img src="assets/img/cta/ctaThumb1_1.png" alt="thumb">
+                            <img src="{{ asset('assets/img/logo-light.png') }}" alt="thumb">
                         </div>
                     </div>
                     <div class="col-xl-6 d-flex align-items-center">
                         <div class="section-title">
                             <div class="subtitle"><img src="assets/img/icon/arrowLeftWhite.svg" alt="icon"> <span
-                                    class="text-white"> Contact US
+                                        class="text-white"> {{ trans('general.comtact-us') }}
                         </span><img src="assets/img/icon/arrowRightWhite.svg" alt="icon"></div>
                             <h2 class="title">24/7 Expert Hosting Support Our Customers Love</h2>
                         </div>
                     </div>
                     <div class="col-xl-3 d-flex align-items-center">
                         <div class="btn-wrapper">
-                            <a class="gt-btn style5" href="contact-us">Talk to a Specialist<i
-                                    class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
+                            <a class="gt-btn style5" href="{{ route('contact') }}">Talk to a Specialist
+                                <i class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
                         </div>
                     </div>
                 </div>
@@ -963,209 +465,44 @@
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
                         <div class="section-title title-area mb-50 mx-auto">
-                            <div class="subtitle d-flex justify-content-center"><img src="assets/img/icon/arrowLeft.svg"
-                                                                                     alt="icon"> <span> Testimonials
-                        </span><img src="assets/img/icon/arrowRight.svg" alt="icon"></div>
+                            <div class="subtitle d-flex justify-content-center">
+                                <img src="assets/img/icon/arrowLeft.svg" alt="icon">
+                                <span>{{ trans('general.testimonial') }}</span>
+                                <img src="assets/img/icon/arrowRight.svg" alt="icon">
+                            </div>
                             <h2 class="title text-center">Our Latest Client Feedback</h2>
                         </div>
                     </div>
                 </div>
                 <div class="slider-area">
                     <div class="swiper gt-slider testimonial-slider3" id="testimonialSlider3"
-                         data-slider-options='{"loop": true,"centeredSlides":true, "breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":1},"768":{"slidesPerView":1},"992":{"slidesPerView":2},"1200":{"slidesPerView":3}}}'>
+                         data-slider-options='{"loop": false,"centeredSlides":true, "breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":1},"768":{"slidesPerView":1},"992":{"slidesPerView":2},"1200":{"slidesPerView":3}}}'>
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="testimonial-card style3 img-custom-anim-left wow fadeInUp"
-                                     data-wow-delay=".4s">
-                                    <ul class="star-wrap">
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIconRegular.png" alt="icon"></li>
-                                    </ul>
-                                    <p class="text">"Extech has completely transformed our process. The user-friendly
-                                        interface and powerful features maintaining our website. Highly recommended for
-                                        all!"
-                                    </p>
-                                    <div class="profile-box">
-                                        <div class="testi-thumb">
-                                            <img src="assets/img/testimonial/testiThumb3_1.png" alt="thumb">
+                            @foreach($testimonials as $testimonial)
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card style3 img-custom-anim-left wow fadeInUp"
+                                         data-wow-delay=".4s">
+                                        <ul class="star-wrap"></ul>
+                                        <p class="text">{{ $testimonial->getTranslatedAttribute('description') }}</p>
+                                        <div class="profile-box">
+                                            <div class="testi-thumb">
+                                                <img src="assets/img/testimonial/testiThumb3_1.png" alt="thumb">
+                                            </div>
+                                            <div class="testi-content">
+                                                <h3 class="title">{{ $testimonial->getTranslatedAttribute('name') }}</h3>
+                                                <div class="designation">{{ $testimonial->getTranslatedAttribute('job') }}</div>
+                                            </div>
                                         </div>
-                                        <div class="testi-content">
-                                            <h3 class="title">Kristin Watson</h3>
-                                            <div class="designation">Web Designer</div>
+                                        <div class="quote">
+                                            <img class="darkQuote" src="assets/img/icon/quoteIconDark.png" alt="icon">
+                                            <img class="whiteQuote" src="assets/img/icon/quoteIconWhite.png" alt="icon">
                                         </div>
-                                    </div>
-                                    <div class="quote">
-                                        <img class="darkQuote" src="assets/img/icon/quoteIconDark.png" alt="icon">
-                                        <img class="whiteQuote" src="assets/img/icon/quoteIconWhite.png" alt="icon">
-                                    </div>
-                                    <div class="shape3_1"><img src="assets/img/shape/testimonialShape3_1.png"
-                                                               alt="shape">
+                                        <div class="shape3_1">
+                                            <img src="assets/img/shape/testimonialShape3_1.png" alt="shape">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-card style3 img-custom-anim-left wow fadeInUp"
-                                     data-wow-delay=".4s">
-                                    <ul class="star-wrap">
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIconRegular.png" alt="icon"></li>
-                                    </ul>
-                                    <p class="text">"I've been using Extech for several months now, and I'm extremely
-                                        impressed with the ease of customization it offers. The wide range of
-                                        templates."
-                                    </p>
-                                    <div class="profile-box">
-                                        <div class="testi-thumb">
-                                            <img src="assets/img/testimonial/testiThumb3_2.png" alt="thumb">
-                                        </div>
-                                        <div class="testi-content">
-                                            <h3 class="title">Theresa Webb</h3>
-                                            <div class="designation">Tech enthusiast</div>
-                                        </div>
-                                    </div>
-                                    <div class="quote">
-                                        <img class="darkQuote" src="assets/img/icon/quoteIconDark.png" alt="icon">
-                                        <img class="whiteQuote" src="assets/img/icon/quoteIconWhite.png" alt="icon">
-                                    </div>
-                                    <div class="shape3_1"><img src="assets/img/shape/testimonialShape3_1.png"
-                                                               alt="shape">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-card style3 img-custom-anim-left wow fadeInUp"
-                                     data-wow-delay=".4s">
-                                    <ul class="star-wrap">
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIconRegular.png" alt="icon"></li>
-                                    </ul>
-                                    <p class="text">"Extech offers exceptional value for money. The comprehensive suite
-                                        of tools and seamless integration with various plugins and services make it a
-                                        for all "
-                                    </p>
-                                    <div class="profile-box">
-                                        <div class="testi-thumb">
-                                            <img src="assets/img/testimonial/testiThumb3_3.png" alt="thumb">
-                                        </div>
-                                        <div class="testi-content">
-                                            <h3 class="title">Ronald Richards</h3>
-                                            <div class="designation">Web Enterprenuor</div>
-                                        </div>
-                                    </div>
-                                    <div class="quote">
-                                        <img class="darkQuote" src="assets/img/icon/quoteIconDark.png" alt="icon">
-                                        <img class="whiteQuote" src="assets/img/icon/quoteIconWhite.png" alt="icon">
-                                    </div>
-                                    <div class="shape3_1"><img src="assets/img/shape/testimonialShape3_1.png"
-                                                               alt="shape">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-card style3 img-custom-anim-left wow fadeInUp"
-                                     data-wow-delay=".4s">
-                                    <ul class="star-wrap">
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIconRegular.png" alt="icon"></li>
-                                    </ul>
-                                    <p class="text">"Extech has completely transformed our process. The user-friendly
-                                        interface and powerful features maintaining our website. Highly recommended for
-                                        all!"
-                                    </p>
-                                    <div class="profile-box">
-                                        <div class="testi-thumb">
-                                            <img src="assets/img/testimonial/testiThumb3_1.png" alt="thumb">
-                                        </div>
-                                        <div class="testi-content">
-                                            <h3 class="title">Kristin Watson</h3>
-                                            <div class="designation">Web Designer</div>
-                                        </div>
-                                    </div>
-                                    <div class="quote">
-                                        <img class="darkQuote" src="assets/img/icon/quoteIconDark.png" alt="icon">
-                                        <img class="whiteQuote" src="assets/img/icon/quoteIconWhite.png" alt="icon">
-                                    </div>
-                                    <div class="shape3_1"><img src="assets/img/shape/testimonialShape3_1.png"
-                                                               alt="shape">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-card style3 img-custom-anim-left wow fadeInUp"
-                                     data-wow-delay=".4s">
-                                    <ul class="star-wrap">
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIconRegular.png" alt="icon"></li>
-                                    </ul>
-                                    <p class="text">"I've been using Extech for several months now, and I'm extremely
-                                        impressed with the ease of customization it offers. The wide range of
-                                        templates."
-                                    </p>
-                                    <div class="profile-box">
-                                        <div class="testi-thumb">
-                                            <img src="assets/img/testimonial/testiThumb3_2.png" alt="thumb">
-                                        </div>
-                                        <div class="testi-content">
-                                            <h3 class="title">Theresa Webb</h3>
-                                            <div class="designation">Tech enthusiast</div>
-                                        </div>
-                                    </div>
-                                    <div class="quote">
-                                        <img class="darkQuote" src="assets/img/icon/quoteIconDark.png" alt="icon">
-                                        <img class="whiteQuote" src="assets/img/icon/quoteIconWhite.png" alt="icon">
-                                    </div>
-                                    <div class="shape3_1"><img src="assets/img/shape/testimonialShape3_1.png"
-                                                               alt="shape">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-card style3 img-custom-anim-left wow fadeInUp"
-                                     data-wow-delay=".4s">
-                                    <ul class="star-wrap">
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIcon2.png" alt="icon"></li>
-                                        <li><img src="assets/img/icon/starIconRegular.png" alt="icon"></li>
-                                    </ul>
-                                    <p class="text">"Extech offers exceptional value for money. The comprehensive suite
-                                        of tools and seamless integration with various plugins and services make it a
-                                        for all "
-                                    </p>
-                                    <div class="profile-box">
-                                        <div class="testi-thumb">
-                                            <img src="assets/img/testimonial/testiThumb3_3.png" alt="thumb">
-                                        </div>
-                                        <div class="testi-content">
-                                            <h3 class="title">Ronald Richards</h3>
-                                            <div class="designation">Web Enterprenuor</div>
-                                        </div>
-                                    </div>
-                                    <div class="quote">
-                                        <img class="darkQuote" src="assets/img/icon/quoteIconDark.png" alt="icon">
-                                        <img class="whiteQuote" src="assets/img/icon/quoteIconWhite.png" alt="icon">
-                                    </div>
-                                    <div class="shape3_1"><img src="assets/img/shape/testimonialShape3_1.png"
-                                                               alt="shape">
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         <div class="slider-pagination"></div>
                     </div>
@@ -1180,198 +517,51 @@
             <div class="container">
                 <div class="title-wrap mb-45">
                     <div class="section-title">
-                        <div class="subtitle"><img src="assets/img/icon/arrowLeft.svg" alt="icon"> <span> Blog & News
-                     </span><img src="assets/img/icon/arrowRight.svg" alt="icon"></div>
-                        <h2 class="title">Featured News And Insights</h2>
+                        <div class="subtitle">
+                            <img src="assets/img/icon/arrowLeft.svg" alt="icon">
+                            <span>{{ trans('general.blog') }}</span>
+                            <img src="assets/img/icon/arrowRight.svg" alt="icon">
+                        </div>
                     </div>
                     <div class="arrow-btn text-end wow fadeInUp" data-wow-delay=".9s">
                         <button data-slider-prev="#blogSliderOne" class="slider-arrow style1"><i
-                                class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
+                                    class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
                         <button data-slider-next="#blogSliderOne" class="slider-arrow style1 slider-next"><i
-                                class="fa-regular fa-arrow-right-long"></i></button>
+                                    class="fa-regular fa-arrow-right-long"></i></button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="slider-area blogSliderOne">
                         <div class="swiper gt-slider" id="blogSliderOne"
-                             data-slider-options='{"loop": true, "breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":1,"centeredSlides":true},"768":{"slidesPerView":2},"992":{"slidesPerView":2},"1200":{"slidesPerView":3}}}'>
+                             data-slider-options='{"loop": false, "breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":1,"centeredSlides":true},"768":{"slidesPerView":2},"992":{"slidesPerView":2},"1200":{"slidesPerView":3}}}'>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="blog-card style1 img-custom-anim-left wow fadeInUp"
-                                         data-wow-delay=".4s">
-                                        <div class="blog-card-thumb">
-                                            <img src="assets/img/blog/blogThumb1_1.jpg" alt="thumb">
-                                        </div>
-                                        <div class="blog-card-body">
-                                            <div class="blog-meta">
-                                                <div class="tag">Shared Hosting</div>
-                                                <div class="date">MARCH 24, 2024</div>
+                                @foreach($posts as $post)
+                                    <div class="swiper-slide">
+                                        <div class="blog-card style1 img-custom-anim-left wow fadeInUp"
+                                             data-wow-delay=".4s">
+                                            <div class="blog-card-thumb">
+                                                <img src="{{ Voyager::image($post->thumbnail('cropped')) }}"
+                                                     alt="thumb">
                                             </div>
-                                            <h3><a href="blog-details">Attentive was born in 2015 help sales
-                                                    teams</a></h3>
-                                            <div class="author-meta">
-                                                <div class="fancy-box style1">
-                                                    <div class="item"><img src="assets/img/blog/blogProfile1_1.png"
-                                                                           alt="thumb">
-                                                    </div>
-                                                    <div class="item">
-                                                        <h6>Admin</h6>
-                                                        <p>Co, Founder</p>
+                                            <div class="blog-card-body">
+                                                <div class="blog-meta">
+                                                    <div class="date">{!! $post->getDateTime !!}</div>
+                                                </div>
+                                                <h3>
+                                                    <a href="{{ route('blog.details',$post->slug) }}">{{ $post->getTranslatedAttribute('title') }}</a>
+                                                </h3>
+                                                <div class="author-meta">
+                                                    <div class="fancy-box style1">
+                                                        <div class="item">
+                                                            <h6>{{ $post->author->name ?? '' }}</h6>
+                                                            <p>{{ $post->category->name }}</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-
-                                                <a class="link-btn style1" href="blog-details"><i
-                                                        class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="blog-card style1 img-custom-anim-top wow fadeInUp" data-wow-delay=".6s">
-                                        <div class="blog-card-thumb">
-                                            <img src="assets/img/blog/blogThumb1_2.jpg" alt="thumb">
-                                        </div>
-                                        <div class="blog-card-body">
-                                            <div class="blog-meta">
-                                                <div class="tag"> Uncategorized</div>
-                                                <div class="date">MARCH 14, 2024</div>
-                                            </div>
-                                            <h3><a href="blog-details">Best and fastest data server ever</a></h3>
-                                            <div class="author-meta">
-                                                <div class="fancy-box style1">
-                                                    <div class="item"><img src="assets/img/blog/blogProfile1_2.png"
-                                                                           alt="thumb">
-                                                    </div>
-                                                    <div class="item">
-                                                        <h6>Admin</h6>
-                                                        <p>Co, Founder</p>
-                                                    </div>
-                                                </div>
-
-                                                <a class="link-btn style1" href="blog-details"><i
-                                                        class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="blog-card style1 img-custom-anim-left wow fadeInUp"
-                                         data-wow-delay=".8s">
-                                        <div class="blog-card-thumb">
-                                            <img src="assets/img/blog/blogThumb1_3.jpg" alt="thumb">
-                                        </div>
-                                        <div class="blog-card-body">
-                                            <div class="blog-meta">
-                                                <div class="tag">Technology</div>
-                                                <div class="date">MARCH 29, 2024</div>
-                                            </div>
-                                            <h3><a href="blog-details">Life won’t one beast air over above all</a>
-                                            </h3>
-                                            <div class="author-meta">
-                                                <div class="fancy-box style1">
-                                                    <div class="item"><img src="assets/img/blog/blogProfile1_3.png"
-                                                                           alt="thumb">
-                                                    </div>
-                                                    <div class="item">
-                                                        <h6>Admin</h6>
-                                                        <p>Co, Founder</p>
-                                                    </div>
-                                                </div>
-
-                                                <a class="link-btn style1" href="blog-details"><i
-                                                        class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="blog-card style1 img-custom-anim-left wow fadeInUp" data-wow-delay="1s">
-                                        <div class="blog-card-thumb">
-                                            <img src="assets/img/blog/blogThumb1_1.jpg" alt="thumb">
-                                        </div>
-                                        <div class="blog-card-body">
-                                            <div class="blog-meta">
-                                                <div class="tag">Shared Hosting</div>
-                                                <div class="date">MARCH 24, 2024</div>
-                                            </div>
-                                            <h3><a href="blog-details">Attentive was born in 2015 help sales
-                                                    teams</a></h3>
-                                            <div class="author-meta">
-                                                <div class="fancy-box style1">
-                                                    <div class="item"><img src="assets/img/blog/blogProfile1_1.png"
-                                                                           alt="thumb">
-                                                    </div>
-                                                    <div class="item">
-                                                        <h6>Admin</h6>
-                                                        <p>Co, Founder</p>
-                                                    </div>
-                                                </div>
-
-                                                <a class="link-btn style1" href="blog-details"><i
-                                                        class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="blog-card style1 img-custom-anim-left wow fadeInUp"
-                                         data-wow-delay=".4s">
-                                        <div class="blog-card-thumb">
-                                            <img src="assets/img/blog/blogThumb1_2.jpg" alt="thumb">
-                                        </div>
-                                        <div class="blog-card-body">
-                                            <div class="blog-meta">
-                                                <div class="tag"> Uncategorized</div>
-                                                <div class="date">MARCH 14, 2024</div>
-                                            </div>
-                                            <h3><a href="blog-details">Best and fastest data server ever</a></h3>
-                                            <div class="author-meta">
-                                                <div class="fancy-box style1">
-                                                    <div class="item"><img src="assets/img/blog/blogProfile1_2.png"
-                                                                           alt="thumb">
-                                                    </div>
-                                                    <div class="item">
-                                                        <h6>Admin</h6>
-                                                        <p>Co, Founder</p>
-                                                    </div>
-                                                </div>
-
-                                                <a class="link-btn style1" href="blog-details"><i
-                                                        class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="blog-card style1 img-custom-anim-left wow fadeInUp"
-                                         data-wow-delay=".8s">
-                                        <div class="blog-card-thumb">
-                                            <img src="assets/img/blog/blogThumb1_3.jpg" alt="thumb">
-                                        </div>
-                                        <div class="blog-card-body">
-                                            <div class="blog-meta">
-                                                <div class="tag">Technology</div>
-                                                <div class="date">MARCH 29, 2024</div>
-                                            </div>
-                                            <h3><a href="blog-details">Life won’t one beast air over above all</a>
-                                            </h3>
-                                            <div class="author-meta">
-                                                <div class="fancy-box style1">
-                                                    <div class="item"><img src="assets/img/blog/blogProfile1_3.png"
-                                                                           alt="thumb">
-                                                    </div>
-                                                    <div class="item">
-                                                        <h6>Admin</h6>
-                                                        <p>Co, Founder</p>
-                                                    </div>
-                                                </div>
-
-                                                <a class="link-btn style1" href="blog-details"><i
-                                                        class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>

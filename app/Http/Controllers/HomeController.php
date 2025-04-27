@@ -29,7 +29,12 @@ class HomeController extends Controller
             ->where('status', 'published')
             ->orderBy('created_at', 'desc')
             ->get();
-        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'service', 'testimonials', 'posts'));
+
+        $services = Service::where('title', '<>', 'quroosh')
+            ->with('features')
+            ->first();
+
+        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'service', 'testimonials', 'posts', 'services'));
     }
 
     public function aboutus()

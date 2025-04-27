@@ -100,127 +100,39 @@
                     </div>
                 </div>
 
+
                 <div class="row">
                     <div class="slider-area serviceSliderOne">
                         <div class="swiper gt-slider" id="serviceSliderOne"
-                             data-slider-options='{"loop": true, "breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":2,"centeredSlides":true},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}}'>
+                             data-slider-options='{"loop": false, "breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":2,"centeredSlides":true},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}}'>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="service-card style1">
-                                        <div class="icon">
-                                            <img src="assets/img/icon/serviceIcon1_1.svg" alt="icon">
-                                        </div>
-                                        <div class="body">
-                                            <h3><a href="service-details">Data Guard Sentinel</a></h3>
-                                            <p>Collaboratively formulate principle capital. Progressively evolve user
-                                                revolutionary hosting services.</p>
-                                            <a href="service-details" class="link-btn style1">Read more <i
-                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="service-card style1">
-                                        <div class="icon">
-                                            <img src="assets/img/icon/serviceIcon1_2.svg" alt="icon">
-                                        </div>
-                                        <div class="body">
-                                            <h3><a href="service-details">Woo Commerce</a></h3>
-                                            <p>Collaboratively formulate principle capital. Progressively evolve user
-                                                revolutionary hosting services.</p>
-                                            <a href="service-details" class="link-btn style1">Read more <i
-                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
+                                @foreach($services->features as $ky => $feature)
+                                    <div class="swiper-slide">
+                                        <div class="service-card style1">
+                                            <div class="icon">
+                                                <img src="{{ Voyager::image($feature->icon) }}"
+                                                     alt="icon">
+                                            </div>
+                                            <div class="body">
+                                                @php
+                                                    $link = $feature->external_link != '' ? $feature->external_link : '#';
+                                                @endphp
+                                                <h3>
+                                                    <a href="{{ $link }}">{{ $feature->getTranslatedAttribute('title') }}</a>
+                                                </h3>
+                                                <p>{{ $feature->getTranslatedAttribute('description') }}</p>
+                                                <a href="{{ $link }}" class="link-btn style1">
+                                                    {{ trans('general.read-more') }} <i class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="service-card style1">
-                                        <div class="icon">
-                                            <img src="assets/img/icon/serviceIcon1_3.svg" alt="icon">
-                                        </div>
-                                        <div class="body">
-                                            <h3><a href="service-details">CRM Solutions</a></h3>
-                                            <p>Collaboratively formulate principle capital. Progressively evolve user
-                                                revolutionary hosting services.</p>
-                                            <a href="service-details" class="link-btn style1">Read more <i
-                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="service-card style1">
-                                        <div class="icon">
-                                            <img src="assets/img/icon/serviceIcon1_4.svg" alt="icon">
-                                        </div>
-                                        <div class="body">
-                                            <h3><a href="service-details">Web Design</a></h3>
-                                            <p>Collaboratively formulate principle capital. Progressively evolve user
-                                                revolutionary hosting services.</p>
-                                            <a href="service-details" class="link-btn style1">Read more <i
-                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="service-card style1">
-                                        <div class="icon">
-                                            <img src="assets/img/icon/serviceIcon1_1.svg" alt="icon">
-                                        </div>
-                                        <div class="body">
-                                            <h3><a href="service-details">Data Guard Sentinel</a></h3>
-                                            <p>Collaboratively formulate principle capital. Progressively evolve user
-                                                revolutionary hosting services.</p>
-                                            <a href="service-details" class="link-btn style1">Read more <i
-                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="service-card style1">
-                                        <div class="icon">
-                                            <img src="assets/img/icon/serviceIcon1_2.svg" alt="icon">
-                                        </div>
-                                        <div class="body">
-                                            <h3><a href="service-details">Woo Commerce</a></h3>
-                                            <p>Collaboratively formulate principle capital. Progressively evolve user
-                                                revolutionary hosting services.</p>
-                                            <a href="service-details" class="link-btn style1">Read more <i
-                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="service-card style1">
-                                        <div class="icon">
-                                            <img src="assets/img/icon/serviceIcon1_1.svg" alt="icon">
-                                        </div>
-                                        <div class="body">
-                                            <h3><a href="service-details">Data Guard Sentinel</a></h3>
-                                            <p>Collaboratively formulate principle capital. Progressively evolve user
-                                                revolutionary hosting services.</p>
-                                            <a href="service-details" class="link-btn style1">Read more <i
-                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="service-card style1">
-                                        <div class="icon">
-                                            <img src="assets/img/icon/serviceIcon1_2.svg" alt="icon">
-                                        </div>
-                                        <div class="body">
-                                            <h3><a href="service-details">Woo Commerce</a></h3>
-                                            <p>Collaboratively formulate principle capital. Progressively evolve user
-                                                revolutionary hosting services.</p>
-                                            <a href="service-details" class="link-btn style1">Read more <i
-                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>

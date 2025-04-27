@@ -18,5 +18,6 @@ return [
     'Blog Details' => 'Blog Details',
     'system-features' => 'System Features',
     'elevating-businesses-with-it-ingenuity' => 'Elevating Businesses with IT Ingenuity',
-    'our-services' => 'Our Services'
+    'our-services' => 'Our Services',
+    'quroosh' => 'Quroosh'
 ];

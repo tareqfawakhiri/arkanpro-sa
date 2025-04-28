@@ -94,9 +94,9 @@
                     </div>
                     <div class="arrow-btn text-end wow fadeInUp" data-wow-delay=".9s">
                         <button data-slider-prev="#serviceSliderOne" class="slider-arrow style1"><i
-                                    class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
+                                class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
                         <button data-slider-next="#serviceSliderOne" class="slider-arrow style1 slider-next"><i
-                                    class="fa-regular fa-arrow-right-long"></i></button>
+                                class="fa-regular fa-arrow-right-long"></i></button>
                     </div>
                 </div>
 
@@ -122,7 +122,8 @@
                                                 </h3>
                                                 <p>{{ $feature->getTranslatedAttribute('description') }}</p>
                                                 <a href="{{ $link }}" class="link-btn style1">
-                                                    {{ trans('general.read-more') }} <i class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i>
+                                                    {{ trans('general.read-more') }} <i
+                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -179,7 +180,7 @@
                                          style="position: absolute;">
                                         <clipPath id="aboutThumbdMask1">
                                             <path
-                                                    d="M0 20C0 8.95431 8.9543 0 20 0H395.5C423.114 0 445.5 22.3858 445.5 50V72.5C445.5 100.114 467.886 122.5 495.5 122.5H520C547.614 122.5 570 144.886 570 172.5V321.5L562.197 537.223C561.808 547.98 552.975 556.5 542.21 556.5H20C8.95432 556.5 0 547.546 0 536.5V20Z"/>
+                                                d="M0 20C0 8.95431 8.9543 0 20 0H395.5C423.114 0 445.5 22.3858 445.5 50V72.5C445.5 100.114 467.886 122.5 495.5 122.5H520C547.614 122.5 570 144.886 570 172.5V321.5L562.197 537.223C561.808 547.98 552.975 556.5 542.21 556.5H20C8.95432 556.5 0 547.546 0 536.5V20Z"/>
                                         </clipPath>
                                     </svg>
                                 </div>
@@ -189,9 +190,9 @@
                             <div class="about-content">
                                 <div class="section-title mxw-560">
                                     <div class="subtitle text-white wow fadeInUp" data-wow-delay=".3s"><img
-                                                src="assets/img/icon/arrowLeftWhite.svg" alt="icon">
+                                            src="assets/img/icon/arrowLeftWhite.svg" alt="icon">
                                         <span
-                                                class="text-white"> {{ trans('general.our-services') }}
+                                            class="text-white"> {{ trans('general.our-services') }}
                                         </span>
                                         <img src="assets/img/icon/arrowRightWhite.svg" alt="icon">
                                     </div>
@@ -210,135 +211,66 @@
         </section>
     @endif
 
-    <!-- Project Section    S T A R T -->
-    <section class="project-section space fix">
-        <div class="project-container-wrapper style1">
-            <div class="container">
-                <div class="section-title title-area  mx-auto mb-10">
-                    <div class="subtitle d-flex justify-content-center"><img src="assets/img/icon/arrowLeft.svg"
-                                                                             alt="icon">
-                        <span>Examples of our work
-                  </span><img src="assets/img/icon/arrowRight.svg" alt="icon">
+    @if($portfolios)
+        <!-- Project Section    S T A R T -->
+        <section class="project-section space fix">
+            <div class="project-container-wrapper style1">
+                <div class="container">
+                    <div class="section-title title-area  mx-auto mb-10">
+                        <h2 class="title text-center">Check Our Latest Portfolios</h2>
                     </div>
-                    <h2 class="title text-center">Check Our Latest Portfolios</h2>
-                </div>
-                <div class="project-item-wrapper style1">
-                    <div class="project-item-card style1 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="project-icon">
-                            <img src="assets/img/icon/projectItemIcon1_1.svg" alt="icon">
-                        </div>
-                        <h5>Data Analysis</h5>
+                    @php
+                    $count = 0;
+                    @endphp
+                    <div class="project-item-wrapper style1">
+                        @foreach($portfolios as $portfolio)
+                            <a class="project-item-card style1 {{ $count++ == 0 ? 'active' : '' }}"
+                               href="#portfolio-{{ $portfolio->id }}">
+                                <div class="project-icon">
+                                    <img src="{{ Voyager::image($portfolio->icon) }}"
+                                         alt="{{ $portfolio->getTranslatedAttribute('sub_title') }}">
+                                </div>
+                                <h5>{{ $portfolio->getTranslatedAttribute('sub_title') }}</h5>
+                            </a>
+                        @endforeach
                     </div>
-                    <div class="project-item-card style1 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="project-icon">
-                            <img src="assets/img/icon/projectItemIcon1_2.svg" alt="icon">
-                        </div>
-                        <h5>UI/UX Designing</h5>
-                    </div>
-                    <div class="project-item-card style1 active wow fadeInUp" data-wow-delay=".6s">
-                        <div class="project-icon">
-                            <img src="assets/img/icon/projectItemIcon1_3.svg" alt="icon">
-                        </div>
-                        <h5>App Development</h5>
-                    </div>
-                    <div class="project-item-card style1 wow fadeInUp" data-wow-delay=".8s">
-                        <div class="project-icon">
-                            <img src="assets/img/icon/projectItemIcon1_4.svg" alt="icon">
-                        </div>
-                        <h5>Wp Development</h5>
-                    </div>
-                    <div class="project-item-card style1 wow fadeInUp" data-wow-delay="1s">
-                        <div class="project-icon">
-                            <img src="assets/img/icon/projectItemIcon1_5.svg" alt="icon">
-                        </div>
-                        <h5>3D Design Solution</h5>
-                    </div>
-                </div>
-                <div class="project-wrapper style1">
-                    <div class="row gy-5 gx-60">
-                        <div class="col-xl-5">
-                            <div class="project-thumb img-custom-anim-left wow fadeInUp" data-wow-delay=".5s">
-                                <img src="assets/img/project/projectThumb1_1.png" alt="thumb">
-                            </div>
-                        </div>
-                        <div class="col-xl-7">
-                            <div class="project-content-wrapper style1">
-                                <div class="project-content style1">
-                                    <div class="row">
-                                        <div class="col-xl-9">
-                                            <div class="project-content-left">
-                                                <h3>Detailing of our Project</h3>
-                                                <p class="text">There are many variations passages of Lorem Ipsum
-                                                    available but the
-                                                    majority
-                                                    have suffered alteration in some form by injected humour,</p>
-                                                <div class="fancy-box-wrapper style3">
-                                                    <div class="fancy-box style3">
-                                                        <div class="item">
-                                                            <div class="icon">
-                                                                <img src="assets/img/icon/projectIcon1_1.svg"
-                                                                     alt="icon">
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <h6>Responsive website</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fancy-box style3">
-                                                        <div class="item">
-                                                            <div class="icon">
-                                                                <img src="assets/img/icon/projectIcon1_2.svg"
-                                                                     alt="icon">
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <h6>100% Customers Satisfaction</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
 
-                                                <div class="fancy-box style3">
-                                                    <div class="item">
-                                                        <div class="icon">
-                                                            <img src="assets/img/icon/projectIcon1_3.svg" alt="icon">
-                                                        </div>
-                                                    </div>
-                                                    <div class="item">
-                                                        <h6>Big Data & Analytics</h6>
+                    @php
+                        $count = 0;
+                    @endphp
+
+                    <div class="project-wrapper style1">
+                        @foreach($portfolios as $portfolio)
+                            <div class="row gy-5 gx-60" id="portfolio-{{ $portfolio->id }}" style="{{ $count++ == 0 ? 'display: flex' : 'display: none' }}">
+                                <div class="col-xl-5">
+                                    <div class="project-thumb img-custom-anim-left">
+                                        <img src="{{ Voyager::image($portfolio->icon) }}"
+                                             alt="{{ $portfolio->getTranslatedAttribute('sub_title') }}">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7">
+                                    <div class="project-content-wrapper style1">
+                                        <div class="project-content style1">
+                                            <div class="row">
+                                                <div class="col-xl-9">
+                                                    <div class="project-content-left">
+                                                        <h3>{{ $portfolio->getTranslatedAttribute('title') }}</h3>
+                                                        <p class="text">{!! $portfolio->getTranslatedAttribute('description') !!}</p>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <div
-                                                    class="project-content-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}">
-                                                <img class="img-custom-anim-right wow fadeInUp" data-wow-delay=".6s"
-                                                     src="assets/img/project/projectThumb1_2.png" alt="thumb">
+                                                <div class="col-xl-3">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- SVG Mask -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"
-                                         style="position: absolute;">
-                                        <clipPath id="projectContentdMask">
-                                            <path
-                                                    d="M0 16C0 7.16344 7.16344 0 16 0H746C754.837 0 762 7.16344 762 16V354C762 362.837 754.837 370 746 370H454.326C432.82 370 412.992 358.378 402.484 339.614L401.681 338.18C379.099 297.856 320.881 298.393 299.048 339.127C288.859 358.136 269.04 370 247.472 370H16C7.16344 370 0 362.837 0 354V16Z"/>
-                                        </clipPath>
-                                    </svg>
                                 </div>
-
-                                <div class="shape"><a href="product-details"><img class="rotate360"
-                                                                                  src="assets/img/shape/projectShape1_1.png"
-                                                                                  alt="shape"></a></div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    @endif
     <!-- Cta Section   S T A R T -->
     <section class="cta-section space pb-0">
         <div class="container">
@@ -353,7 +285,7 @@
                     <div class="col-xl-6 d-flex align-items-center">
                         <div class="section-title">
                             <div class="subtitle"><img src="assets/img/icon/arrowLeftWhite.svg" alt="icon"> <span
-                                        class="text-white"> {{ trans('general.comtact-us') }}
+                                    class="text-white"> {{ trans('general.contact-us') }}
                         </span><img src="assets/img/icon/arrowRightWhite.svg" alt="icon"></div>
                             <h2 class="title">24/7 Expert Hosting Support Our Customers Love</h2>
                         </div>
@@ -402,7 +334,8 @@
                                             </div>
                                             <div class="testi-content">
                                                 <h3 class="title">{{ $testimonial->getTranslatedAttribute('name') }}</h3>
-                                                <div class="designation">{{ $testimonial->getTranslatedAttribute('job') }}</div>
+                                                <div
+                                                    class="designation">{{ $testimonial->getTranslatedAttribute('job') }}</div>
                                             </div>
                                         </div>
                                         <div class="quote">
@@ -437,9 +370,9 @@
                     </div>
                     <div class="arrow-btn text-end wow fadeInUp" data-wow-delay=".9s">
                         <button data-slider-prev="#blogSliderOne" class="slider-arrow style1"><i
-                                    class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
+                                class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
                         <button data-slider-next="#blogSliderOne" class="slider-arrow style1 slider-next"><i
-                                    class="fa-regular fa-arrow-right-long"></i></button>
+                                class="fa-regular fa-arrow-right-long"></i></button>
                     </div>
                 </div>
                 <div class="row">

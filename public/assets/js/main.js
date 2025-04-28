@@ -54,7 +54,8 @@ Js TABLE OF CONTENTS
         //>> Body Overlay Js Start <<//
         $(".body-overlay").on("click", function () {
             $(".offcanvas__area").removeClass("offcanvas-opened");
-            $(".df-search-area").removeClass("opened");;
+            $(".df-search-area").removeClass("opened");
+            ;
             $(".body-overlay").removeClass("opened");
         });
 
@@ -111,10 +112,9 @@ Js TABLE OF CONTENTS
             });
             init.on("slideChange", animated);
         }
+
         animated_swiper(sliderActive2, sliderInit2);
         //>> Banner Animation <<//
-
-
 
 
         //>> Magnific Popup <<//
@@ -129,7 +129,6 @@ Js TABLE OF CONTENTS
         });
 
 
-
         /* magnificPopup video view */
         $(".popup-video").magnificPopup({
             type: "iframe",
@@ -138,13 +137,11 @@ Js TABLE OF CONTENTS
         });
 
 
-
         /* magnificPopup video view */
         $(".popup-content").magnificPopup({
             type: "inline",
             midClick: true,
         });
-
 
 
         //>> Video Popup Start <<//
@@ -156,7 +153,6 @@ Js TABLE OF CONTENTS
         });
 
 
-
         //>> Counter Up  <<//
         $(".counter-number").counterUp({
             delay: 10,
@@ -164,15 +160,12 @@ Js TABLE OF CONTENTS
         });
 
 
-
         //>> Wow Animation Start <<//
         new WOW().init();
 
 
-
         //>> Nice Select Start <<//
         $('select').niceSelect();
-
 
 
         //>> Brand Slider Start <<//
@@ -234,7 +227,6 @@ Js TABLE OF CONTENTS
         });
 
 
-
         //>> Service Slider Start <<//
         const serviceSlider2 = new Swiper(".service-slider-2", {
             spaceBetween: 30,
@@ -267,7 +259,6 @@ Js TABLE OF CONTENTS
                 },
             },
         });
-
 
 
         //>> Project Slider Start <<//
@@ -345,7 +336,6 @@ Js TABLE OF CONTENTS
         });
 
 
-
         //>> Testimonial Slider Start <<//
 
         const testimonialSlider2 = new Swiper(".testimonial-slider-2", {
@@ -378,7 +368,6 @@ Js TABLE OF CONTENTS
             },
 
         });
-
 
 
         //>> News Slider Start <<//
@@ -416,7 +405,6 @@ Js TABLE OF CONTENTS
         });
 
 
-
         //>> Team Slider Start <<//
         const teamSlider = new Swiper(".team-slider", {
             spaceBetween: 30,
@@ -451,7 +439,6 @@ Js TABLE OF CONTENTS
         });
 
 
-
         //>> Team Hover Image Show Slider Start <<//
         const teamItems = document.querySelectorAll(".team-items");
 
@@ -476,13 +463,13 @@ Js TABLE OF CONTENTS
 
         $(".search-trigger").on("click", function (e) {
             e.preventDefault();
-            $searchWrap.animate({ opacity: "toggle" }, 500);
+            $searchWrap.animate({opacity: "toggle"}, 500);
             $navSearch.add($searchClose).addClass("open");
         });
 
         $(".search-close").on("click", function (e) {
             e.preventDefault();
-            $searchWrap.animate({ opacity: "toggle" }, 500);
+            $searchWrap.animate({opacity: "toggle"}, 500);
             $navSearch.add($searchClose).removeClass("open");
         });
 
@@ -509,8 +496,8 @@ Js TABLE OF CONTENTS
                     o = !1;
                 (window.onmousemove = function (s) {
                     o ||
-                        (t.style.transform =
-                            "translate(" + s.clientX + "px, " + s.clientY + "px)"),
+                    (t.style.transform =
+                        "translate(" + s.clientX + "px, " + s.clientY + "px)"),
                         (e.style.transform =
                             "translate(" + s.clientX + "px, " + s.clientY + "px)"),
                         (n = s.clientY),
@@ -521,17 +508,17 @@ Js TABLE OF CONTENTS
                     }),
                     $("body").on("mouseleave", "a, .cursor-pointer", function () {
                         ($(this).is("a") && $(this).closest(".cursor-pointer").length) ||
-                            (e.classList.remove("cursor-hover"),
-                                t.classList.remove("cursor-hover"));
+                        (e.classList.remove("cursor-hover"),
+                            t.classList.remove("cursor-hover"));
                     }),
                     (e.style.visibility = "visible"),
                     (t.style.visibility = "visible");
             }
         }
+
         $(function () {
             mousecursor();
         });
-
 
 
         //>> Set Background Image  & Mask<<//
@@ -553,7 +540,8 @@ Js TABLE OF CONTENTS
                 $(this).addClass('bg-mask');
                 $(this).removeAttr('data-mask-src');
             });
-        };
+        }
+        ;
 
 
         //>> Global Slider<<//
@@ -581,7 +569,7 @@ Js TABLE OF CONTENTS
                 speed: settings['speed'] ? settings['speed'] : 1000,
                 initialSlide: settings['initialSlide'] ? settings['initialSlide'] : 0,  // Default to 0 if not set
                 centeredSlides: settings['centeredSlides'] == true ? true : false,
-                autoplay: autoplayconditon ? autoplayconditon : { delay: 6000, disableOnInteraction: false },
+                autoplay: autoplayconditon ? autoplayconditon : {delay: 6000, disableOnInteraction: false},
                 navigation: {
                     nextEl: nextArrow.get(0),
                     prevEl: prevArrow.get(0),
@@ -637,6 +625,7 @@ Js TABLE OF CONTENTS
                 $(this).css('animation-delay', delayTime);
             });
         }
+
         animationProperties();
 
         // Add click event handlers for external slider arrows based on data attributes
@@ -669,7 +658,7 @@ Js TABLE OF CONTENTS
                     'animation': 'animate-positive 1.8s forwards',
                     'opacity': '1'
                 });
-            }, { offset: '75%' });
+            }, {offset: '75%'});
         });
 
 
@@ -680,7 +669,6 @@ Js TABLE OF CONTENTS
         checkbox.on('change', function () {
             submitButton.prop('disabled', !this.checked);
         });
-
 
 
     }); // End Document Ready Function
@@ -695,6 +683,22 @@ Js TABLE OF CONTENTS
 
     loader();
 
+    $('.project-item-card').on('click', function (e) {
+        e.preventDefault();
+
+        // Hide all project details
+        $('.project-wrapper > .row').hide();
+
+        // Get the target portfolio ID from the href attribute
+        var target = $(this).attr('href');
+
+        // Show the selected project details
+        $(target).fadeIn(400);
+
+        // Optionally: Add an active class to the selected tab
+        $('.project-item-card').removeClass('active');
+        $(this).addClass('active');
+    });
 
 })(jQuery); // End jQuery
 

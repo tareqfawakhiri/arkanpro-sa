@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Models\Partner;
+use App\Models\Portfolio;
 use App\Models\Post;
 use App\Models\Quotation;
 use App\Models\Service;
@@ -34,7 +35,9 @@ class HomeController extends Controller
             ->with('features')
             ->first();
 
-        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'service', 'testimonials', 'posts', 'services'));
+        $portfolios = Portfolio::orderBy('created_at', 'desc')
+            ->get();
+        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'service', 'testimonials', 'posts', 'services', 'portfolios'));
     }
 
     public function aboutus()

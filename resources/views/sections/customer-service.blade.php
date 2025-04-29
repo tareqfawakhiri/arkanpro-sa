@@ -2,27 +2,27 @@
 @section('title', trans('general.customer-service'))
 @section('content')
     <!--<< Breadcrumb Section Start >>-->
-    <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb.jpg');">
+    <div class="breadcrumb-wrapper bg-cover">
         <div class="border-shape">
-            <img src="assets/img/element.png" alt="shape-img">
+            <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>
         <div class="line-shape">
-            <img src="assets/img/line-element.png" alt="shape-img">
+            <img src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
         </div>
         <div class="container">
             <div class="page-heading">
-                <h1 class="wow fadeInUp" data-wow-delay=".3s">Customer Service</h1>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">{{ trans('general.customer-service') }}</h1>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
                         <a href="{{ route('home') }}">
-                            Home
+                            {{ trans('general.home') }}
                         </a>
                     </li>
                     <li>
-                        <i class="fas fa-chevron-right"></i>
+                        <i class="fas fa-chevron-{{ app()->getLocale() =='ar' ? 'left' : 'right' }}"></i>
                     </li>
                     <li>
-                        Customer Service
+                        {{ trans('general.customer-service') }}
                     </li>
                 </ul>
             </div>
@@ -34,29 +34,31 @@
         <div class="container">
             <div class="contact-wrapper">
                 <div class="arrow-shape">
-                    <img src="assets/img/arrow-shape.png" alt="shape-img">
+                    <img src="{{ asset('assets/img/arrow-shape.png') }}" alt="shape-img">
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="contact-image wow fadeInUp" data-wow-delay=".4s">
-                            <img src="assets/img/contact.png" alt="contact-img">
+                            <img src="{{ asset('assets/img/contact.png') }}" alt="contact-img">
                             <div class="cricle-shape">
-                                <img src="assets/img/circle-shape.png" alt="shape-img">
+                                <img src="{{ asset('assets/img/circle-shape.png') }}" alt="shape-img">
                             </div>
                             <div class="small-cricle-shape">
-                                <img src="assets/img/choose/circle.png" alt="shape-img">
+                                <img src="{{ asset('assets/img/choose/circle.png') }}" alt="shape-img">
                             </div>
                             <div class="frame-shape">
-                                <img src="assets/img/frame.png" alt="img">
+                                <img src="{{ asset('assets/img/frame.png') }}" alt="img">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="contact-content">
                             <div class="section-title mb-40 mxw-650">
-                                <div class="subtitle"><img src="assets/img/icon/arrowLeftWhite.svg" alt="icon"> <span
+                                <div class="subtitle"><img src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}"
+                                                           alt="icon"> <span
                                         class="text-white"> TALK TO US
-                                    </span><img src="assets/img/icon/arrowRightWhite.svg" alt="icon"></div>
+                                    </span><img src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon">
+                                </div>
                                 <h2 class="title text-white"> How May We Help You! </h2>
                             </div>
 

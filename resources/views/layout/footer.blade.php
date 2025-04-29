@@ -1,6 +1,6 @@
 <!-- Footer Area   S T A R T -->
 <footer class="footer-area">
-    <div class="widget-area style1  pt-100 pb-80">
+    <div class="widget-area style1 pt-100 pb-80">
         <div class="container">
             <div class="contact-info-area">
                 <div class="contact-info-items wow fadeInUp" data-wow-delay=".7s">
@@ -69,7 +69,7 @@
         <div class="container">
             <div class="footer-layout style1">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6 col-12">
+                    <div class="col-xl-6 col-md-6 col-12">
                         <div class="widget footer-widget wow fadeInUp" data-wow-delay=".6s">
                             <div class="gt-widget-about">
                                 <div class="about-logo">
@@ -104,7 +104,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-md-6 col-12">
+                    <div class="col-xl-3 col-md-6 col-12">
                         <div class="widget widget_nav_menu footer-widget wow fadeInUp" data-wow-delay="1s">
                             <h3 class="widget_title">Quick Links</h3>
                             <div class="menu-all-pages-container">
@@ -124,45 +124,6 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-12">
-                        <div class="widget footer-widget wow fadeInUp" data-wow-delay="1.3s">
-                            <h3 class="widget_title">Recent Posts</h3>
-                            <div class="recent-post-wrap">
-                                <div class="recent-post">
-                                    <div class="media-img">
-                                        <a href="news-details.html"><img src="assets/img/footer/footerThumb1_1.png"
-                                                                         alt="thumb"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="recent-post-meta">
-                                            <a href="news-details.html"><img src="assets/img/icon/calendarIcon.svg"
-                                                                             alt="icon">15th April, 2024</a>
-                                        </div>
-                                        <h4 class="post-title"><a class="text-inherit" href="news-details.html">Top 5
-                                                Most
-                                                Famous Technology Trend In 2024</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="recent-post">
-                                    <div class="media-img">
-                                        <a href="news-details.html"><img src="assets/img/footer/footerThumb1_2.png"
-                                                                         alt="thumb"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="recent-post-meta">
-                                            <a href="news-details.html"><img src="assets/img/icon/calendarIcon.svg"
-                                                                             alt="icon">20th June, 2024</a>
-                                        </div>
-                                        <h4 class="post-title"><a class="text-inherit" href="news-details.html">The
-                                                Surfing
-                                                Man Will Blow Your Mind</a>
-                                        </h4>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

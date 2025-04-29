@@ -10,6 +10,8 @@ use App\Models\Quotation;
 use App\Models\Service;
 use App\Models\Slider;
 use App\Models\Testimonial;
+use App\Models\Pricing;
+use App\Models\PricingChecklist;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -37,7 +39,25 @@ class HomeController extends Controller
 
         $portfolios = Portfolio::orderBy('created_at', 'desc')
             ->get();
-        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'service', 'testimonials', 'posts', 'services', 'portfolios'));
+
+        $pricing = Pricing::orderBy('created_at')->get();
+        $i=0;
+        foreach($pricing as $plane){
+            $pricing[$i]->pricing_check=Pricing::select('pricing_checklist.title','pricing_checklist.title_ar')
+            ->leftJoin('pricing_check', 'pricing.id', '=', 'pricing_check.pricing_id')
+            ->leftJoin('pricing_checklist', 'pricing_checklist.id', '=', 'pricing_check.pricing_checklist_id')
+            ->WHERE('pricing.id', $plane->id)
+            ->get();
+
+
+            $pricing[$i]->pricing_uncheck=Pricing::select('pricing_checklist.title','pricing_checklist.title_ar')
+            ->leftJoin('pricing_uncheck', 'pricing.id', '=', 'pricing_uncheck.pricing_id')
+            ->leftJoin('pricing_checklist', 'pricing_checklist.id', '=', 'pricing_uncheck.pricing_checklist_id')
+            ->WHERE('pricing.id', $plane->id)
+            ->get();
+            $i++;
+        }
+        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'service', 'testimonials', 'posts', 'services', 'portfolios', 'pricing'));
     }
 
     public function aboutus()

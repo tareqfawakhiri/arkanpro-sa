@@ -25,8 +25,4 @@ class Product extends Model
         return $media->download_link ?? null;
     }
 
-    public function features()
-    {
-        return $this->hasMany(ServiceFeature::class);
-    }
 }

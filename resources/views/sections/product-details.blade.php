@@ -68,23 +68,6 @@
                                 </div>
                             </div>
                             {!! $product->getTranslatedAttribute('description') !!}
-
-                        </div>
-                        <div class="preview-area">
-                            <div class="preview-item">
-                                <img src="{{ asset('assets/img/project/p-1.png') }}" alt="img">
-                                <div class="content">
-                                    <h3>{{ trans('products.previous') }}</h3>
-                                    <p>Analytic Solutions</p>
-                                </div>
-                            </div>
-                            <div class="preview-item">
-                                <div class="content text-right">
-                                    <h3>{{ trans('products.next') }}</h3>
-                                    <p>Software Development</p>
-                                </div>
-                                <img src="{{ asset('assets/img/project/p-2.png') }}" alt="img">
-                            </div>
                         </div>
                     </div>
                 </div>

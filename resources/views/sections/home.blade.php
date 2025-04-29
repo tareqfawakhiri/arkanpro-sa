@@ -164,9 +164,9 @@
         <!-- About Section    S T A R T -->
         <section class="about-section space fix bg-theme-color">
             <div class="about-container-wrapper style1">
-                <div class="shape1"><img src="assets/img/shape/aboutShape1_1.png" alt="shape"></div>
-                <div class="shape2"><img src="assets/img/shape/aboutShape1_2.png" alt="shape"></div>
-                <div class="shape3"><img src="assets/img/shape/aboutShape1_3.png" alt="shape"></div>
+                <div class="shape1"><img src="{{ asset('assets/img/shape/aboutShape1_1.png') }}" alt="shape"></div>
+                <div class="shape2"><img src="{{ asset('assets/img/shape/aboutShape1_2.png') }}" alt="shape"></div>
+                <div class="shape3"><img src="{{ asset('assets/img/shape/aboutShape1_3.png') }}" alt="shape"></div>
                 <div class="container">
                     <div class="row gy-5 gx-70">
                         <div class="col-xl-6">
@@ -190,11 +190,11 @@
                             <div class="about-content">
                                 <div class="section-title mxw-560">
                                     <div class="subtitle text-white wow fadeInUp" data-wow-delay=".3s"><img
-                                            src="assets/img/icon/arrowLeftWhite.svg" alt="icon">
+                                            src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon">
                                         <span
                                             class="text-white"> {{ trans('general.our-services') }}
                                         </span>
-                                        <img src="assets/img/icon/arrowRightWhite.svg" alt="icon">
+                                        <img src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon">
                                     </div>
                                     <h2 class="title text-white wow fadeInUp" data-wow-delay=".6s">
                                         {{ $service->getTranslatedAttribute('title') }}
@@ -275,8 +275,8 @@
     <!-- Pricing Section   S T A R T -->
     <section class="pricing-section fix section-padding">
         <div class="pricing-wrapper style1">
-            <div class="shape1 d-none d-xxl-block"><img src="assets/img/shape/pricingShape1_1.png" alt="shape"></div>
-            <div class="shape2 d-none d-xxl-block"><img src="assets/img/shape/pricingShape1_2.png" alt="shape"></div>
+            <div class="shape1 d-none d-xxl-block"><img src="{{ asset('assets/img/shape/pricingShape1_1.png') }}" alt="shape"></div>
+            <div class="shape2 d-none d-xxl-block"><img src="{{ asset('assets/img/shape/pricingShape1_2.png') }}" alt="shape"></div>
             <div class="container">
                 <div class="section-title title-area  mx-auto mb-25">
                     <div class="subtitle d-flex justify-content-center"><img src="assets/img/icon/arrowLeft.svg"

@@ -5,10 +5,10 @@
     <!--<< Breadcrumb Section Start >>-->
     <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb.jpg');">
         <div class="border-shape">
-            <img src="assets/img/element.png" alt="shape-img">
+            <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>
         <div class="line-shape">
-            <img src="assets/img/line-element.png" alt="shape-img">
+            <img src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
         </div>
         <div class="container">
             <div class="page-heading">
@@ -103,7 +103,7 @@
                                 </div>
                             </div>
                             <div class="video-image">
-                                <img src="assets/img/video.jpg" alt="img">
+                                <img src="{{ asset('assets/img/video.jpg') }}" alt="img">
                                 <div class="video-box">
                                     <a href="{{ setting('contact-us.video_contact_us') }}" class="video-btn ripple popup-video">
                                         <i class="fa-solid fa-play"></i>

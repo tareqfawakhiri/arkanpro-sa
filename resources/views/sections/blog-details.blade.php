@@ -115,7 +115,7 @@
                                 <div class="recent-post-area">
                                     <div class="recent-items">
                                         <div class="recent-thumb">
-                                            <img src="assets/img/news/pp3.jpg" alt="img">
+                                            <img src="{{ asset('assets/img/news/pp3.jpg') }}" alt="img">
                                         </div>
                                         <div class="recent-content">
                                             <ul>
@@ -134,7 +134,7 @@
                                     </div>
                                     <div class="recent-items">
                                         <div class="recent-thumb">
-                                            <img src="assets/img/news/pp4.jpg" alt="img">
+                                            <img src="{{ asset('assets/img/news/pp4.jpg') }}" alt="img">
                                         </div>
                                         <div class="recent-content">
                                             <ul>
@@ -153,7 +153,7 @@
                                     </div>
                                     <div class="recent-items">
                                         <div class="recent-thumb">
-                                            <img src="assets/img/news/pp5.jpg" alt="img">
+                                            <img src="{{ asset('assets/img/news/pp5.jpg') }}" alt="img">
                                         </div>
                                         <div class="recent-content">
                                             <ul>

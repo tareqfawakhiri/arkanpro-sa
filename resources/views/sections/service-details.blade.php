@@ -5,10 +5,10 @@
     <!--<< Breadcrumb Section Start >>-->
     <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb.jpg');">
         <div class="border-shape">
-            <img src="assets/img/element.png" alt="shape-img">
+            <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>
         <div class="line-shape">
-            <img src="assets/img/line-element.png" alt="shape-img">
+            <img src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
         </div>
         <div class="container">
             <div class="page-heading">
@@ -86,7 +86,7 @@
                     <div class="col-12 col-lg-8 order-1 order-md-2">
                         <div class="{{ route('service.details') }}-items">
                             <div class="details-image">
-                                <img src="assets/img/service/details-1.jpg" alt="img">
+                                <img src="{{ asset('assets/img/service/details-1.jpg') }}" alt="img">
                             </div>
                             <div class="details-content">
                                 <h3>IT Consultancy</h3>
@@ -104,7 +104,7 @@
                                 </p>
                                 <div class="details-video-items">
                                     <div class="video-thumb">
-                                        <img src="assets/img/service/details-video.jpg" alt="img">
+                                        <img src="{{ asset('assets/img/service/details-video.jpg') }}" alt="img">
                                         <div class="video-box">
                                             <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I"
                                                 class="video-btn ripple popup-video">
@@ -141,12 +141,12 @@
                                     <div class="row g-4">
                                         <div class="col-lg-6 col-md-6">
                                             <div class="thumb">
-                                                <img src="assets/img/service/details-2.jpg" alt="img">
+                                                <img src="{{ asset('assets/img/service/details-2.jpg') }}" alt="img">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <div class="thumb">
-                                                <img src="assets/img/service/details-3.jpg" alt="img">
+                                                <img src="{{ asset('assets/img/service/details-3.jpg') }}" alt="img">
                                             </div>
                                         </div>
                                     </div>

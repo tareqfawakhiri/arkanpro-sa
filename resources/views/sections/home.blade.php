@@ -94,9 +94,9 @@
                     </div>
                     <div class="arrow-btn text-end wow fadeInUp" data-wow-delay=".9s">
                         <button data-slider-prev="#serviceSliderOne" class="slider-arrow style1"><i
-                                class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
+                                    class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
                         <button data-slider-next="#serviceSliderOne" class="slider-arrow style1 slider-next"><i
-                                class="fa-regular fa-arrow-right-long"></i></button>
+                                    class="fa-regular fa-arrow-right-long"></i></button>
                     </div>
                 </div>
 
@@ -106,25 +106,20 @@
                         <div class="swiper gt-slider" id="serviceSliderOne"
                              data-slider-options='{"loop": false, "breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":2,"centeredSlides":true},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}}'>
                             <div class="swiper-wrapper">
-                                @foreach($services->features as $ky => $feature)
+                                @foreach($services as $service)
                                     <div class="swiper-slide">
                                         <div class="service-card style1">
                                             <div class="icon">
-                                                <img src="{{ Voyager::image($feature->icon) }}"
+                                                <img src="{{ Voyager::image($service->image) }}"
                                                      alt="icon">
                                             </div>
                                             <div class="body">
-                                                @php
-                                                    $link = $feature->external_link != '' ? $feature->external_link : '#';
-                                                @endphp
                                                 <h3>
-                                                    <a href="{{ $link }}">{{ $feature->getTranslatedAttribute('title') }}</a>
+                                                    <a href="{{ route('service',$service->slug) }}">{{ $service->getTranslatedAttribute('title') }}</a>
                                                 </h3>
-                                                <p>{{ $feature->getTranslatedAttribute('description') }}</p>
-                                                <a href="{{ $link }}" class="link-btn style1">
-                                                    {{ trans('general.read-more') }} <i
-                                                        class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i>
-                                                </a>
+                                                <p>
+                                                    {!! $service->short_content !!}
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -180,7 +175,7 @@
                                          style="position: absolute;">
                                         <clipPath id="aboutThumbdMask1">
                                             <path
-                                                d="M0 20C0 8.95431 8.9543 0 20 0H395.5C423.114 0 445.5 22.3858 445.5 50V72.5C445.5 100.114 467.886 122.5 495.5 122.5H520C547.614 122.5 570 144.886 570 172.5V321.5L562.197 537.223C561.808 547.98 552.975 556.5 542.21 556.5H20C8.95432 556.5 0 547.546 0 536.5V20Z"/>
+                                                    d="M0 20C0 8.95431 8.9543 0 20 0H395.5C423.114 0 445.5 22.3858 445.5 50V72.5C445.5 100.114 467.886 122.5 495.5 122.5H520C547.614 122.5 570 144.886 570 172.5V321.5L562.197 537.223C561.808 547.98 552.975 556.5 542.21 556.5H20C8.95432 556.5 0 547.546 0 536.5V20Z"/>
                                         </clipPath>
                                     </svg>
                                 </div>
@@ -190,9 +185,9 @@
                             <div class="about-content">
                                 <div class="section-title mxw-560">
                                     <div class="subtitle text-white wow fadeInUp" data-wow-delay=".3s"><img
-                                            src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon">
+                                                src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon">
                                         <span
-                                            class="text-white"> {{ trans('general.our-services') }}
+                                                class="text-white"> {{ trans('general.our-services') }}
                                         </span>
                                         <img src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon">
                                     </div>
@@ -211,26 +206,26 @@
         </section>
     @endif
 
-    @if($portfolios)
+    @if($products)
         <!-- Project Section    S T A R T -->
         <section class="project-section space fix">
             <div class="project-container-wrapper style1">
                 <div class="container">
                     <div class="section-title title-area  mx-auto mb-10">
-                        <h2 class="title text-center">Check Our Latest Portfolios</h2>
+                        <h2 class="title text-center">Check Our Latest Services</h2>
                     </div>
                     @php
-                    $count = 0;
+                        $count = 0;
                     @endphp
                     <div class="project-item-wrapper style1">
-                        @foreach($portfolios as $portfolio)
+                        @foreach($products as $product)
                             <a class="project-item-card style1 {{ $count++ == 0 ? 'active' : '' }}"
-                               href="#portfolio-{{ $portfolio->id }}">
+                               href="#portfolio-{{ $product->id }}">
                                 <div class="project-icon">
-                                    <img src="{{ Voyager::image($portfolio->icon) }}"
-                                         alt="{{ $portfolio->getTranslatedAttribute('sub_title') }}">
+                                    <img src="{{ Voyager::image($product->icon) }}"
+                                         alt="{{ $product->getTranslatedAttribute('sub_title') }}">
                                 </div>
-                                <h5>{{ $portfolio->getTranslatedAttribute('sub_title') }}</h5>
+                                <h5>{{ $product->getTranslatedAttribute('sub_title') }}</h5>
                             </a>
                         @endforeach
                     </div>
@@ -240,25 +235,24 @@
                     @endphp
 
                     <div class="project-wrapper style1">
-                        @foreach($portfolios as $portfolio)
-                            <div class="row gy-5 gx-60" id="portfolio-{{ $portfolio->id }}" style="{{ $count++ == 0 ? 'display: flex' : 'display: none' }}">
+                        @foreach($products as $product)
+                            <div class="row gy-5 gx-60" id="portfolio-{{ $product->id }}"
+                                 style="{{ $count++ == 0 ? 'display: flex' : 'display: none' }}">
                                 <div class="col-xl-5">
                                     <div class="project-thumb img-custom-anim-left">
-                                        <img src="{{ Voyager::image($portfolio->icon) }}"
-                                             alt="{{ $portfolio->getTranslatedAttribute('sub_title') }}">
+                                        <img src="{{ Voyager::image($product->icon) }}"
+                                             alt="{{ $product->getTranslatedAttribute('sub_title') }}">
                                     </div>
                                 </div>
                                 <div class="col-xl-7">
                                     <div class="project-content-wrapper style1">
                                         <div class="project-content style1">
                                             <div class="row">
-                                                <div class="col-xl-9">
+                                                <div class="col-xl-12">
                                                     <div class="project-content-left">
-                                                        <h3>{{ $portfolio->getTranslatedAttribute('title') }}</h3>
-                                                        <p class="text">{!! $portfolio->getTranslatedAttribute('description') !!}</p>
+                                                        <h3>{{ $product->getTranslatedAttribute('title') }}</h3>
+                                                        <p class="text">{!! $product->excerpt !!}</p>
                                                     </div>
-                                                </div>
-                                                <div class="col-xl-3">
                                                 </div>
                                             </div>
                                         </div>
@@ -288,7 +282,7 @@
                     <div class="col-xl-6 d-flex align-items-center">
                         <div class="section-title">
                             <div class="subtitle"><img src="assets/img/icon/arrowLeftWhite.svg" alt="icon"> <span
-                                    class="text-white"> {{ trans('general.contact-us') }}
+                                        class="text-white"> {{ trans('general.contact-us') }}
                         </span><img src="assets/img/icon/arrowRightWhite.svg" alt="icon"></div>
                             <h2 class="title">24/7 Expert Hosting Support Our Customers Love</h2>
                         </div>
@@ -338,7 +332,7 @@
                                             <div class="testi-content">
                                                 <h3 class="title">{{ $testimonial->getTranslatedAttribute('name') }}</h3>
                                                 <div
-                                                    class="designation">{{ $testimonial->getTranslatedAttribute('job') }}</div>
+                                                        class="designation">{{ $testimonial->getTranslatedAttribute('job') }}</div>
                                             </div>
                                         </div>
                                         <div class="quote">
@@ -373,9 +367,9 @@
                     </div>
                     <div class="arrow-btn text-end wow fadeInUp" data-wow-delay=".9s">
                         <button data-slider-prev="#blogSliderOne" class="slider-arrow style1"><i
-                                class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
+                                    class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
                         <button data-slider-next="#blogSliderOne" class="slider-arrow style1 slider-next"><i
-                                class="fa-regular fa-arrow-right-long"></i></button>
+                                    class="fa-regular fa-arrow-right-long"></i></button>
                     </div>
                 </div>
                 <div class="row">

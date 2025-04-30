@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use TCG\Voyager\Traits\Resizable;
 use TCG\Voyager\Traits\Translatable;
 
@@ -16,7 +17,7 @@ class Service extends Model
     protected $table = 'services';
     protected $guarded = [];
 
-    protected $appends = ['file_media_path_original'];
+    protected $appends = ['file_media_path_original', 'short_content'];
 
     function getFileMediaPathOriginalAttribute()
     {
@@ -28,5 +29,10 @@ class Service extends Model
     public function features()
     {
         return $this->hasMany(ServiceFeature::class);
+    }
+
+    public function getShortContentAttribute()
+    {
+        return Str::of(strip_tags($this->description))->substr(0, 100);
     }
 }

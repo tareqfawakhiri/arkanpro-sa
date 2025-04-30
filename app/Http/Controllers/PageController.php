@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Service;
 use App\Models\Pricing;
+use App\Models\Service;
 
 class PageController extends Controller
 {
-    function index($title)
+    function index($slug)
     {
-        $section = Service::where('title', $title)
+        $section = Service::where('slug', $slug)
             ->with('features')
-            ->first();
+            ->firstOrFail();
 
-        $title = str_replace('', '_', $section->title);
+        $title = str_replace('-', '_', $section->title);
 
         $pricing = Pricing::orderBy('created_at')->get();
         $i = 0;
@@ -33,7 +33,7 @@ class PageController extends Controller
             $i++;
         }
 
-        if (view()->exists('sections.page.' . $title))
+        if (view()->exists('sections.page.' . $section->title))
             return view('sections.page.' . $title, compact('section', 'pricing'));
         else
             return view('sections.page.index', compact('section', 'pricing'));

@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Models\Partner;
-use App\Models\Portfolio;
 use App\Models\Post;
 use App\Models\Pricing;
+use App\Models\Product;
 use App\Models\Quotation;
 use App\Models\Service;
 use App\Models\Slider;
@@ -20,12 +20,17 @@ class HomeController extends Controller
     {
         $partners = Partner::orderByDesc('created_at')->get();
         $clients = Client::orderByDesc('created_at')->get();
-        $slider = Slider::where('status', 'published')->orderByDesc('created_at')->get();
+
+        $slider = Slider::where('status', 'published')
+            ->orderByDesc('created_at')
+            ->get();
+
         $isHome = true;
         $service = Service::where('status', 'ACTIVE')
             ->where('add_to_home_page_banner', 'YES')
-            ->orderBy('created_at', 'desc')
+            ->orderByDesc('created_at')
             ->first();
+
         $testimonials = Testimonial::orderByDesc('created_at')->get();
 
         $posts = Post::with(['category', 'author'])
@@ -33,13 +38,13 @@ class HomeController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
-        $services = Service::where('title', '<>', 'quroosh')
-            ->with('features')
-            ->first();
-
-        $portfolios = Portfolio::orderBy('created_at', 'desc')
+        $services = Service::where('status', 'ACTIVE')
+            ->orderByDesc('created_at')
             ->get();
 
+        $products = Product::where('status', 'ACTIVE')
+            ->orderByDesc('created_at')
+            ->get();
         $pricing = Pricing::orderBy('created_at')->get();
         $i = 0;
         foreach ($pricing as $plane) {
@@ -57,7 +62,7 @@ class HomeController extends Controller
                 ->get();
             $i++;
         }
-        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'service', 'testimonials', 'posts', 'services', 'portfolios', 'pricing'));
+        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'service', 'testimonials', 'posts', 'services', 'products', 'pricing'));
     }
 
     public function aboutus()

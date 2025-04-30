@@ -18,6 +18,7 @@
                         <div class="form-clt">
                             <input type="tel" name="phone" id="phone"
                                    value="{{ old('phone') }}"
+                                   style="direction: {{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }};"
                                    placeholder="{{ trans('contact-us.your-phone') }}">
                             @error('phone')
                             <div style="color: red;">{{ $message }}</div>@enderror

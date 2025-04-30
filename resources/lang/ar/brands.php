@@ -1,4 +1,5 @@
 <?php
 return [
-    'partners-success' => 'شركاء النجاح',
+    'partners-success' => 'شركاء في النجاح',
+    'clients-success' => 'عملاء في النجاح'
 ];

@@ -19,5 +19,17 @@ return [
     'system-features' => 'System Features',
     'elevating-businesses-with-it-ingenuity' => 'Elevating Businesses with IT Ingenuity',
     'our-services' => 'Our Services',
-    'quroosh' => 'Quroosh'
+    'quroosh' => 'Quroosh',
+    'our-products' => 'Our Products',
+    'expert-hosting' => '24/7 Expert Hosting Support Our Customers Love',
+    'talk-to-specialist' => 'Talk to a Specialist',
+    'testimonial' => 'Testimonial',
+    'latest-client-feedback' => 'Our Latest Client Feedback',
+
+    'terms-and-conditions' => 'Terms & Condition',
+    'privacy-policy' => 'Privacy Policy '
+
+
+
+
 ];

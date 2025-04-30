@@ -42,7 +42,7 @@ Route::get('/customer-service', [CustomerServiceControlller::class, 'index'])->n
 Route::get('/blog', [BlogControlller::class, 'index'])->name('blog.all');
 Route::get('/blog/{slug}/details', [BlogControlller::class, 'details'])->name('blog.details');
 
-Route::get('/page/{slug}', [PageController::class, 'index'])->name('page');
+Route::get('/page/{slug}', [PageController::class, 'page'])->name('page');
 Route::get('/service/{slug}', [PageController::class, 'index'])->name('service');
 
 Route::group(['prefix' => 'admin'], function () {

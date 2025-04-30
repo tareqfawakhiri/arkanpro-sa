@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Pricing;
 use App\Models\Service;
+use TCG\Voyager\Models\Page;
 
 class PageController extends Controller
 {
     function index($slug)
     {
-        $section = Service::where('slug', $slug)
+        return $section = Service::where('slug', $slug)
             ->with('features')
-            ->firstOrFail();
+            ->first();
 
         $title = str_replace('-', '_', $section->title);
 
@@ -33,10 +34,15 @@ class PageController extends Controller
             $i++;
         }
 
-        if (view()->exists('sections.page.' . $section->title))
-            return view('sections.page.' . $title, compact('section', 'pricing'));
-        else
-            return view('sections.page.index', compact('section', 'pricing'));
+
+            return view('sections.service-details', compact('section', 'pricing'));
     }
 
+
+    function page($slug)
+    {
+        $section = Page::where('slug', $slug)
+            ->firstOrFail();
+        return view('sections.page.index', compact('section'));
+    }
 }

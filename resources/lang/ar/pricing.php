@@ -1,9 +1,9 @@
 <?php
 return [
-    'our-pricing' => 'الباقات',
-    'our-pricing-plan' => 'خطط التسعير الرائعة لدينا',
+    'our-pricing' => 'أسعارنا',
+    'our-pricing-plan' => 'خطط الأسعار الرائعة لدينا',
     'establishment-fees' => 'رسوم التأسيس',
-    'monthly' => 'شهري',
-    'yearly' => 'سنوي',
-    'choose-plan' => 'إختر الباقة',
+    'monthly' => 'شهريًا',
+    'yearly' => 'سنويًا',
+    'choose-plan' => 'اختر الخطة',
 ];

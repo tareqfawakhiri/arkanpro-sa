@@ -8,16 +8,24 @@ return [
     'products' => 'المنتجات',
     'about-us' => 'من نحن',
     'customer-service' => 'خدمة العملاء',
-    'blog' => 'اخر الاخبار',
+    'blog' => 'المدونة',
 
-    'loading' => 'يرجى الانتظار',
-
-    'send-email' => 'بريد إلكتروني',
-    'call-emergency' => 'اتصل بخدمات',
+    'loading' => 'جارٍ التحميل',
+    'send-email' => 'إرسال بريد إلكتروني',
+    'call-emergency' => 'اتصال طارئ',
     'address' => 'العنوان',
-    'read-more' => 'اقرا المزيد',
-    'Blog Details' => 'Blog Details',
-    'system-features' => 'System Features',
-    'elevating-businesses-with-it-ingenuity' => 'Elevating Businesses with IT Ingenuity',
-    'our-services' => 'Our Services'
+    'read-more' => 'اقرأ المزيد',
+    'Blog Details' => 'تفاصيل المدونة',
+    'system-features' => 'ميزات النظام',
+    'elevating-businesses-with-it-ingenuity' => 'الارتقاء بالأعمال من خلال براعة تكنولوجيا المعلومات',
+    'our-services' => 'خدماتنا',
+    'quroosh' => 'قروش',
+    'our-products' => 'اهم المنتجات',
+    'expert-hosting' => 'دعم استضافة خبير على مدار الساعة يحبه عملاؤنا',
+    'talk-to-specialist' => 'تحدث إلى أخصائي',
+    'testimonial' => 'شهادة',
+    'latest-client-feedback' => 'آراء عملائنا الأخيرة',
+    'terms-and-conditions' => 'الشروط والأحكام',
+    'privacy-policy' => 'سياسة الخصوصية'
+
 ];

@@ -2,6 +2,7 @@
 <footer class="footer-area">
     <div class="widget-area style1 pt-100 pb-80">
         <div class="container">
+
             <div class="contact-info-area">
                 <div class="contact-info-items wow fadeInUp" data-wow-delay=".7s">
                     <div class="icon">
@@ -69,7 +70,7 @@
         <div class="container">
             <div class="footer-layout style1">
                 <div class="row">
-                    <div class="col-xl-6 col-md-6 col-12">
+                    <div class="col-xl-3 col-md-6 col-12">
                         <div class="widget footer-widget wow fadeInUp" data-wow-delay=".6s">
                             <div class="gt-widget-about">
                                 <div class="about-logo">
@@ -104,29 +105,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-12">
-                        <div class="widget widget_nav_menu footer-widget wow fadeInUp" data-wow-delay="1s">
-                            <h3 class="widget_title">Quick Links</h3>
-                            <div class="menu-all-pages-container">
-                                <ul class="menu">
-                                    <li><a href="/about-us"><i
-                                                class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>{{ trans('general.about-us') }}
-                                        </a></li>
-                                    <li><a href="/service"><i
-                                                class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>Our
-                                            Services</a></li>
-                                    <li><a href="/blog"><i
-                                                class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>Our
-                                            Blogs</a></li>
-                                    </li>
-                                    <li><a href="/contact-us"><i
-                                                class="fa-solid fa-chevrons-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}"></i>{{ trans('general.contact-us') }}
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="col-xl-3 col-md-6 col-12">
                         <div class="widget widget_nav_menu footer-widget wow fadeInUp" data-wow-delay="1.6s">
                             <h3 class="widget_title">{{ trans('general.contact-us') }}</h3>
@@ -140,24 +119,11 @@
                                     <li class="text-white"
                                         style="direction:ltr">{{ setting('contact-us.phone_number') }}</li>
                                 </ul>
-                                <div class="email-input-container">
-                                    <input type="email" id="email" placeholder="Your email address" required="">
-                                    <button type="submit" id="submitButton" disabled=""><i
-                                            class="fa-regular fa-arrow-{{ app()->currentLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
-                                    </button>
-                                </div>
-                                {{--                                <form id="termsForm">--}}
-                                {{--                                    <label class="custom-checkbox">--}}
-                                {{--                                        <input type="checkbox" name="agree" id="agreeCheckbox">--}}
-                                {{--                                        <span class="checkmark"></span>--}}
-                                {{--                                        I agree to the <a class="text-underline" href="contact.html" target="_blank">Privacy--}}
-                                {{--                                            Policy.</a>--}}
-                                {{--                                    </label>--}}
-                                {{--                                    <br>--}}
-                                {{--                                </form>--}}
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -173,8 +139,8 @@
                 </div>
                 <div class="layout-link wow fadeInUp" data-wow-delay=".6s">
                     <div class="link-wrapper">
-                        <a href="{{ route('page',['terms-condition']) }}">Terms &amp; Condition</a>
-                        <a href="{{ route('page',['privacy-policy']) }}">Privacy Policy</a>
+                        <a href="{{ route('page',['terms-condition']) }}">{{ trans('general.terms-and-conditions') }}</a>
+                        <a href="{{ route('page',['privacy-policy']) }}">{{ trans('general.privacy-policy') }}</a>
                         <a href="{{ route('contact') }}">{{ trans('general.contact-us') }}</a>
                     </div>
                 </div>

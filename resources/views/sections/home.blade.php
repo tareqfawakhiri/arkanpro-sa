@@ -3,17 +3,6 @@
 @section('content')
     <!-- Hero Section Start -->
     <section class="hero-section  hero-3">
-        <div class="bottom-shape">
-            <img src="{{ asset('assets/img/hero/bottom-shape.png') }}" alt="shape-img">
-        </div>
-        <div class="array-button">
-            <button class="array-prev">
-                <i class="fal fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"></i>
-            </button>
-            <button class="array-next">
-                <i class="fal fa-arrow-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}"></i>
-            </button>
-        </div>
         <div class="swiper hero-slider">
             <div class="swiper-wrapper">
                 @foreach($slider as $slide)
@@ -61,7 +50,7 @@
                                                 <div class="video-box">
                                                     <a href="{{ $slide->media }}"
                                                        class="play-btn popup-video">
-                                                        <img class="rotate360" src="assets/img/shape/heroShape2_1.png"
+                                                        <img class="rotate360" src="{{ asset('assets/img/shape/heroShape2_1.png') }}"
                                                              alt="{{ $slide->getTranslatedAttribute('title')  }}">
                                                     </a>
                                                 </div>
@@ -88,15 +77,19 @@
             <div class="container">
                 <div class="title-wrap mb-45">
                     <div class="section-title">
-                        <div class="subtitle"><img src="assets/img/icon/arrowLeft.svg" alt="icon"> <span> Our Services
-                     </span><img src="assets/img/icon/arrowRight.svg" alt="icon"></div>
-                        <h2 class="title">Elevating Businesses with IT Ingenuity</h2>
+                        <div class="subtitle"><img src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
+                            <span> {{ trans('general.our-services') }}</span>
+                            <img src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
+                        </div>
+                        <h4>{{ trans('general.elevating-businesses-with-it-ingenuity') }}</h4>
                     </div>
                     <div class="arrow-btn text-end wow fadeInUp" data-wow-delay=".9s">
-                        <button data-slider-prev="#serviceSliderOne" class="slider-arrow style1"><i
-                                    class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
-                        <button data-slider-next="#serviceSliderOne" class="slider-arrow style1 slider-next"><i
-                                    class="fa-regular fa-arrow-right-long"></i></button>
+                        <button data-slider-prev="#serviceSliderOne" class="slider-arrow style1">
+                            <i class="fa-sharp fa-regular fa-arrow-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}-long"></i>
+                        </button>
+                        <button data-slider-next="#serviceSliderOne" class="slider-arrow style1 slider-next">
+                            <i class="fa-regular fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -175,7 +168,7 @@
                                          style="position: absolute;">
                                         <clipPath id="aboutThumbdMask1">
                                             <path
-                                                    d="M0 20C0 8.95431 8.9543 0 20 0H395.5C423.114 0 445.5 22.3858 445.5 50V72.5C445.5 100.114 467.886 122.5 495.5 122.5H520C547.614 122.5 570 144.886 570 172.5V321.5L562.197 537.223C561.808 547.98 552.975 556.5 542.21 556.5H20C8.95432 556.5 0 547.546 0 536.5V20Z"/>
+                                                d="M0 20C0 8.95431 8.9543 0 20 0H395.5C423.114 0 445.5 22.3858 445.5 50V72.5C445.5 100.114 467.886 122.5 495.5 122.5H520C547.614 122.5 570 144.886 570 172.5V321.5L562.197 537.223C561.808 547.98 552.975 556.5 542.21 556.5H20C8.95432 556.5 0 547.546 0 536.5V20Z"/>
                                         </clipPath>
                                     </svg>
                                 </div>
@@ -185,9 +178,9 @@
                             <div class="about-content">
                                 <div class="section-title mxw-560">
                                     <div class="subtitle text-white wow fadeInUp" data-wow-delay=".3s"><img
-                                                src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon">
+                                            src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon">
                                         <span
-                                                class="text-white"> {{ trans('general.our-services') }}
+                                            class="text-white"> {{ trans('general.our-services') }}
                                         </span>
                                         <img src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon">
                                     </div>
@@ -212,7 +205,7 @@
             <div class="project-container-wrapper style1">
                 <div class="container">
                     <div class="section-title title-area  mx-auto mb-10">
-                        <h2 class="title text-center">Check Our Latest Services</h2>
+                        <h2 class="title text-center">{{ trans('general.our-products') }}</h2>
                     </div>
                     @php
                         $count = 0;
@@ -272,7 +265,7 @@
     <section class="cta-section space pb-0">
         <div class="container">
             <div class="cta-wrap style1 fix">
-                <div class="shape"><img src="assets/img/shape/ctaShape1_1.png" alt="shape"></div>
+                <div class="shape"><img src="{{ asset('assets/img/shape/ctaShape1_1.png') }}" alt="shape"></div>
                 <div class="row gy-5">
                     <div class="col-xl-3">
                         <div class="cta-thumb img-custom-anim-left wow fadeInUp" data-wow-delay=".4s">
@@ -281,16 +274,18 @@
                     </div>
                     <div class="col-xl-6 d-flex align-items-center">
                         <div class="section-title">
-                            <div class="subtitle"><img src="assets/img/icon/arrowLeftWhite.svg" alt="icon"> <span
-                                        class="text-white"> {{ trans('general.contact-us') }}
-                        </span><img src="assets/img/icon/arrowRightWhite.svg" alt="icon"></div>
-                            <h2 class="title">24/7 Expert Hosting Support Our Customers Love</h2>
+                            <div class="subtitle"><img src="{{ asset('assets/img/icon/arrowLeftWhite.svgv') }}" alt="icon"> <span
+                                    class="text-white"> {{ trans('general.contact-us') }}
+                        </span><img src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon"></div>
+                            <h2 class="title">{{ trans('general.expert-hosting') }}</h2>
                         </div>
                     </div>
                     <div class="col-xl-3 d-flex align-items-center">
                         <div class="btn-wrapper">
-                            <a class="gt-btn style5" href="{{ route('contact') }}">Talk to a Specialist
-                                <i class="fa-sharp fa-regular fa-arrow-right-long"></i></a>
+                            <a class="gt-btn style5" href="{{ route('contact') }}">
+                                {{ trans('general.talk-to-specialist') }}
+                                <i class="fa-sharp fa-regular fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -300,18 +295,18 @@
 
     <!-- Testimonial Section   S T A R T -->
     <section class="testimonial-section space pb-0 fix wow fadeInUp" data-wow-delay=".5s"
-             data-bg-src="assets/img/bg/testimonialBg1_1.png">
+             data-bg-src="{{ asset('assets/img/bg/testimonialBg1_1.png') }}">
         <div class="testimonial-wrap style3 space">
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
                         <div class="section-title title-area mb-50 mx-auto">
                             <div class="subtitle d-flex justify-content-center">
-                                <img src="assets/img/icon/arrowLeft.svg" alt="icon">
+                                <img src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
                                 <span>{{ trans('general.testimonial') }}</span>
-                                <img src="assets/img/icon/arrowRight.svg" alt="icon">
+                                <img src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
                             </div>
-                            <h2 class="title text-center">Our Latest Client Feedback</h2>
+                            <h2 class="title text-center">{{ trans('general.latest-client-feedback') }}</h2>
                         </div>
                     </div>
                 </div>
@@ -327,20 +322,20 @@
                                         <p class="text">{{ $testimonial->getTranslatedAttribute('description') }}</p>
                                         <div class="profile-box">
                                             <div class="testi-thumb">
-                                                <img src="assets/img/testimonial/testiThumb3_1.png" alt="thumb">
+                                                <img src="{{ asset('assets/img/testimonial/testiThumb3_1.png') }}" alt="thumb">
                                             </div>
                                             <div class="testi-content">
                                                 <h3 class="title">{{ $testimonial->getTranslatedAttribute('name') }}</h3>
                                                 <div
-                                                        class="designation">{{ $testimonial->getTranslatedAttribute('job') }}</div>
+                                                    class="designation">{{ $testimonial->getTranslatedAttribute('job') }}</div>
                                             </div>
                                         </div>
                                         <div class="quote">
-                                            <img class="darkQuote" src="assets/img/icon/quoteIconDark.png" alt="icon">
-                                            <img class="whiteQuote" src="assets/img/icon/quoteIconWhite.png" alt="icon">
+                                            <img class="darkQuote" src="{{ asset('assets/img/icon/quoteIconDark.png') }}" alt="icon">
+                                            <img class="whiteQuote" src="{{ asset('assets/img/icon/quoteIconWhite.png') }}" alt="icon">
                                         </div>
                                         <div class="shape3_1">
-                                            <img src="assets/img/shape/testimonialShape3_1.png" alt="shape">
+                                            <img src="{{ asset('assets/img/shape/testimonialShape3_1.png') }}" alt="shape">
                                         </div>
                                     </div>
                                 </div>
@@ -360,16 +355,16 @@
                 <div class="title-wrap mb-45">
                     <div class="section-title">
                         <div class="subtitle">
-                            <img src="assets/img/icon/arrowLeft.svg" alt="icon">
+                            <img src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
                             <span>{{ trans('general.blog') }}</span>
-                            <img src="assets/img/icon/arrowRight.svg" alt="icon">
+                            <img src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
                         </div>
                     </div>
                     <div class="arrow-btn text-end wow fadeInUp" data-wow-delay=".9s">
                         <button data-slider-prev="#blogSliderOne" class="slider-arrow style1"><i
-                                    class="fa-sharp fa-regular fa-arrow-left-long"></i></button>
+                                class="fa-sharp fa-regular fa-arrow-{{ app()->getLocale() == 'ar' ? 'right' : 'left' }}-long"></i></button>
                         <button data-slider-next="#blogSliderOne" class="slider-arrow style1 slider-next"><i
-                                    class="fa-regular fa-arrow-right-long"></i></button>
+                                class="fa-regular fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i></button>
                     </div>
                 </div>
                 <div class="row">

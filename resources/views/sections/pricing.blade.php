@@ -75,13 +75,13 @@
                                                 <form action="https://cpe-soft.com/arkanmerchant/" method="POST">
                                                     <input type="hidden" name="amt" id="amt" value="{{ $plane->amount + $plane->fees }}">
                                                     <button type="submit" class="gt-btn style2 w-100">{{ trans('pricing.choose-plan') }} <i
-                                                        class="fa-sharp fa-light fa-arrow-right-long"></i></button>
+                                                        class="fa-sharp fa-light fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i></button>
                                                 </form>
                                             @else
                                                 <form action="https://cpe-soft.com/arkanmerchant/" method="POST">
                                                     <input type="hidden" name="amt" id="amt" value="{{ $plane->amount + $plane->fees }}">
                                                     <button type="submit" class="gt-btn style3 w-100">{{ trans('pricing.choose-plan') }} <i
-                                                        class="fa-sharp fa-light fa-arrow-right-long"></i></button>
+                                                        class="fa-sharp fa-light fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i></button>
                                                 </form>
                                             @endif
                                         </div>

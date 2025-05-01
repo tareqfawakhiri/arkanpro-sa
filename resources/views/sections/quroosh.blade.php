@@ -3,7 +3,7 @@
 @section('content')
     <!--<< Breadcrumb Section Start >>-->
     @php
-        $media_banner = $section->file_media_path_original;
+        $media_banner = $section->file_media_path_original ?? null;
     @endphp
     <div class="breadcrumb-wrapper bg-cover" style="background-image: url({{ Voyager::image($media_banner) }});">
         <div class="border-shape">

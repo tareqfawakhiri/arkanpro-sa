@@ -46,9 +46,9 @@ class Controller extends BaseController
     function quroosh()
     {
 
-        $section = Service::where('slug', 'quroosh')
+         $section = Service::where('slug', 'quroosh')
             ->with('features')
-            ->first();
+            ->firstOrFail();
 
 
         $pricing = Pricing::orderBy('order')->get();

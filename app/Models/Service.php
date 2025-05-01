@@ -9,7 +9,6 @@ use TCG\Voyager\Traits\Translatable;
 
 class Service extends Model
 {
-
     use Translatable, Resizable;
 
     protected $translatable = ['title', 'description', 'excerpt'];

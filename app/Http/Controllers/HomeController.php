@@ -19,7 +19,7 @@ class HomeController extends Controller
     public function index()
     {
         $partners = Partner::orderBy('order')->get();
-        $clients = Client::orderBy('order')->get();
+        $clients = Client::orderBy('created_at')->get();
 
         $slider = Slider::where('status', 'published')
             ->orderBy('order')

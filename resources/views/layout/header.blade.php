@@ -73,7 +73,7 @@
                                             <a href="{{ route('home') }}">{{ trans('general.home') }}</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('service',['quroosh']) }}">{{ trans('general.quroosh') }}</a>
+                                            <a href="{{ route('service.details',['quroosh']) }}">{{ trans('general.quroosh') }}</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('products') }}">{{ trans('general.products') }}</a>
@@ -82,7 +82,7 @@
                                             <a href="{{ route('customer.service') }}">{{ trans('general.customer-service') }}</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('about-us') }}">{{ trans('general.about-us') }}</a>
+                                            <a href="{{ route('page.details',['about-us']) }}">{{ trans('general.about-us') }}</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('blog.all') }}">{{ trans('general.blog') }}</a>
@@ -103,15 +103,15 @@
                             </a>
                         @endif
 
-{{--                        @if (session()->get('locale') == 'en')--}}
-{{--                            <a class="menu-thumb" href="{{ route('change-language') }}?lang=ar">--}}
-{{--                                <b>العربية</b>--}}
-{{--                            </a>--}}
-{{--                        @else--}}
-{{--                            <a class="menu-thumb" href="{{ route('change-language') }}?lang=en">--}}
-{{--                                <b>English</b>--}}
-{{--                            </a>--}}
-{{--                        @endif--}}
+                        {{--                        @if (session()->get('locale') == 'en')--}}
+                        {{--                            <a class="menu-thumb" href="{{ route('change-language') }}?lang=ar">--}}
+                        {{--                                <b>العربية</b>--}}
+                        {{--                            </a>--}}
+                        {{--                        @else--}}
+                        {{--                            <a class="menu-thumb" href="{{ route('change-language') }}?lang=en">--}}
+                        {{--                                <b>English</b>--}}
+                        {{--                            </a>--}}
+                        {{--                        @endif--}}
 
 
                         <div class="header-button ms-4">

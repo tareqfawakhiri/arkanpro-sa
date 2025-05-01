@@ -139,8 +139,8 @@
                 </div>
                 <div class="layout-link wow fadeInUp" data-wow-delay=".6s">
                     <div class="link-wrapper">
-                        <a href="{{ route('page',['terms-condition']) }}">{{ trans('general.terms-and-conditions') }}</a>
-                        <a href="{{ route('page',['privacy-policy']) }}">{{ trans('general.privacy-policy') }}</a>
+                        <a href="{{ route('page.details',['terms-condition']) }}">{{ trans('general.terms-and-conditions') }}</a>
+                        <a href="{{ route('page.details',['privacy-policy']) }}">{{ trans('general.privacy-policy') }}</a>
                         <a href="{{ route('contact') }}">{{ trans('general.contact-us') }}</a>
                     </div>
                 </div>

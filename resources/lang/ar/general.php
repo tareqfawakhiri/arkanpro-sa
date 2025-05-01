@@ -1,7 +1,6 @@
 <?php
 return [
     'current_lang' => 'ar',
-
     'home' => 'الرئيسية',
     'contact-us' => 'اتصل بنا',
     'services' => 'الخدمات',
@@ -9,7 +8,6 @@ return [
     'about-us' => 'من نحن',
     'customer-service' => 'خدمة العملاء',
     'blog' => 'المدونة',
-
     'loading' => 'جارٍ التحميل',
     'send-email' => 'إرسال بريد إلكتروني',
     'call-emergency' => 'اتصال طارئ',
@@ -26,6 +24,7 @@ return [
     'testimonial' => 'شهادة',
     'latest-client-feedback' => 'آراء عملائنا الأخيرة',
     'terms-and-conditions' => 'الشروط والأحكام',
-    'privacy-policy' => 'سياسة الخصوصية'
-
+    'privacy-policy' => 'سياسة الخصوصية',
+    'talk-to-us' => 'تحدث معنا',
+    'how-may-we-help-you' => 'كيف يمكننا مساعدتك!'
 ];

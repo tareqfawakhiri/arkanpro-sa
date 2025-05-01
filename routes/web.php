@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 // Landing page
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/send-quotation-request', [HomeController::class, 'quotation'])->name('contact.send-quotation-request');
-Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
+
 Route::get('/lang/change', [Controller::class, 'language'])->name('change-language');
 Route::get('/theme/change', [Controller::class, 'theme'])->name('change-theme');
 
@@ -32,18 +32,18 @@ Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact'
 Route::post('/contact-us', [ContactUsController::class, 'send'])->name('contact.send');
 
 Route::get('/services', [ServicesController::class, 'index'])->name('services');
-Route::get('/service-details', [ServicesController::class, 'details'])->name('service.details');
+Route::get('/service/{slug}', [ServicesController::class, 'details'])->name('service.details');
 
 Route::get('/products', [ProductsController::class, 'index'])->name('products');
-Route::get('/products/{slug}/product-details', [ProductsController::class, 'details'])->name('product.details');
+Route::get('/product/{slug}', [ProductsController::class, 'index'])->name('product.details');
 
 Route::get('/customer-service', [CustomerServiceControlller::class, 'index'])->name('customer.service');
+Route::post('/customer-service', [CustomerServiceControlller::class, 'send'])->name('customer.service.send');
 
 Route::get('/blog', [BlogControlller::class, 'index'])->name('blog.all');
 Route::get('/blog/{slug}/details', [BlogControlller::class, 'details'])->name('blog.details');
 
-Route::get('/page/{slug}', [PageController::class, 'page'])->name('page');
-Route::get('/service/{slug}', [PageController::class, 'index'])->name('service');
+Route::get('/page/{slug}', [PageController::class, 'index'])->name('page.details');;
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

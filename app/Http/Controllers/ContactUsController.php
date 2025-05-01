@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use TCG\Voyager\Models\Page;
 
 class ContactUsController extends Controller
 {
     function index()
     {
-        return view('sections.contact-us');
+        $section = Page::where('slug', 'contact-us')->firstOrFail();
+        return view('sections.contact-us', compact('section'));
     }
 
     function send(Request $request)

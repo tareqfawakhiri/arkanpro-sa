@@ -274,7 +274,7 @@
                     </div>
                     <div class="col-xl-6 d-flex align-items-center">
                         <div class="section-title">
-                            <div class="subtitle"><img src="{{ asset('assets/img/icon/arrowLeftWhite.svgv') }}" alt="icon"> <span
+                            <div class="subtitle"><img src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon"> <span
                                     class="text-white"> {{ trans('general.contact-us') }}
                         </span><img src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon"></div>
                             <h2 class="title">{{ trans('general.expert-hosting') }}</h2>

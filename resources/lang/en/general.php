@@ -1,7 +1,6 @@
 <?php
 return [
     'current_lang' => 'en',
-
     'home' => 'Home',
     'contact-us' => 'Contact Us',
     'services' => 'Services',
@@ -9,7 +8,6 @@ return [
     'about-us' => 'About Us',
     'customer-service' => 'Customer Service',
     'blog' => 'Blog',
-
     'loading' => 'Loading',
     'send-email' => 'Send Email',
     'call-emergency' => 'Call Emergency',
@@ -25,11 +23,8 @@ return [
     'talk-to-specialist' => 'Talk to a Specialist',
     'testimonial' => 'Testimonial',
     'latest-client-feedback' => 'Our Latest Client Feedback',
-
     'terms-and-conditions' => 'Terms & Condition',
-    'privacy-policy' => 'Privacy Policy '
-
-
-
-
+    'privacy-policy' => 'Privacy Policy ',
+    'talk-to-us' => 'TALK TO US',
+    'how-may-we-help-you' => 'How May We Help You!'
 ];

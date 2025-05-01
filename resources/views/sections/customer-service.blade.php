@@ -54,38 +54,69 @@
                     <div class="col-lg-6">
                         <div class="contact-content">
                             <div class="section-title mb-40 mxw-650">
-                                <div class="subtitle"><img src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}"
-                                                           alt="icon"> <span
-                                        class="text-white"> TALK TO US
-                                    </span><img src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon">
+                                <div class="subtitle">
+                                    <img src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon">
+                                    <span class="text-white">
+                                        {{ trans('general.talk-to-us') }}
+                                    </span>
+                                    <img src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon">
                                 </div>
-                                <h2 class="title text-white"> How May We Help You! </h2>
+                                <h2 class="title text-white"> {{ trans('general.how-may-we-help-you') }} </h2>
                             </div>
 
-                            <form action="#" id="contact-form" method="POST" class="contact-form-items">
+                            <form action="{{ route('customer.service.send') }}" class="contact-form" id="contact-form"
+                                  method="POST">
+                                @csrf
                                 <div class="row g-4">
-                                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="col-lg-12  ">
                                         <div class="form-clt">
-                                            <span>Your name*</span>
-                                            <input type="text" name="name" id="name" placeholder="Robot fox">
+                                            <input type="text" name="name" id="name"
+                                                   value="{{ old('name') }}"
+                                                   placeholder="{{ trans('contact-us.your-name') }}">
+                                            @error('name')
+                                            <div style="color: red;">{{ $message }}</div>@enderror
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="col-lg-12  ">
                                         <div class="form-clt">
-                                            <span>Your Email*</span>
-                                            <input type="text" name="email" id="email" placeholder="info@example.com">
+                                            <input type="tel" name="phone_number" id="phone"
+                                                   value="{{ old('phone_number') }}"
+                                                   style="direction: {{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }};"
+                                                   placeholder="{{ trans('contact-us.your-phone') }}">
+                                            @error('phone_number')
+                                            <div style="color: red;">{{ $message }}</div>@enderror
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
+                                    <div class="col-lg-12  ">
                                         <div class="form-clt">
-                                            <span>Message*</span>
-                                            <textarea name="message" id="message"
-                                                      placeholder="Write Message"></textarea>
+                                            <div class="form-clt">
+                                                <input type="email" name="email" id="email"
+                                                       value="{{ old('email') }}"
+                                                       placeholder="{{ trans('contact-us.your-email') }}">
+                                                @error('email')
+                                                <div style="color: red;">{{ $message }}</div>@enderror
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-7 wow fadeInUp" data-wow-delay=".9s">
-                                        <button type="submit" class="theme-btn bg-white">
-                                            Send Message
+                                    <div class="col-lg-12  ">
+                                        <div class="form-clt">
+                                            <div class="form-clt">
+                                                <input type="message" name="message" id="message"
+                                                       value="{{ old('message') }}"
+                                                       placeholder="{{ trans('contact-us.your-message') }}">
+                                                @error('message')
+                                                <div style="color: red;">{{ $message }}</div>@enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @if(session('success'))
+                                        <div style="color: green;">{{ session('success') }}</div>
+                                    @endif
+
+                                    <div class="col-lg-12 btn-text-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}">
+                                        <button type="submit" class="theme-btn">
+                                            {{ trans('contact-us.send') }}
+                                            <i class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
                                         </button>
                                     </div>
                                 </div>
@@ -96,4 +127,10 @@
             </div>
         </div>
     </section>
+    <style>
+        select, .single-select, .form-control, .form-select, textarea, input {
+            background-color: white;
+            color: black;
+        }
+    </style>
 @endsection

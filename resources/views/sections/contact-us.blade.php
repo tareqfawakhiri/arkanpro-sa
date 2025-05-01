@@ -3,7 +3,7 @@
 @section('content')
 
     <!--<< Breadcrumb Section Start >>-->
-    <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb.jpg');">
+    <div class="breadcrumb-wrapper bg-cover" style="background-image: url({{ Voyager::image($section->image) }});">
         <div class="border-shape">
             <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>

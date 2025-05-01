@@ -38,7 +38,7 @@ Route::get('/services', [ServicesController::class, 'index'])->name('services');
 Route::get('/service/{slug}', [ServicesController::class, 'details'])->name('service.details');
 
 Route::get('/products', [ProductsController::class, 'index'])->name('products');
-Route::get('/product/{slug}', [ProductsController::class, 'index'])->name('product.details');
+Route::get('/product/{slug}', [ProductsController::class, 'details'])->name('product.details');
 
 Route::get('/customer-service', [CustomerServiceControlller::class, 'index'])->name('customer.service');
 Route::post('/customer-service', [CustomerServiceControlller::class, 'send'])->name('customer.service.send');

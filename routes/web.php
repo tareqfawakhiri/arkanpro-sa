@@ -28,6 +28,9 @@ Route::post('/send-quotation-request', [HomeController::class, 'quotation'])->na
 Route::get('/lang/change', [Controller::class, 'language'])->name('change-language');
 Route::get('/theme/change', [Controller::class, 'theme'])->name('change-theme');
 
+Route::get('/quroosh', [Controller::class, 'quroosh'])->name('quroosh');
+
+
 Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact');
 Route::post('/contact-us', [ContactUsController::class, 'send'])->name('contact.send');
 

@@ -15,7 +15,7 @@ class BlogControlller extends Controller
     {
         $posts = Post::with(['category', 'author'])
             ->where('status', 'published')
-            ->orderBy('created_at', 'desc')
+            ->orderBy('order')
             ->paginate(12);
         return view('sections.blog', compact('posts'));
     }

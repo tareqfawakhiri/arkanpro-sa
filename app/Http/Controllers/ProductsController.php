@@ -9,7 +9,7 @@ class ProductsController extends Controller
     function index()
     {
         $products = Product::where('status', 'ACTIVE')
-            ->orderBy('created_at', 'desc')
+            ->orderBy('order')
             ->paginate(12);
         return view('sections.products', compact('products'));
     }

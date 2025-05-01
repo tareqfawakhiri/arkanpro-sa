@@ -1,9 +1,8 @@
 @extends('layout.main')
-@section('title', $post->getTranslatedAttribute('title'))
 
-@section('seo_title',$post->seo_title)
-@section('meta_description',$post->meta_description)
-@section('meta_keywords',$post->meta_keywords)
+@section('title', $post->seo_title ? $post->seo_title : $post->getTranslatedAttribute('title'))
+@section('meta_description',$post->meta_description ? $post->meta_description : setting('site.description'))
+@section('meta_keywords',$post->meta_keywords ? $post->meta_keywords : setting('site.keywords'))
 
 @section('content')
 

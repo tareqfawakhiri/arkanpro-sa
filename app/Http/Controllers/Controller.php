@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Models\Pricing;
+
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
@@ -49,13 +51,14 @@ class Controller extends BaseController
             ->first();
 
 
-        $pricing = Pricing::orderBy('created_at')->get();
+        $pricing = Pricing::orderBy('order')->get();
         $i = 0;
         foreach ($pricing as $plane) {
             $pricing[$i]->pricing_check = Pricing::select('pricing_checklist.title', 'pricing_checklist.title_ar')
                 ->leftJoin('pricing_check', 'pricing.id', '=', 'pricing_check.pricing_id')
                 ->leftJoin('pricing_checklist', 'pricing_checklist.id', '=', 'pricing_check.pricing_checklist_id')
                 ->WHERE('pricing.id', $plane->id)
+                ->orderBy('pricing_checklist.order')
                 ->get();
 
 
@@ -63,6 +66,7 @@ class Controller extends BaseController
                 ->leftJoin('pricing_uncheck', 'pricing.id', '=', 'pricing_uncheck.pricing_id')
                 ->leftJoin('pricing_checklist', 'pricing_checklist.id', '=', 'pricing_uncheck.pricing_checklist_id')
                 ->WHERE('pricing.id', $plane->id)
+                ->orderBy('pricing_checklist.order')
                 ->get();
             $i++;
         }

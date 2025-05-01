@@ -1,9 +1,9 @@
 @extends('layout.main')
-@section('title', $product->getTranslatedAttribute('title'))
 
-@section('seo_title',$product->seo_title)
-@section('meta_description',$product->meta_description)
-@section('meta_keywords',$product->meta_keywords)
+@section('title', $product->seo_title ? $product->seo_title : $product->getTranslatedAttribute('title'))
+@section('meta_description',$product->meta_description ? $product->meta_description : setting('site.description'))
+@section('meta_keywords',$product->meta_keywords ? $product->meta_keywords : setting('site.keywords'))
+
 
 @section('content')
 @php

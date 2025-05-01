@@ -1,5 +1,9 @@
 @extends('layout.main')
-@section('title',$section->title)
+
+@section('title', $section->seo_title ? $section->seo_title : $section->getTranslatedAttribute('title'))
+@section('meta_description',$section->meta_description ? $section->meta_description : setting('site.description'))
+@section('meta_keywords',$section->meta_keywords ? $section->meta_keywords : setting('site.keywords'))
+
 @section('content')
     <!--<< Breadcrumb Section Start >>-->
     @php

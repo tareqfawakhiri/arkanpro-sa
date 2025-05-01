@@ -9,13 +9,15 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <meta http-equiv="X-UA-Compatible" content-ie=edge"/>
+    <meta http-equiv="X-UA-Compatible" content-ie="edge"/>
 
 
-    <meta name="author" content="ex-coders">
-    <meta name="description" content="Extech - IT Solution & Technology HTML Template">
+
+    <meta name="keywords" content="@yield('meta_keywords',setting('site.keywords'))">
+    <meta name="description" content="@yield('meta_description',setting('site.description'))">
+
     <!-- ======== Page title ============ -->
-    <title>Arkan Pro &#8211; أركان الاحتراف | @yield('title', 'No Title')</title>
+    <title>Arkan Pro &#8211; أركان الاحتراف | @yield('title', setting('site.title'))</title>
 
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}">

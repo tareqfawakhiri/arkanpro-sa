@@ -18,40 +18,41 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $partners = Partner::orderByDesc('created_at')->get();
-        $clients = Client::orderByDesc('created_at')->get();
+        $partners = Partner::orderBy('order')->get();
+        $clients = Client::orderBy('order')->get();
 
         $slider = Slider::where('status', 'published')
-            ->orderByDesc('created_at')
+            ->orderBy('order')
             ->get();
 
         $isHome = true;
         $service = Service::where('status', 'ACTIVE')
             ->where('add_to_home_page_banner', 'YES')
-            ->orderByDesc('created_at')
+            ->orderBy('order')
             ->first();
 
         $testimonials = Testimonial::orderByDesc('created_at')->get();
 
         $posts = Post::with(['category', 'author'])
             ->where('status', 'published')
-            ->orderBy('created_at', 'desc')
+            ->orderBy('order')
             ->get();
 
         $services = Service::where('status', 'ACTIVE')
-            ->orderByDesc('created_at')
+            ->orderBy('order')
             ->get();
 
         $products = Product::where('status', 'ACTIVE')
-            ->orderByDesc('created_at')
+            ->orderBy('order')
             ->get();
-        $pricing = Pricing::orderBy('created_at')->get();
+        $pricing = Pricing::orderBy('order')->get();
         $i = 0;
         foreach ($pricing as $plane) {
             $pricing[$i]->pricing_check = Pricing::select('pricing_checklist.title', 'pricing_checklist.title_ar')
                 ->leftJoin('pricing_check', 'pricing.id', '=', 'pricing_check.pricing_id')
                 ->leftJoin('pricing_checklist', 'pricing_checklist.id', '=', 'pricing_check.pricing_checklist_id')
                 ->WHERE('pricing.id', $plane->id)
+                ->orderBy('pricing_checklist.order')
                 ->get();
 
 
@@ -59,6 +60,7 @@ class HomeController extends Controller
                 ->leftJoin('pricing_uncheck', 'pricing.id', '=', 'pricing_uncheck.pricing_id')
                 ->leftJoin('pricing_checklist', 'pricing_checklist.id', '=', 'pricing_uncheck.pricing_checklist_id')
                 ->WHERE('pricing.id', $plane->id)
+                ->orderBy('pricing_checklist.order')
                 ->get();
             $i++;
         }

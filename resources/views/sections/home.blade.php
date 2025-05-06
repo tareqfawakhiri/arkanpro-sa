@@ -108,7 +108,7 @@
                                             </div>
                                             <div class="body">
                                                 <h3>
-                                                    <a href="{{ route('service',$service->slug) }}">{{ $service->getTranslatedAttribute('title') }}</a>
+                                                    <a href="{{ route('service.details',$service->slug ?? 'xxx') }}">{{ $service->getTranslatedAttribute('title') }}</a>
                                                 </h3>
                                                 <p>
                                                     {!! $service->short_content !!}
@@ -233,7 +233,7 @@
                                  style="{{ $count++ == 0 ? 'display: flex' : 'display: none' }}">
                                 <div class="col-xl-5">
                                     <div class="project-thumb img-custom-anim-left">
-                                        <img src="{{ Voyager::image($product->icon) }}"
+                                        <img src="{{ Voyager::image($product->image) }}"
                                              alt="{{ $product->getTranslatedAttribute('sub_title') }}">
                                     </div>
                                 </div>
@@ -244,7 +244,7 @@
                                                 <div class="col-xl-12">
                                                     <div class="project-content-left">
                                                         <h3>{{ $product->getTranslatedAttribute('title') }}</h3>
-                                                        <p class="text">{!! $product->excerpt !!}</p>
+                                                        <p class="text">{!! $product->description !!}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -391,7 +391,7 @@
                                                     <div class="fancy-box style1">
                                                         <div class="item">
                                                             <h6>{{ $post->author->name ?? '' }}</h6>
-                                                            <p>{{ $post->category->name }}</p>
+                                                            <p>{{ $post->category->name ?? ''}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -427,4 +427,17 @@
             </div>
         </div>
     </div>
+    <style>
+        .project-content-left {
+            max-width: 100% !important;
+            text-align: {{ app()->getLocale() == 'ar' ? 'right' : 'left' }};
+        }
+
+        .project-content-left {
+            list-style: disc;
+        }
+        .project-content-left *{
+            color: var(--text-color);
+        }
+    </style>
 @endsection

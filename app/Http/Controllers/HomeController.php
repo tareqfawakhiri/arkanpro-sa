@@ -38,7 +38,7 @@ class HomeController extends Controller
             ->orderBy('order')
             ->get();
 
-        $services = Service::where('status', 'ACTIVE')
+        $services = Service::where('status', 'PUBLISHED')
             ->orderBy('order')
             ->get();
 

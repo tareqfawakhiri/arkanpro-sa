@@ -57,7 +57,7 @@
                                         @if($post->category)
                                             <li>
                                                 <i class="fa-solid fa-tag"></i>
-                                                {{ $post->category->name }}
+                                                {{ $post->category->name ?? ''}}
                                             </li>
                                         @endif
 

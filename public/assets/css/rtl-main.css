@@ -2636,11 +2636,6 @@ video {
     height: auto;
 }
 
-ul {
-    list-style-type: none;
-    padding-right: 0px !important;
-}
-
 ol {
     list-style-type: decimal;
 }

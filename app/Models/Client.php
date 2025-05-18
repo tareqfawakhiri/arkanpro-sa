@@ -8,4 +8,6 @@ use TCG\Voyager\Traits\Resizable;
 class Client extends Model
 {
     use Resizable;
+
+    protected $table = 'clients';
 }

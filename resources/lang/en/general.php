@@ -25,6 +25,7 @@ return [
     'latest-client-feedback' => 'Our Latest Client Feedback',
     'terms-and-conditions' => 'Terms & Condition',
     'privacy-policy' => 'Privacy Policy ',
+    'share' => 'Share',
     'talk-to-us' => 'TALK TO US',
     'how-may-we-help-you' => 'How May We Help You!'
 ];

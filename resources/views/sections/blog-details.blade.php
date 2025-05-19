@@ -7,7 +7,7 @@
 @section('content')
 
     <!--<< Breadcrumb Section Start >>-->
-    <div class="breadcrumb-wrapper bg-cover" style="background-image: url({{ asset('assets/img/breadcrumb.jpg') }}">
+    <div class="breadcrumb-wrapper bg-cover">
         <div class="border-shape">
             <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>
@@ -39,7 +39,7 @@
         <div class="container">
             <div class="news-details-area">
                 <div class="row g-5">
-                    <div class="col-12 col-lg-8">
+                    <div class="col-12 col-lg-12">
                         <div class="blog-post-details">
                             <div class="single-blog-post">
                                 <div class="post-featured-thumb bg-cover"
@@ -70,120 +70,10 @@
                                 </div>
                                 <div class="col-lg-4 col-12 mt-3 mt-lg-0 text-lg-end">
                                     <div class="social-share">
-                                        <span class="me-3">Share:</span>
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="main-sidebar">
-                            <div class="single-sidebar-widget">
-                                <div class="wid-title">
-                                    <h3>Search</h3>
-                                </div>
-                                <div class="search-widget">
-                                    <form action="#">
-                                        <input type="text" placeholder="Search here">
-                                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="single-sidebar-widget">
-                                <div class="wid-title">
-                                    <h3>Categories</h3>
-                                </div>
-                                <div class="news-widget-categories">
-                                    <ul>
-                                        <li><a href="#">Database Security <span>(08)</span></a></li>
-                                        <li><a href="#">IT Consultancy <span>(11)</span></a></li>
-                                        <li class="active"><a href="#">App
-                                                Development <span>(12)</span></a></li>
-                                        <li><a href="#">UI/UX Design <span>(18)</span></a></li>
-                                        <li><a href="#">Cyber Security <span>(07)</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="single-sidebar-widget">
-                                <div class="wid-title">
-                                    <h3>Recent Post</h3>
-                                </div>
-                                <div class="recent-post-area">
-                                    <div class="recent-items">
-                                        <div class="recent-thumb">
-                                            <img src="{{ asset('assets/img/news/pp3.jpg') }}" alt="img">
-                                        </div>
-                                        <div class="recent-content">
-                                            <ul>
-                                                <li>
-                                                    <i class="fa-solid fa-calendar-days"></i>
-                                                    18 Dec, 2024
-                                                </li>
-                                            </ul>
-                                            <h6>
-                                                <a href="#">
-                                                    Keep Your Business Safe & <br>
-                                                    Endure High Availability
-                                                </a>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                    <div class="recent-items">
-                                        <div class="recent-thumb">
-                                            <img src="{{ asset('assets/img/news/pp4.jpg') }}" alt="img">
-                                        </div>
-                                        <div class="recent-content">
-                                            <ul>
-                                                <li>
-                                                    <i class="fa-solid fa-calendar-days"></i>
-                                                    18 Dec, 2024
-                                                </li>
-                                            </ul>
-                                            <h6>
-                                                <a href="#">
-                                                    Tacking the Changes of <br>
-                                                    Retail Industry
-                                                </a>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                    <div class="recent-items">
-                                        <div class="recent-thumb">
-                                            <img src="{{ asset('assets/img/news/pp5.jpg') }}" alt="img">
-                                        </div>
-                                        <div class="recent-content">
-                                            <ul>
-                                                <li>
-                                                    <i class="fa-solid fa-calendar-days"></i>
-                                                    18 Dec, 2024
-                                                </li>
-                                            </ul>
-                                            <h6>
-                                                <a href="#">
-                                                    What’s the Holding Back <br>
-                                                    the It Solution
-                                                </a>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-sidebar-widget">
-                                <div class="wid-title">
-                                    <h3>Tags</h3>
-                                </div>
-                                <div class="news-widget-categories">
-                                    <div class="tagcloud">
-                                        <a href="#">News</a>
-                                        <a href="#">business</a>
-                                        <a href="#">marketing</a>
-                                        <a href="#">solution</a>
-                                        <a href="#">SMM</a>
-                                        <a href="#">strategy</a>
-                                        <a href="#">SEO</a>
+                                        <span class="me-3">{{ trans('general.share') }}:</span>
+                                        <a href="{{ setting('social-media.facebook_url') }}"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="{{ setting('social-media.twitter_url') }}"><i class="fab fa-x"></i></a>
+                                        <a href="{{ setting('social-media.linkedin_url') }}"><i class="fab fa-linkedin-in"></i></a>
                                     </div>
                                 </div>
                             </div>

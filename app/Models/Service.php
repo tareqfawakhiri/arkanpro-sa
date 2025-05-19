@@ -27,7 +27,7 @@ class Service extends Model
 
     public function features()
     {
-        return $this->hasMany(ServiceFeature::class);
+        return $this->belongsToMany(ServiceFeature::class, 'services_feature');
     }
 
     public function getShortContentAttribute()

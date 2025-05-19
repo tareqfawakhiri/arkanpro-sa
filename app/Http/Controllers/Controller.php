@@ -43,7 +43,7 @@ class Controller extends BaseController
         return redirect()->back();
     }
 
-    function quroosh()
+    public function quroosh()
     {
 
          $section = Service::where('slug', 'quroosh')

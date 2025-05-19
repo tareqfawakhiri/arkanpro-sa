@@ -26,7 +26,7 @@ class HomeController extends Controller
             ->get();
 
         $isHome = true;
-        $service = Service::where('status', 'ACTIVE')
+        $service = Service::where('status', 'PUBLISHED')
             ->where('add_to_home_page_banner', 'YES')
             ->orderBy('order')
             ->first();

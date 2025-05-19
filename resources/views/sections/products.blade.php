@@ -3,7 +3,7 @@
 @section('content')
 
     <!--<< Breadcrumb Section Start >>-->
-    <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb.jpg');">
+    <div class="breadcrumb-wrapper bg-cover">
         <div class="border-shape">
             <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>
@@ -38,7 +38,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="project-items">
                         <div class="project-image">
-                            <img src="{{ Voyager::image($product->thumbnail('cropped')) }}" alt="project-img">
+                            <img src="{{ Voyager::image($product->image) }}" alt="project-img">
                             <div class="project-content style2">
                                 <p>{{ $product->getTranslatedAttribute('excerpt') }}</p>
                                 <h4>

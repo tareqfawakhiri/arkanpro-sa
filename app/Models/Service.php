@@ -32,6 +32,6 @@ class Service extends Model
 
     public function getShortContentAttribute()
     {
-        return Str::of(strip_tags($this->description))->substr(0, 100);
+        return Str::of(strip_tags($this->excerpt))->substr(0, 100);
     }
 }

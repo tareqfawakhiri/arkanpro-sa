@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use TCG\Voyager\Models\Page;
 
 class ProductsController extends Controller
 {
@@ -11,7 +12,8 @@ class ProductsController extends Controller
         $products = Product::where('status', 'ACTIVE')
             ->orderBy('order')
             ->paginate(12);
-        return view('sections.products', compact('products'));
+        $page = Page::where('slug', 'products')->firstOrFail();
+        return view('sections.products', compact('products','page'));
     }
 
     function details($slug)

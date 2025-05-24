@@ -3,7 +3,7 @@
 @section('content')
 
     <!--<< Breadcrumb Section Start >>-->
-    <div class="breadcrumb-wrapper bg-cover">
+    <div class="breadcrumb-wrapper bg-cover" style="background-image: url({{ Voyager::image($page->image) }});">
         <div class="border-shape">
             <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>
@@ -29,6 +29,12 @@
             </div>
         </div>
     </div>
+
+    <section class="about-section section-padding fix bg-cover">
+        <div class="container">
+            {!! $page->getTranslatedAttribute('body') !!}
+        </div>
+    </section>
 
     <!-- Project Section Start -->
     <section class="project-section section-padding fix">

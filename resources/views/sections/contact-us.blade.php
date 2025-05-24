@@ -102,6 +102,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="video-image">
+                                <img src="{{ asset('assets/img/video.jpg') }}" alt="img">
+                                <div class="video-box">
+                                    <a href="{{ setting('contact-us.video_contact_us') }}" class="video-btn ripple popup-video">
+                                        <i class="fa-solid fa-play"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6">

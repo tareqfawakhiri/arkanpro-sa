@@ -53,13 +53,13 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="project-catagory">
-                                        <h3>{{ trans('products.product-info') }}: </h3>
+                                        <h3 style="color:#000;">{{ trans('products.product-info') }}: </h3>
                                         <ul>
-                                            <li>
+                                            <li style="color:#000;">
                                                 {{ trans('products.product-name') }}:
                                                 <span>{{ $product->getTranslatedAttribute('title') }}</span>
                                             </li>
-                                            <li>
+                                            <li style="color:#000;">
                                                 {{ trans('products.product-category') }}:
                                                 <span>{{ $product->getTranslatedAttribute('excerpt') }}</span>
                                             </li>

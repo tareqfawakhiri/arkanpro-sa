@@ -45,15 +45,9 @@
                             @else
                                 <img src="{{ asset('assets/img/contact.png') }}" alt="customer-service-img">
                             @endif
-                            
+
                             <div class="cricle-shape">
                                 <img src="{{ asset('assets/img/circle-shape.png') }}" alt="shape-img">
-                            </div>
-                            <div class="small-cricle-shape">
-                                <img src="{{ asset('assets/img/choose/circle.png') }}" alt="shape-img">
-                            </div>
-                            <div class="frame-shape">
-                                <img src="{{ asset('assets/img/frame.png') }}" alt="img">
                             </div>
                         </div>
                     </div>

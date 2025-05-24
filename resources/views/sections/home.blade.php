@@ -9,18 +9,6 @@
                     <div class="swiper-slide">
                         <div class="slider-image bg-cover"
                              style="background-image: url('{{ Voyager::image($slide->bk_image) }}');">
-                            <div class="mask-shape">
-                                <img src="{{ asset('assets/img/hero/mask-shape-2.png') }}" alt="shape-img">
-                            </div>
-                            <div class="border-shape">
-                                <img src="{{ asset('assets//img/hero/border-shape.png') }}" alt="shape-img">
-                            </div>
-                            <div class="circle-shape">
-                                <img src="{{ asset('assets/img/choose/circle.png') }}" alt="shape-img">
-                            </div>
-                            <div class="frame" data-animation="slideInLeft" data-duration="3s" data-delay="2.2s">
-                                <img src="{{ asset('assets/img/frame.png') }}" alt="shape-img">
-                            </div>
                         </div>
                         <div class="container">
                             <div class="row g-4 align-items-center">

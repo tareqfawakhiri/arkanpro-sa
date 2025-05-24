@@ -115,7 +115,7 @@
                     <div class="col-lg-6">
                         <div class="contact-content">
                             <h2>{{ trans('contact-us.get-ready') }}</h2>
-                            <p>{{ trans('contact-us.get-ready-desc') }}</p>
+{{--                            <p>{{ trans('contact-us.get-ready-desc') }}</p>--}}
                             <form action="{{ route('contact.send') }}" id="contact-form" method="POST"
                                   class="contact-form-items">
                                 @csrf

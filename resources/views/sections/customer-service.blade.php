@@ -110,7 +110,7 @@
                                         </div>
                                     </div>
                                     @if(session('success'))
-                                        <div style="color: green;">{{ session('success') }}</div>
+                                        <div style="color: white;">{{ session('success') }}</div>
                                     @endif
 
                                     <div class="col-lg-12 btn-text-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}">

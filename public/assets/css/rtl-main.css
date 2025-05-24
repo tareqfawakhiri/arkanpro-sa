@@ -2743,7 +2743,7 @@ h5,
 .h6,
 h6 {
     font-family: var(--title-font);
-    color: var(--title-color);
+    color: var(--header);
     text-transform: none;
     font-weight: 700;
     line-height: 1.4;

@@ -39,7 +39,13 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="contact-image wow fadeInUp" data-wow-delay=".4s">
-                            <img src="{{ asset('assets/img/contact.png') }}" alt="contact-img">
+
+                            @if(setting('site.customer-service-image'))
+                                <img src="{{ Voyager::image(setting('site.customer-service-image')) }}" alt="customer-service-img" width="594px">
+                            @else
+                                <img src="{{ asset('assets/img/contact.png') }}" alt="customer-service-img">
+                            @endif
+                            
                             <div class="cricle-shape">
                                 <img src="{{ asset('assets/img/circle-shape.png') }}" alt="shape-img">
                             </div>

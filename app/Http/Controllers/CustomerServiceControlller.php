@@ -28,6 +28,6 @@ class CustomerServiceControlller extends Controller
             'phone_number' => $request->phone_number,
             'message' => $request->message,
         ]);
-        return back()->with('success', 'Your message has been sent!');
+        return back()->with('success', trans('general.message-sent'));
     }
 }

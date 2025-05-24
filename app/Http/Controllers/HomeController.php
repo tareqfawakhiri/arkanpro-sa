@@ -86,6 +86,6 @@ class HomeController extends Controller
             'phone' => $request->phone,
             'type' => $request->type,
         ]);
-        return back()->with('success', 'Your message has been sent!');
+        return back()->with('success', trans('general.message-sent'));
     }
 }

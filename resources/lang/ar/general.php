@@ -27,5 +27,6 @@ return [
     'privacy-policy' => 'سياسة الخصوصية',
     'share' => 'مشاركة',
     'talk-to-us' => 'تحدث معنا',
-    'how-may-we-help-you' => 'كيف يمكننا مساعدتك!'
+    'how-may-we-help-you' => 'كيف يمكننا مساعدتك!',
+    'message-sent' => 'تم استلام طلبك بنجاح'
 ];

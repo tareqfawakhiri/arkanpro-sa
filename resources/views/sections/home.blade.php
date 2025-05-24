@@ -294,8 +294,7 @@
     </section>
 
     <!-- Testimonial Section   S T A R T -->
-    <section class="testimonial-section space pb-0 fix wow fadeInUp" data-wow-delay=".5s"
-             data-bg-src="{{ asset('assets/img/bg/testimonialBg1_1.png') }}">
+    <section class="testimonial-section space pb-0 fix wow fadeInUp" data-wow-delay=".5s" data-bg-src="{{ (session()->get('theme') != 'dark') ? asset('assets/img/bg/testimonialBg1_1.png') : '' }}">
         <div class="testimonial-wrap style3 space">
             <div class="container">
                 <div class="row">
@@ -321,9 +320,11 @@
                                         <ul class="star-wrap"></ul>
                                         <p class="text">{{ $testimonial->getTranslatedAttribute('description') }}</p>
                                         <div class="profile-box">
+                                            @if($testimonial->avatar)
                                             <div class="testi-thumb">
-                                                <img src="{{ asset('assets/img/testimonial/testiThumb3_1.png') }}" alt="thumb">
+                                                <img src="{{ Voyager::image($testimonial->avatar) }}" alt="{{ $testimonial->getTranslatedAttribute('name') }}">
                                             </div>
+                                            @endif
                                             <div class="testi-content">
                                                 <h3 class="title">{{ $testimonial->getTranslatedAttribute('name') }}</h3>
                                                 <div
@@ -378,7 +379,7 @@
                                              data-wow-delay=".4s">
                                             <div class="blog-card-thumb">
                                                 <img src="{{ Voyager::image($post->thumbnail('cropped')) }}"
-                                                     alt="thumb">
+                                                     alt="{{ $post->getTranslatedAttribute('title') }}">
                                             </div>
                                             <div class="blog-card-body">
                                                 <div class="blog-meta">
@@ -408,7 +409,7 @@
     </section>
 
 
-    <div class="brand-section fix pt-0">
+    <div class="brand-section fix pt-0 pb-5">
         <div class="container">
             <div class="brand-wrapper">
                 <h6 class="text-center wow fadeInUp" data-wow-delay=".3s">{{ trans('brands.clients-success')}}</h6>

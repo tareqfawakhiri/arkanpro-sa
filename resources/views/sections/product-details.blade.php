@@ -12,10 +12,10 @@
     <!--<< Breadcrumb Section Start >>-->
     <div class="breadcrumb-wrapper bg-cover" style="background-image: url({{ Voyager::image($media_banner) }})">
         <div class="border-shape">
-            <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
+            <img data-src="{{ asset('assets/img/element.png') }}" >
         </div>
         <div class="line-shape">
-            <img src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
+            <img data-src="{{ asset('assets/img/line-element.png') }}" >
         </div>
         <div class="container">
             <div class="page-heading">
@@ -45,7 +45,7 @@
                     <div class="col-lg-12">
                         <div class="project-details-items">
                             <div class="details-image">
-                                <img src="{{ Voyager::image($product->image_details) }}" alt="img">
+                                <img data-src="{{ Voyager::image($product->image_details) }}" alt="img">
                             </div>
                             <div class="row g-4 justify-content-between">
                                 <div class="col-lg-7">

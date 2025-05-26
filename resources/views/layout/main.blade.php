@@ -85,6 +85,19 @@
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js"></script>
 
+<!-- cdnjs -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("img").lazy({
+            effect: "fadeIn",
+            effectTime: 1000,
+            threshold: 200
+        });
+    });
+</script>
+
 <!--<< Main.js >>-->
 <script src="{{ asset('assets/js/main.js') }}"></script>
 <script>

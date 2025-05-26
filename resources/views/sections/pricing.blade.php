@@ -1,14 +1,14 @@
 <!-- Pricing Section   S T A R T -->
 <section class="pricing-section fix section-padding">
         <div class="pricing-wrapper style1">
-            <div class="shape1 d-none d-xxl-block"><img src="{{ asset('assets/img/shape/pricingShape1_1.png') }}" alt="shape"></div>
-            <div class="shape2 d-none d-xxl-block"><img src="{{ asset('assets/img/shape/pricingShape1_2.png') }}" alt="shape"></div>
+            <div class="shape1 d-none d-xxl-block"><img data-src="{{ asset('assets/img/shape/pricingShape1_1.png') }}" alt="shape"></div>
+            <div class="shape2 d-none d-xxl-block"><img data-src="{{ asset('assets/img/shape/pricingShape1_2.png') }}" alt="shape"></div>
             <div class="container">
                 <div class="section-title title-area  mx-auto mb-25">
-                    <div class="subtitle d-flex justify-content-center"><img src="{{ asset('assets/img/icon/arrowLeft.svg') }}"
+                    <div class="subtitle d-flex justify-content-center"><img data-src="{{ asset('assets/img/icon/arrowLeft.svg') }}"
                                                                              alt="icon">
                         <span> {{ trans('pricing.our-pricing') }}
-                  </span><img src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
+                  </span><img data-src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
                     </div>
                     <h2 class="title text-center">{{ trans('pricing.our-pricing-plan') }}</h2>
                 </div>
@@ -39,14 +39,14 @@
                                             @endif
                                         </div>
                                         <div class="item">
-                                            <img src="{{ asset('assets/img/icon/pricingIcon1_1.svg') }}" alt="icon">
+                                            <img data-src="{{ asset('assets/img/icon/pricingIcon1_1.svg') }}" alt="icon">
                                         </div>
                                     </div>
                                     <div class="pricing-card_body">
                                         <div class="checklist-wrapper">
                                         @foreach($plane->pricing_check as $check)
                                             <ul class="checklist style1">
-                                                <li><img src="{{ asset('assets/img/icon/checkmarkIcon.svg') }}" alt="icon">
+                                                <li><img data-src="{{ asset('assets/img/icon/checkmarkIcon.svg') }}" alt="icon">
                                                 @if(app()->getLocale() == 'ar')
                                                     {{ $check->title_ar }}
                                                 @else
@@ -59,7 +59,7 @@
                                         @foreach($plane->pricing_uncheck as $uncheck)
                                         @if($uncheck->title)
                                             <ul class="checklist style1">
-                                                <li><img src="{{ asset('assets/img/icon/crossIcon.svg') }}" alt="icon">
+                                                <li><img data-src="{{ asset('assets/img/icon/crossIcon.svg') }}" alt="icon">
                                                 @if(app()->getLocale() == 'ar')
                                                     {{ $uncheck->title_ar }}
                                                 @else

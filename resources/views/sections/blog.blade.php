@@ -4,10 +4,10 @@
     <!--<< Breadcrumb Section Start >>-->
     <div class="breadcrumb-wrapper bg-cover">
         <div class="border-shape">
-            <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
+            <img data-src="{{ asset('assets/img/element.png') }}" >
         </div>
         <div class="line-shape">
-            <img src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
+            <img data-src="{{ asset('assets/img/line-element.png') }}" >
         </div>
         <div class="container">
             <div class="page-heading">
@@ -36,7 +36,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                         <div class="news-card-items style-2 mt-0 pb-0">
                             <div class="news-image">
-                                <img src="{{ Voyager::image($post->thumbnail('cropped')) }}" alt="news-img"
+                                <img data-src="{{ Voyager::image($post->thumbnail('cropped')) }}" alt="news-img"
                                      style="height:240px">
                                 <div class="post-date">
                                     <h3>{!! $post->getDateTime !!}</h3>

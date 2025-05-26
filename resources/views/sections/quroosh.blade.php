@@ -11,10 +11,10 @@
     @endphp
     <div class="breadcrumb-wrapper bg-cover" style="background-image: url({{ Voyager::image($media_banner) }});">
         <div class="border-shape">
-            <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
+            <img data-src="{{ asset('assets/img/element.png') }}" >
         </div>
         <div class="line-shape">
-            <img src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
+            <img data-src="{{ asset('assets/img/line-element.png') }}" >
         </div>
         <div class="container">
             <div class="page-heading">
@@ -53,9 +53,9 @@
                 <div class="title-wrap mb-45">
                     <div class="section-title">
                         <div class="subtitle">
-                            <img src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
+                            <img data-src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
                             <span> {{ trans('general.system-features')  }} </span>
-                            <img src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
+                            <img data-src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
                         </div>
                         <h2 class="title">{{ trans('general.elevating-businesses-with-it-ingenuity') }}</h2>
                     </div>
@@ -76,7 +76,7 @@
                                     <div class="swiper-slide">
                                         <div class="service-card style1">
                                             <div class="icon">
-                                                <img src="{{ Voyager::image($feature->icon) }}"
+                                                <img data-src="{{ Voyager::image($feature->icon) }}"
                                                      alt="icon">
                                             </div>
                                             <div class="body">

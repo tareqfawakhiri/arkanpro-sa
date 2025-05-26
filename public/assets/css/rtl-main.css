@@ -13140,11 +13140,11 @@ input.main-search-input::placeholder {
 }
 
 .project-item-wrapper.style1 {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
-    margin-bottom: -60px;
-    padding: 80px 146px 0px;
+    gap: 23px;
+    margin-bottom: -148px;
+    padding: 80px;
 }
 
 @media (max-width: 1199px) {
@@ -13172,7 +13172,7 @@ input.main-search-input::placeholder {
     display: inline-block;
     border: 1px solid var(--border-color);
     background: var(--white-color);
-    padding: 65px 15px 25px;
+    padding: 40px 15px 25px;
     border-radius: 16px;
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
@@ -13183,6 +13183,9 @@ input.main-search-input::placeholder {
     -moz-border-radius: 16px;
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
+    width: 100%;
+    display: grid;
+    align-items: center;
 }
 
 @media (max-width: 1199px) {

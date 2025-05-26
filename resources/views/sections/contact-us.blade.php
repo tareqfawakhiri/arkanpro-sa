@@ -5,10 +5,10 @@
     <!--<< Breadcrumb Section Start >>-->
     <div class="breadcrumb-wrapper bg-cover" style="background-image: url({{ Voyager::image($section->image) }});">
         <div class="border-shape">
-            <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
+            <imgdata-src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>
         <div class="line-shape">
-            <img src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
+            <imgdata-src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
         </div>
         <div class="container">
             <div class="page-heading">
@@ -103,7 +103,7 @@
                                 </div>
                             </div>
                             <div class="video-image">
-                                <img src="{{ asset('assets/img/video.jpg') }}" alt="img">
+                                <imgdata-src="{{ asset('assets/img/video.jpg') }}" alt="img">
                                 <div class="video-box">
                                     <a href="{{ setting('contact-us.video_contact_us') }}" class="video-btn ripple popup-video">
                                         <i class="fa-solid fa-play"></i>
@@ -168,7 +168,7 @@
         <div class="map-items">
             <div class="googpemap">
                 <iframe
-                    src="{{setting('site.google_map_url')}}"
+                   data-src="{{setting('site.google_map_url')}}"
                     style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>

@@ -4,10 +4,10 @@
     <!--<< Breadcrumb Section Start >>-->
     <div class="breadcrumb-wrapper bg-cover">
         <div class="border-shape">
-            <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
+            <imgdata-src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>
         <div class="line-shape">
-            <img src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
+            <imgdata-src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
         </div>
         <div class="container">
             <div class="page-heading">
@@ -34,20 +34,20 @@
         <div class="container">
             <div class="contact-wrapper">
                 <div class="arrow-shape">
-                    <img src="{{ asset('assets/img/arrow-shape.png') }}" alt="shape-img">
+                    <imgdata-src="{{ asset('assets/img/arrow-shape.png') }}" alt="shape-img">
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="contact-image wow fadeInUp" data-wow-delay=".4s">
 
                             @if(setting('site.customer-service-image'))
-                                <img src="{{ Voyager::image(setting('site.customer-service-image')) }}" alt="customer-service-img" width="594px">
+                                <imgdata-src="{{ Voyager::image(setting('site.customer-service-image')) }}" alt="customer-service-img" width="594px">
                             @else
-                                <img src="{{ asset('assets/img/contact.png') }}" alt="customer-service-img">
+                                <imgdata-src="{{ asset('assets/img/contact.png') }}" alt="customer-service-img">
                             @endif
 
                             <div class="cricle-shape">
-                                <img src="{{ asset('assets/img/circle-shape.png') }}" alt="shape-img">
+                                <imgdata-src="{{ asset('assets/img/circle-shape.png') }}" alt="shape-img">
                             </div>
                         </div>
                     </div>
@@ -55,11 +55,11 @@
                         <div class="contact-content">
                             <div class="section-title mb-40 mxw-650">
                                 <div class="subtitle">
-                                    <img src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon">
+                                    <imgdata-src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon">
                                     <span class="text-white">
                                         {{ trans('general.talk-to-us') }}
                                     </span>
-                                    <img src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon">
+                                    <imgdata-src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon">
                                 </div>
                                 <h2 class="title text-white"> {{ trans('general.how-may-we-help-you') }} </h2>
                             </div>

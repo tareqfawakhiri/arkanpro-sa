@@ -9,10 +9,10 @@
     <!--<< Breadcrumb Section Start >>-->
     <div class="breadcrumb-wrapper bg-cover">
         <div class="border-shape">
-            <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
+            <imgdata-src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>
         <div class="line-shape">
-            <img src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
+            <imgdata-src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
         </div>
         <div class="container">
             <div class="page-heading">

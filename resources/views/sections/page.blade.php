@@ -4,10 +4,10 @@
     <!--<< Breadcrumb Section Start >>-->
     <div class="breadcrumb-wrapper bg-cover" style="background-image: url({{ Voyager::image($section->image) }});">
         <div class="border-shape">
-            <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
+            <imgdata-src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>
         <div class="line-shape">
-            <img src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
+            <imgdata-src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
         </div>
         <div class="container">
             <div class="page-heading">

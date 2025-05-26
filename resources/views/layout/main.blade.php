@@ -11,8 +11,6 @@
 
     <meta http-equiv="X-UA-Compatible" content-ie="edge"/>
 
-
-
     <meta name="keywords" content="@yield('meta_keywords',setting('site.keywords'))">
     <meta name="description" content="@yield('meta_description',setting('site.description'))">
 
@@ -52,6 +50,12 @@
     @else
         <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     @endif
+
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
 </head>
 
 <body>
@@ -88,7 +92,6 @@
 <!--<< Main.js >>-->
 <script src="{{ asset('assets/js/main.js') }}"></script>
 <script>
-
     const phoneInput = document.querySelector("#phone");
     const iti = window.intlTelInput(phoneInput, {
         utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
@@ -111,6 +114,9 @@
         }
     });
 
+    $(document).ready(function () {
+        $('img').Lazy();
+    });
 </script>
 </body>
 

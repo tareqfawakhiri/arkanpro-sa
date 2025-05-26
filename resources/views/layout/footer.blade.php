@@ -74,7 +74,7 @@
                         <div class="widget footer-widget wow fadeInUp" data-wow-delay=".6s">
                             <div class="gt-widget-about">
                                 <div class="about-logo">
-                                    <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo-light.png') }}" alt="extech"></a>
+                                    <a href="{{ route('home') }}"><img data-src="{{ asset('assets/img/logo-light.png') }}" alt="extech"></a>
                                 </div>
                                 <p class="about-text">
                                     {{ setting('site.description') }}

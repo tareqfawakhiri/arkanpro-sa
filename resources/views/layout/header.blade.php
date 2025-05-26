@@ -60,7 +60,7 @@
                     <div class="header-left">
                         <div class="logo">
                             <a href="{{ route('home') }}" class="header-logo">
-                                <img data-src="{{ asset('assets/img/logo.png') }}" alt="logo-img">
+                                <img src="{{ asset('assets/img/logo.png') }}" alt="logo-img">
                             </a>
                         </div>
                     </div>

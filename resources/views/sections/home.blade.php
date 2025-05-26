@@ -38,12 +38,12 @@
                                                 <div class="video-box">
                                                     <a href="{{ $slide->media }}"
                                                        class="play-btn popup-video">
-                                                        <img class="rotate360" data-src="{{ asset('assets/img/shape/heroShape2_1.png') }}"
+                                                        <img class="rotate360" src="{{ asset('assets/img/shape/heroShape2_1.png') }}"
                                                              alt="{{ $slide->getTranslatedAttribute('title')  }}">
                                                     </a>
                                                 </div>
                                             @else
-                                                <img data-src="{{ Voyager::image($slide->file_media_path_original) }}"
+                                                <img src="{{ Voyager::image($slide->file_media_path_original) }}"
                                                      alt="{{ $slide->getTranslatedAttribute('title')  }}">
                                             @endif
                                         </div>
@@ -65,9 +65,9 @@
             <div class="container">
                 <div class="title-wrap mb-45">
                     <div class="section-title">
-                        <div class="subtitle"><img data-src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
+                        <div class="subtitle"><img src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
                             <span> {{ trans('general.our-services') }}</span>
-                            <img data-src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
+                            <img src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
                         </div>
                         <h4>{{ trans('general.elevating-businesses-with-it-ingenuity') }}</h4>
                     </div>
@@ -91,7 +91,7 @@
                                     <div class="swiper-slide">
                                         <div class="service-card style1">
                                             <div class="icon">
-                                                <img data-src="{{ Voyager::image($service->image) }}"
+                                                <img src="{{ Voyager::image($service->image) }}"
                                                      alt="icon">
                                             </div>
                                             <div class="body">
@@ -124,7 +124,7 @@
                         @foreach($partners as $partner)
                             <div class="swiper-slide">
                                 <div class="brand-image">
-                                    <img data-src="{{ Voyager::image($partner->logo) }}"
+                                    <img src="{{ Voyager::image($partner->logo) }}"
                                          alt="{{ $partner->title }}">
                                 </div>
                             </div>
@@ -140,16 +140,16 @@
         <!-- About Section    S T A R T -->
         <section class="about-section space fix bg-theme-color">
             <div class="about-container-wrapper style1">
-                <div class="shape1"><img data-src="{{ asset('assets/img/shape/aboutShape1_1.png') }}" alt="shape"></div>
-                <div class="shape2"><img data-src="{{ asset('assets/img/shape/aboutShape1_2.png') }}" alt="shape"></div>
-                <div class="shape3"><img data-src="{{ asset('assets/img/shape/aboutShape1_3.png') }}" alt="shape"></div>
+                <div class="shape1"><img src="{{ asset('assets/img/shape/aboutShape1_1.png') }}" alt="shape"></div>
+                <div class="shape2"><img src="{{ asset('assets/img/shape/aboutShape1_2.png') }}" alt="shape"></div>
+                <div class="shape3"><img src="{{ asset('assets/img/shape/aboutShape1_3.png') }}" alt="shape"></div>
                 <div class="container">
                     <div class="row gy-5 gx-70">
                         <div class="col-xl-6">
                             <div class="about-thumb">
                                 <div class="thumb1">
                                     <img class="img-custom-anim-left wow fadeInUp" data-wow-delay=".5s"
-                                         data-src="{{ Voyager::image($service->image) }}" alt="thumb">
+                                         src="{{ Voyager::image($service->image) }}" alt="thumb">
 
                                     <!-- SVG Mask -->
                                     <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"
@@ -166,11 +166,11 @@
                             <div class="about-content">
                                 <div class="section-title mxw-560">
                                     <div class="subtitle text-white wow fadeInUp" data-wow-delay=".3s"><img
-                                            data-src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon">
+                                            src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon">
                                         <span
                                             class="text-white"> {{ trans('general.our-services') }}
                                         </span>
-                                        <img data-src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon">
+                                        <img src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon">
                                     </div>
                                     <h2 class="title text-white wow fadeInUp" data-wow-delay=".6s">
                                         {{ $service->getTranslatedAttribute('title') }}
@@ -203,7 +203,7 @@
                             <a class="project-item-card style1 {{ $count++ == 0 ? 'active' : '' }}"
                                href="#portfolio-{{ $product->id }}">
                                 <div class="project-icon">
-                                    <img data-src="{{ Voyager::image($product->icon) }}"
+                                    <img src="{{ Voyager::image($product->icon) }}"
                                          alt="{{ $product->getTranslatedAttribute('sub_title') }}">
                                 </div>
                                 <h5>{{ $product->getTranslatedAttribute('sub_title') }}</h5>
@@ -221,7 +221,7 @@
                                  style="{{ $count++ == 0 ? 'display: flex' : 'display: none' }}">
                                 <div class="col-xl-5">
                                     <div class="project-thumb img-custom-anim-left">
-                                        <img data-src="{{ Voyager::image($product->image) }}"
+                                        <img src="{{ Voyager::image($product->image) }}"
                                              alt="{{ $product->getTranslatedAttribute('sub_title') }}">
                                     </div>
                                 </div>
@@ -253,18 +253,18 @@
     <section class="cta-section space pb-0">
         <div class="container">
             <div class="cta-wrap style1 fix">
-                <div class="shape"><img data-src="{{ asset('assets/img/shape/ctaShape1_1.png') }}" alt="shape"></div>
+                <div class="shape"><img src="{{ asset('assets/img/shape/ctaShape1_1.png') }}" alt="shape"></div>
                 <div class="row gy-5">
                     <div class="col-xl-3">
                         <div class="cta-thumb img-custom-anim-left wow fadeInUp" data-wow-delay=".4s">
-                            <img data-src="{{ asset('assets/img/logo-light.png') }}" alt="thumb">
+                            <img src="{{ asset('assets/img/logo-light.png') }}" alt="thumb">
                         </div>
                     </div>
                     <div class="col-xl-6 d-flex align-items-center">
                         <div class="section-title">
-                            <div class="subtitle"><img data-src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon"> <span
+                            <div class="subtitle"><img src="{{ asset('assets/img/icon/arrowLeftWhite.svg') }}" alt="icon"> <span
                                     class="text-white"> {{ trans('general.contact-us') }}
-                        </span><img data-src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon"></div>
+                        </span><img src="{{ asset('assets/img/icon/arrowRightWhite.svg') }}" alt="icon"></div>
                             <h2 class="title">{{ trans('general.expert-hosting') }}</h2>
                         </div>
                     </div>
@@ -282,16 +282,16 @@
     </section>
 
     <!-- Testimonial Section   S T A R T -->
-    <section class="testimonial-section space pb-0 fix wow fadeInUp" data-wow-delay=".5s" data-bg-data-src="{{ (session()->get('theme') != 'dark') ? asset('assets/img/bg/testimonialBg1_1.png') : '' }}">
+    <section class="testimonial-section space pb-0 fix wow fadeInUp" data-wow-delay=".5s" data-bg-src="{{ (session()->get('theme') != 'dark') ? asset('assets/img/bg/testimonialBg1_1.png') : '' }}">
         <div class="testimonial-wrap style3 space">
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
                         <div class="section-title title-area mb-50 mx-auto">
                             <div class="subtitle d-flex justify-content-center">
-                                <img data-src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
+                                <img src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
                                 <span>{{ trans('general.testimonial') }}</span>
-                                <img data-src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
+                                <img src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
                             </div>
                             <h2 class="title text-center">{{ trans('general.latest-client-feedback') }}</h2>
                         </div>
@@ -310,7 +310,7 @@
                                         <div class="profile-box">
                                             @if($testimonial->avatar)
                                             <div class="testi-thumb">
-                                                <img data-src="{{ Voyager::image($testimonial->avatar) }}" alt="{{ $testimonial->getTranslatedAttribute('name') }}">
+                                                <img src="{{ Voyager::image($testimonial->avatar) }}" alt="{{ $testimonial->getTranslatedAttribute('name') }}">
                                             </div>
                                             @endif
                                             <div class="testi-content">
@@ -320,11 +320,11 @@
                                             </div>
                                         </div>
                                         <div class="quote">
-                                            <img class="darkQuote" data-src="{{ asset('assets/img/icon/quoteIconDark.png') }}" alt="icon">
-                                            <img class="whiteQuote" data-src="{{ asset('assets/img/icon/quoteIconWhite.png') }}" alt="icon">
+                                            <img class="darkQuote" src="{{ asset('assets/img/icon/quoteIconDark.png') }}" alt="icon">
+                                            <img class="whiteQuote" src="{{ asset('assets/img/icon/quoteIconWhite.png') }}" alt="icon">
                                         </div>
                                         <div class="shape3_1">
-                                            <img data-src="{{ asset('assets/img/shape/testimonialShape3_1.png') }}" alt="shape">
+                                            <img src="{{ asset('assets/img/shape/testimonialShape3_1.png') }}" alt="shape">
                                         </div>
                                     </div>
                                 </div>
@@ -344,9 +344,9 @@
                 <div class="title-wrap mb-45">
                     <div class="section-title">
                         <div class="subtitle">
-                            <img data-src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
+                            <img src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
                             <span>{{ trans('general.blog') }}</span>
-                            <img data-src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
+                            <img src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
                         </div>
                     </div>
                     <div class="arrow-btn text-end wow fadeInUp" data-wow-delay=".9s">
@@ -366,7 +366,7 @@
                                         <div class="blog-card style1 img-custom-anim-left wow fadeInUp"
                                              data-wow-delay=".4s">
                                             <div class="blog-card-thumb">
-                                                <img data-src="{{ Voyager::image($post->thumbnail('cropped')) }}"
+                                                <img src="{{ Voyager::image($post->thumbnail('cropped')) }}"
                                                      alt="{{ $post->getTranslatedAttribute('title') }}">
                                             </div>
                                             <div class="blog-card-body">
@@ -406,7 +406,7 @@
                         @foreach($clients as $client)
                             <div class="swiper-slide">
                                 <div class="brand-image">
-                                    <img data-src="{{ Voyager::image($client->image) }}"
+                                    <img src="{{ Voyager::image($client->image) }}"
                                          alt="{{ $client->title }}">
                                 </div>
                             </div>

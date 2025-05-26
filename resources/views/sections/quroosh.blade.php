@@ -11,10 +11,10 @@
     @endphp
     <div class="breadcrumb-wrapper bg-cover" style="background-image: url({{ Voyager::image($media_banner) }});">
         <div class="border-shape">
-            <imgdata-src="{{ asset('assets/img/element.png') }}" alt="shape-img">
+            <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>
         <div class="line-shape">
-            <imgdata-src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
+            <img src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
         </div>
         <div class="container">
             <div class="page-heading">
@@ -53,9 +53,9 @@
                 <div class="title-wrap mb-45">
                     <div class="section-title">
                         <div class="subtitle">
-                            <imgdata-src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
+                            <img src="{{ asset('assets/img/icon/arrowLeft.svg') }}" alt="icon">
                             <span> {{ trans('general.system-features')  }} </span>
-                            <imgdata-src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
+                            <img src="{{ asset('assets/img/icon/arrowRight.svg') }}" alt="icon">
                         </div>
                         <h2 class="title">{{ trans('general.elevating-businesses-with-it-ingenuity') }}</h2>
                     </div>
@@ -76,7 +76,7 @@
                                     <div class="swiper-slide">
                                         <div class="service-card style1">
                                             <div class="icon">
-                                                <imgdata-src="{{ Voyager::image($feature->icon) }}"
+                                                <img src="{{ Voyager::image($feature->icon) }}"
                                                      alt="icon">
                                             </div>
                                             <div class="body">

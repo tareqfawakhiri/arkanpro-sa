@@ -5,10 +5,10 @@
     <!--<< Breadcrumb Section Start >>-->
     <div class="breadcrumb-wrapper bg-cover" style="background-image: url({{ Voyager::image($page->image) }});">
         <div class="border-shape">
-            <imgdata-src="{{ asset('assets/img/element.png') }}" alt="shape-img">
+            <img src="{{ asset('assets/img/element.png') }}" alt="shape-img">
         </div>
         <div class="line-shape">
-            <imgdata-src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
+            <img src="{{ asset('assets/img/line-element.png') }}" alt="shape-img">
         </div>
         <div class="container">
             <div class="page-heading">
@@ -44,7 +44,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="project-items">
                         <div class="project-image">
-                            <imgdata-src="{{ Voyager::image($product->image) }}" alt="project-img">
+                            <img src="{{ Voyager::image($product->image) }}" alt="project-img">
                             <div class="project-content style2">
                                 <p>{{ $product->getTranslatedAttribute('excerpt') }}</p>
                                 <h4>

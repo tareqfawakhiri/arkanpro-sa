@@ -9,7 +9,7 @@
                     <div class="col-lg-6">
                         <div class="about-image-items">
                             <div class="counter-shape float-bob-y">
-                                @if(setting('partner.image 1'))
+                                @if(setting('partner.image_1'))
                                     <div class="icon">
                                         <img src="{{ Voyager::image(setting('partner.image 1')) }}" alt="icon-img">
                                     </div>
@@ -23,7 +23,7 @@
                                  style="background-image: url('{{ asset("assets/img/about/03.png") }}');">
                                 <div class="about-image-2 wow fadeInUp" data-wow-delay=".5s"
                                      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                                    @if(setting('partner.image 2'))
+                                    @if(setting('partner.image_2'))
                                         <div class="icon">
                                             <img src="{{ Voyager::image(setting('partner.image 2')) }}" alt="about-img">
                                         </div>

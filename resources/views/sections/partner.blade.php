@@ -11,7 +11,7 @@
                             <div class="counter-shape float-bob-y">
                                 @if(setting('partner.image_1'))
                                     <div class="icon">
-                                        <img src="{{ Voyager::image(setting('partner.image 1')) }}" alt="icon-img">
+                                        <img src="{{ Voyager::image(setting('partner.image_1')) }}" alt="icon-img">
                                     </div>
                                 @else
                                     <div class="icon">

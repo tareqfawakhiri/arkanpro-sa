@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\CustomerServiceControlller;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ServicesController;
 use Illuminate\Support\Facades\Route;
@@ -47,6 +48,9 @@ Route::get('/blog', [BlogControlller::class, 'index'])->name('blog.all');
 Route::get('/blog/{slug}/details', [BlogControlller::class, 'details'])->name('blog.details');
 
 Route::get('/page/{slug}', [PageController::class, 'index'])->name('page.details');;
+
+Route::get('/partner', [PartnerController::class, 'index'])->name('partner.index');
+Route::post('/partner', [PartnerController::class, 'send'])->name('partner.send');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

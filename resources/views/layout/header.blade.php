@@ -85,6 +85,9 @@
                                             <a href="{{ route('page.details',['about-us']) }}">{{ trans('general.about-us') }}</a>
                                         </li>
                                         <li>
+                                            <a href="{{ route('partner.index') }}">{{ trans('general.become-partner') }}</a>
+                                        </li>
+                                        <li>
                                             <a href="{{ route('blog.all') }}">{{ trans('general.blog') }}</a>
                                         </li>
                                     </ul>

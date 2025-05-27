@@ -45,23 +45,6 @@
                                 <div class="post-featured-thumb bg-cover"
                                      style="background-image: url('{{ Voyager::image($post->image) }}');"></div>
                                 <div class="post-content">
-                                    <ul class="post-list d-flex align-items-center">
-                                        <li>
-                                            <i class="fa-regular fa-user"></i>
-                                            {{ $post->author->name }}
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-calendar-days"></i>
-                                            {{ $post->created_at }}
-                                        </li>
-                                        @if($post->category)
-                                            <li>
-                                                <i class="fa-solid fa-tag"></i>
-                                                {{ $post->category->name ?? ''}}
-                                            </li>
-                                        @endif
-
-                                    </ul>
                                     {!! $post->body !!}
                                 </div>
                             </div>

@@ -168,7 +168,7 @@
         <div class="map-items">
             <div class="googpemap">
                 <iframe
-                    data-src="{{setting('site.google_map_url')}}"
+                    src="{{setting('site.google_map_url')}}"
                     style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>

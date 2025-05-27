@@ -103,6 +103,4 @@
         </div>
     </section>
 
-    @include('sections.pricing')
-
 @endsection

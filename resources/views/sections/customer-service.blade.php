@@ -1,5 +1,9 @@
 @extends('layout.main')
-@section('title', trans('general.customer-service'))
+
+@section('title', setting('site.customer-service-seo-title') ? setting('site.customer-service-seo-title') : trans('general.customer-service'))
+@section('meta_description',setting('site.customer-service-meta-description') ? setting('site.customer-service-meta-description') : setting('site.description'))
+@section('meta_keywords',setting('site.customer-service-meta-keywords') ? setting('site.customer-service-meta-keywords') : setting('site.keywords'))
+
 @section('content')
     <!--<< Breadcrumb Section Start >>-->
     <div class="breadcrumb-wrapper bg-cover">

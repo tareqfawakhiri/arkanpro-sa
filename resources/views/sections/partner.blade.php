@@ -1,5 +1,9 @@
 @extends('layout.main')
-@section('title', __('general.partner'))
+
+@section('title', setting('partner.seo-title') ? setting('partner.seo-title') : trans('general.partner'))
+@section('meta_description',setting('partner.meta-description') ? setting('partner.meta-description') : setting('site.description'))
+@section('meta_keywords',setting('partner.meta-keywords') ? setting('partner.meta-keywords') : setting('site.keywords'))
+
 @section('content')
     <section class="about-section section-padding fix bg-cover"
              style="background-image: url('{{ asset("assets/img/service/service-bg-2.jpg") }}');">
@@ -11,11 +15,11 @@
                             <div class="counter-shape float-bob-y">
                                 @if(setting('partner.image_1'))
                                     <div class="icon">
-                                        <img src="{{ Voyager::image(setting('partner.image_1')) }}" alt="icon-img">
+                                        <img src="{{ Voyager::image(setting('partner.image_1')) }}" alt="{{ setting('partner.seo-title') }}">
                                     </div>
                                 @else
                                     <div class="icon">
-                                        <img src="{{ asset("assets/img/about/icon-3.svg") }}" alt="icon-img">
+                                        <img src="{{ asset("assets/img/about/icon-3.svg") }}" alt="{{ setting('partner.seo-title') }}">
                                     </div>
                                 @endif
                             </div>
@@ -25,11 +29,11 @@
                                      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
                                     @if(setting('partner.image_2'))
                                         <div class="icon">
-                                            <img src="{{ Voyager::image(setting('partner.image 2')) }}" alt="about-img">
+                                            <img src="{{ Voyager::image(setting('partner.image 2')) }}" alt="{{ setting('partner.seo-title') }}">
                                         </div>
                                     @else
                                         <div class="icon">
-                                            <img src="{{ asset("assets/img/about/04.jpg") }}" alt="about-img">
+                                            <img src="{{ asset("assets/img/about/04.jpg") }}" alt="{{ setting('partner.seo-title') }}">
                                         </div>
                                     @endif
 

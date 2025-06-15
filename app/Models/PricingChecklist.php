@@ -9,7 +9,9 @@ use TCG\Voyager\Traits\Translatable;
 class PricingChecklist extends Model
 {
     use Resizable;
+    use Translatable;
 
+    protected $translatable = [];
 
     protected $table = 'pricing_checklist';
 

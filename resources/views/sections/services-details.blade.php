@@ -4,6 +4,14 @@
 @section('meta_description',$section->meta_description ? $section->meta_description : setting('site.description'))
 @section('meta_keywords',$section->meta_keywords ? $section->meta_keywords : setting('site.keywords'))
 
+@section('meta_tags')
+@if($section->features)
+    @foreach($section->features as $ky => $feature)
+        <meta name="keywords" content="{{$feature->meta_keywords}}">
+        <meta name="description" content="{{$feature->meta_description}}" />
+    @endforeach
+@endif
+@endsection
 @section('content')
     <!--<< Breadcrumb Section Start >>-->
     @php

@@ -24,6 +24,12 @@
         <meta name="description" content="{{$partner->meta_description}}" />
     @endforeach
 @endif
+@if($pricing)
+    @foreach($pricing as $plane)
+        <meta name="keywords" content="{{$plane->meta_keywords}}">
+        <meta name="description" content="{{$plane->meta_description}}" />
+    @endforeach
+@endif
 @endsection
 @section('title', trans('general.home'))
 

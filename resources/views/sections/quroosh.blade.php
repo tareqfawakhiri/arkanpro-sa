@@ -17,39 +17,72 @@
         <meta name="description" content="{{$plane->meta_description}}" />
     @endforeach
 @endif
+@if($slider)
+    @foreach($slider as $slide)
+        <meta name="keywords" content="{{$slide->meta_keywords}}">
+        <meta name="description" content="{{$slide->meta_description}}" />
+    @endforeach
+@endif
 @endsection
 
 @section('content')
-    <!--<< Breadcrumb Section Start >>-->
-    @php
-        $media_banner = $section->file_media_path_original ?? null;
-    @endphp
-    <div class="breadcrumb-wrapper bg-cover" style="background-image: url({{ Voyager::image($media_banner) }});">
-        <div class="border-shape">
-            <img data-src="{{ asset('assets/img/element.png') }}" >
-        </div>
-        <div class="line-shape">
-            <img data-src="{{ asset('assets/img/line-element.png') }}" >
-        </div>
-        <div class="container">
-            <div class="page-heading">
-                <h1 class="wow fadeInUp" data-wow-delay=".3s">{{ $section->getTranslatedAttribute('title') }}</h1>
-                <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
-                    <li>
-                        <a href="{{ route('home') }}">
-                            {{ trans('general.home') }}
-                        </a>
-                    </li>
-                    <li>
-                        <i class="fas fa-chevron-{{ app()->getLocale() == 'ar' ? 'left': 'right' }}"></i>
-                    </li>
-                    <li>
-                        {{ trans('general.services') }}
-                    </li>
-                </ul>
+    <!-- Hero Section Start -->
+    <section class="hero-section  hero-3">
+        <div class="swiper hero-slider">
+            <div class="swiper-wrapper">
+                @foreach($slider as $slide)
+                    <div class="swiper-slide">
+                        <div class="slider-image bg-cover"
+                             style="background-image: url('{{ Voyager::image($slide->bk_image) }}');">
+                        </div>
+                        <div class="container">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-lg-7">
+                                    <div class="hero-content">
+                                        <h5>{{ $slide->getTranslatedAttribute('sub_title') }}</h5>
+                                        <h1>
+                                            {{ $slide->getTranslatedAttribute('title') }}
+                                        </h1>
+                                        <p>
+                                            {!! $slide->getTranslatedAttribute('body') !!}
+                                        </p>
+                                        <div class="hero-button">
+                                            @if(!is_null($slide->external_link) && $slide->external_link != '')
+                                                <a href="{{ $slide->external_link }}" class="theme-btn hover-white">
+                                                    {{ trans('slider.explore-more')}}
+                                                    <i class="fa-solid fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
+                                                </a>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    @if($slide->type == 'VIDEO' || $slide->type == 'IMAGE')
+                                        <div class="hero-thumb style2">
+                                            @if($slide->type == 'VIDEO')
+                                                <div class="video-box">
+                                                    <a href="{{ $slide->media }}"
+                                                       class="play-btn popup-video">
+                                                        <img class="rotate360" data-src="{{ asset('assets/img/shape/heroShape2_1.png') }}"
+                                                             alt="{{ $slide->getTranslatedAttribute('title')  }}">
+                                                    </a>
+                                                </div>
+                                            @else
+                                                <img data-src="{{ Voyager::image($slide->file_media_path_original) }}"
+                                                     alt="{{ $slide->getTranslatedAttribute('title')  }}">
+                                            @endif
+                                        </div>
+                                    @elseif($slide->type == 'FORM')
+                                        @include('sections.slider-form')
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Project Section Start -->
     <section class="Project-details-section fix section-padding">

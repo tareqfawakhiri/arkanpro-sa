@@ -22,6 +22,7 @@ class HomeController extends Controller
         $clients = Client::orderBy('created_at')->get();
 
         $slider = Slider::where('status', 'published')
+            ->where('add_to', 'home')
             ->orderBy('order')
             ->get();
 

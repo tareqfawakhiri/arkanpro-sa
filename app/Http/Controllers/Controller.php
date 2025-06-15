@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use App\Models\Pricing;
+use App\Models\Slider;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -46,6 +47,11 @@ class Controller extends BaseController
     function quroosh()
     {
 
+        $slider = Slider::where('status', 'published')
+            ->where('add_to', 'quroosh')
+            ->orderBy('order')
+            ->get();
+
          $section = Service::where('slug', 'quroosh')
             ->with('features')
             ->firstOrFail();
@@ -72,6 +78,6 @@ class Controller extends BaseController
         }
 
 
-        return view('sections.quroosh', compact('section', 'pricing'));
+        return view('sections.quroosh', compact('section', 'pricing', 'slider'));
     }
 }

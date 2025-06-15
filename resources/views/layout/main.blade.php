@@ -15,7 +15,7 @@
 
     <meta name="keywords" content="@yield('meta_keywords',setting('site.keywords'))">
     <meta name="description" content="@yield('meta_description',setting('site.description'))">
-
+    @yield('meta_tags')
     <!-- ======== Page title ============ -->
     <title>Arkan Pro &#8211; أركان الاحتراف | @yield('title', setting('site.title'))</title>
 

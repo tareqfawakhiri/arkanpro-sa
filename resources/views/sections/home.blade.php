@@ -1,5 +1,21 @@
 @extends('layout.main')
+@section('meta_tags')
+@if($testimonials)
+    @foreach($testimonials as $testimonial)
+        <meta name="keywords" content="{{$testimonial->meta_keywords}}">
+        <meta name="description" content="{{$testimonial->meta_description}}" />
+    @endforeach
+
+@endif
+@if($clients)
+    @foreach($clients as $client)
+        <meta name="keywords" content="{{$client->meta_keywords}}">
+        <meta name="description" content="{{$client->meta_description}}" />
+    @endforeach
+@endif
+@endsection
 @section('title', trans('general.home'))
+
 @section('content')
     <!-- Hero Section Start -->
     <section class="hero-section  hero-3">

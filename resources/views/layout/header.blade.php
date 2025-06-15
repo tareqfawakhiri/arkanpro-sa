@@ -73,9 +73,6 @@
                                             <a href="{{ route('home') }}">{{ trans('general.home') }}</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('quroosh') }}">{{ trans('general.quroosh') }}</a>
-                                        </li>
-                                        <li>
                                             <a href="{{ route('products') }}">{{ trans('general.products') }}</a>
                                         </li>
                                         <li>

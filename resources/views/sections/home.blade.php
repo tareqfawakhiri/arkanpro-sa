@@ -5,12 +5,23 @@
         <meta name="keywords" content="{{$testimonial->meta_keywords}}">
         <meta name="description" content="{{$testimonial->meta_description}}" />
     @endforeach
-
 @endif
 @if($clients)
     @foreach($clients as $client)
         <meta name="keywords" content="{{$client->meta_keywords}}">
         <meta name="description" content="{{$client->meta_description}}" />
+    @endforeach
+@endif
+@if($slider)
+    @foreach($slider as $slide)
+        <meta name="keywords" content="{{$slide->meta_keywords}}">
+        <meta name="description" content="{{$slide->meta_description}}" />
+    @endforeach
+@endif
+@if($partners)
+    @foreach($partners as $partner)
+        <meta name="keywords" content="{{$partner->meta_keywords}}">
+        <meta name="description" content="{{$partner->meta_description}}" />
     @endforeach
 @endif
 @endsection
@@ -215,6 +226,14 @@
                         $count = 0;
                     @endphp
                     <div class="project-item-wrapper style1">
+                        <a class="project-item-card style1 {{ $count++ == 0 ? 'active' : '' }}"
+                               href="#portfolio-1000">
+                                <div class="project-icon">
+                                    <img data-src="{{ Voyager::image($section->icon) }}"
+                                         alt="{{ $section->getTranslatedAttribute('sub_title') }}">
+                                </div>
+                                <h5>{{ $section->getTranslatedAttribute('title') }}</h5>
+                            </a>
                         @foreach($products as $product)
                             <a class="project-item-card style1 {{ $count++ == 0 ? 'active' : '' }}"
                                href="#portfolio-{{ $product->id }}">
@@ -232,6 +251,33 @@
                     @endphp
 
                     <div class="project-wrapper style1">
+                        <div class="row gy-5 gx-60" id="portfolio-1000"
+                                 style="{{ $count++ == 0 ? 'display: flex' : 'display: none' }}">
+                                <div class="col-xl-5">
+                                    <div class="project-thumb img-custom-anim-left">
+                                        <img data-src="{{ Voyager::image($section->image) }}"
+                                             alt="{{ $section->getTranslatedAttribute('sub_title') }}">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7">
+                                    <div class="project-content-wrapper style1">
+                                        <div class="project-content style1">
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <div class="project-content-left">
+                                                        <h3>{{ $section->getTranslatedAttribute('title') }}</h3>
+                                                        <p class="text">{!! $section->excerpt !!}</p>
+                                                        <a href="{{ route('quroosh') }}" class="link-btn style1">
+                                                            {{ trans('general.read-more') }} <i
+                                                            class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         @foreach($products as $product)
                             <div class="row gy-5 gx-60" id="portfolio-{{ $product->id }}"
                                  style="{{ $count++ == 0 ? 'display: flex' : 'display: none' }}">
@@ -249,6 +295,10 @@
                                                     <div class="project-content-left">
                                                         <h3>{{ $product->getTranslatedAttribute('title') }}</h3>
                                                         <p class="text">{!! $product->description !!}</p>
+                                                        <a href="{{ route('product.details',$product->slug) }}" class="link-btn style1">
+                                                            {{ trans('general.read-more') }} <i
+                                                            class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>

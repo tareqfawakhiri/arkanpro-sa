@@ -42,6 +42,10 @@ class HomeController extends Controller
             ->orderBy('order')
             ->get();
 
+        $section = Service::where('slug', 'quroosh')
+            ->with('features')
+            ->firstOrFail();
+
         $products = Product::where('status', 'ACTIVE')
             ->orderBy('order')
             ->get();
@@ -64,7 +68,7 @@ class HomeController extends Controller
                 ->get();
             $i++;
         }
-        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'service', 'testimonials', 'posts', 'services', 'products', 'pricing'));
+        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'service', 'testimonials', 'posts', 'services', 'products', 'pricing', 'section'));
     }
 
     public function aboutus()

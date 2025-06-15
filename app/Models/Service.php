@@ -11,7 +11,7 @@ class Service extends Model
 {
     use Translatable, Resizable;
 
-    protected $translatable = ['title', 'description', 'excerpt'];
+    protected $translatable = ['title', 'description', 'excerpt', 'sub_title'];
 
     protected $table = 'services';
     protected $guarded = [];

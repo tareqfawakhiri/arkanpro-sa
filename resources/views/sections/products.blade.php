@@ -40,6 +40,19 @@
     <section class="project-section section-padding fix">
         <div class="container">
             <div class="row g-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="project-items">
+                        <div class="project-image">
+                            <img data-src="{{ Voyager::image($section->image) }}" alt="project-img">
+                            <div class="project-content style2">
+                                <p>{{ $section->getTranslatedAttribute('sub_title') }}</p>
+                                <h4>
+                                    <a href="{{ route('quroosh') }}">{{ $section->getTranslatedAttribute('title') }}</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 @foreach($products as $product)
                 <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="project-items">

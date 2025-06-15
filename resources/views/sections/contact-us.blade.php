@@ -1,5 +1,7 @@
 @extends('layout.main')
-@section('title', trans('general.contact-us'))
+@section('title', $section->seo_title ? $section->seo_title : trans('general.contact-us'))
+@section('meta_description',$section->meta_description ? $section->meta_description : setting('site.description'))
+@section('meta_keywords',$section->meta_keywords ? $section->meta_keywords : setting('site.keywords'))
 @section('content')
 
     <!--<< Breadcrumb Section Start >>-->

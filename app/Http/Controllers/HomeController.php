@@ -9,6 +9,7 @@ use App\Models\Pricing;
 use App\Models\Product;
 use App\Models\Quotation;
 use App\Models\Service;
+use App\Models\Section;
 use App\Models\Slider;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
@@ -27,9 +28,11 @@ class HomeController extends Controller
             ->get();
 
         $isHome = true;
-        $service = Service::where('status', 'ACTIVE')
-            ->where('add_to_home_page_banner', 'YES')
-            ->orderBy('order')
+
+        $section1 = Section::where('section_type', 'banner_1')
+            ->first();
+
+        $section2 = Section::where('section_type', 'banner_2')
             ->first();
 
         $testimonials = Testimonial::orderByDesc('created_at')->get();
@@ -69,7 +72,7 @@ class HomeController extends Controller
                 ->get();
             $i++;
         }
-        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'service', 'testimonials', 'posts', 'services', 'products', 'pricing', 'section'));
+        return view('sections.home', compact('partners', 'clients', 'slider', 'isHome', 'section1', 'section2', 'testimonials', 'posts', 'services', 'products', 'pricing', 'section'));
     }
 
     public function aboutus()

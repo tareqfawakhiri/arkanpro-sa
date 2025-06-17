@@ -12070,6 +12070,23 @@ h6 {
     line-height: normal;
 }
 
+.pricing-card.style1 .pricing-card_header .item .price-discount h4 {
+    margin-bottom: 20px;
+    color: var(--white-color);
+    font-family: var(--title-font);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: line-through;
+    text-decoration-color: red;
+    -moz-transform:rotate(-15deg);
+    -ms-transform:rotate(-15deg);
+    -o-transform:rotate(-15deg);
+    transform: rotate(-15deg);
+
+}
+
 .pricing-card.style1 .pricing-card_header .item .price {
     display: flex;
     align-items: center;
@@ -12133,6 +12150,23 @@ h6 {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.pricing-card.style2 .pricing-card_header .item .price-discount h4 {
+    margin-bottom: 20px;
+    color: var(--white-color);
+    font-family: var(--title-font);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: line-through;
+    text-decoration-color: red;
+    -moz-transform:rotate(-15deg);
+    -ms-transform:rotate(-15deg);
+    -o-transform:rotate(-15deg);
+    transform: rotate(-15deg);
+
 }
 
 .pricing-card.style2 .pricing-card_header .item .price {

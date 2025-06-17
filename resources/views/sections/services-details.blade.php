@@ -95,10 +95,12 @@
                                                     <a href="{{ $link }}">{{ $feature->getTranslatedAttribute('title') }}</a>
                                                 </h3>
                                                 <p>{{ $feature->getTranslatedAttribute('description') }}</p>
+                                                @if($link !='#')
                                                 <a href="{{ $link }}" class="link-btn style1">
                                                     {{ trans('general.read-more') }} <i
                                                         class="fa-regular fa-chevrons-{{ app()->getLocale() == 'ar' ? 'Left' : 'Right' }}"></i>
                                                 </a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>

@@ -39,7 +39,12 @@
                                             @endif
                                         </div>
                                         <div class="item">
-                                            <img data-src="{{ asset('assets/img/icon/pricingIcon1_1.svg') }}" alt="icon">
+                                            @if($plane->amount_before_discount > 0)
+                                            <div class="price-discount">
+                                                <h4>SR{{ $plane->amount_before_discount }} </h4>
+                                            </div>
+                                            @endif
+                                            <img data-src="{{ Voyager::image($plane->icon) }}" alt="icon">
                                         </div>
                                     </div>
                                     <div class="pricing-card_body">
@@ -72,17 +77,15 @@
                                         </div>
                                         <div class="btn-wrapper">
                                             @if($plane->id !=2)
-                                                <form action="https://cpe-soft.com/arkanmerchant/" method="POST">
-                                                    <input type="hidden" name="amt" id="amt" value="{{ $plane->amount + $plane->fees }}">
-                                                    <button type="submit" class="gt-btn style2 w-100">{{ trans('pricing.choose-plan') }} <i
-                                                        class="fa-sharp fa-light fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i></button>
-                                                </form>
+                                                <a href="{{ route('pricing.details',$plane->slug) }}" class="gt-btn style2 w-100">
+                                                            {{ trans('pricing.choose-plan') }} <i
+                                                            class="fa-sharp fa-light fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
+                                                </a>
                                             @else
-                                                <form action="https://cpe-soft.com/arkanmerchant/" method="POST">
-                                                    <input type="hidden" name="amt" id="amt" value="{{ $plane->amount + $plane->fees }}">
-                                                    <button type="submit" class="gt-btn style3 w-100">{{ trans('pricing.choose-plan') }} <i
-                                                        class="fa-sharp fa-light fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i></button>
-                                                </form>
+                                                <a href="{{ route('pricing.details',$plane->slug) }}" class="gt-btn style1 w-100">
+                                                            {{ trans('pricing.choose-plan') }} <i
+                                                            class="fa-sharp fa-light fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i>
+                                                </a>
                                             @endif
                                         </div>
                                     </div>

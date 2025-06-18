@@ -20,7 +20,7 @@ return [
     'quroosh' => 'قروش',
     'our-products' => 'اهم المنتجات',
     'expert-hosting' => 'دعم استضافة خبير على مدار الساعة يحبه عملاؤنا',
-    'talk-to-specialist' => 'تحدث إلى أخصائي',
+    'talk-to-specialist' => 'تحدث معنا',
     'testimonial' => 'شهادة',
     'latest-client-feedback' => 'آراء عملائنا الأخيرة',
     'terms-and-conditions' => 'الشروط والأحكام',

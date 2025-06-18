@@ -27,7 +27,7 @@
 
 @section('content')
     <!-- Hero Section Start -->
-    <section class="hero-section  hero-3">
+    <section class="hero-section space hero-3">
         <div class="swiper hero-slider">
             <div class="swiper-wrapper">
                 @foreach($slider as $slide)
@@ -85,7 +85,7 @@
     </section>
 
     <!-- Project Section Start -->
-    <section class="Project-details-section fix section-padding">
+    <section class="Project-details-section fix ">
         <div class="container">
             <div class="service-details-items">
                 <div class="details-content">
@@ -95,7 +95,7 @@
         </div>
 
     </section>
-    <section class="service-section space fix">
+    <section class="service-section  fix">
         <div class="service-container-wrapper style1">
             <div class="container">
                 <div class="title-wrap mb-45">

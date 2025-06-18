@@ -75,7 +75,7 @@
                                         </div>
                                         <div class="btn-wrapper">
 
-                                                <form action="https://cpe-soft.com/arkanmerchant/" method="POST">
+                                                <form action="https://cpe-soft.com/arkanmerchant/" method="POST" target="_new">
                                                     <input type="hidden" name="amt" id="amt" value="{{ $pricing->amount + $pricing->fees }}">
                                                     <button type="submit" class="gt-btn style3 w-100">{{ trans('pricing.continue') }} <i
                                                         class="fa-sharp fa-light fa-arrow-{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}-long"></i></button>

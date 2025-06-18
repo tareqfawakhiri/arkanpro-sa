@@ -1,5 +1,5 @@
 <!-- Pricing Section   S T A R T -->
-<section class="pricing-section fix section-padding">
+<section class="pricing-section fix space">
         <div class="pricing-wrapper style1">
             <div class="shape1 d-none d-xxl-block"><img data-src="{{ asset('assets/img/shape/pricingShape1_1.png') }}" alt="shape"></div>
             <div class="shape2 d-none d-xxl-block"><img data-src="{{ asset('assets/img/shape/pricingShape1_2.png') }}" alt="shape"></div>

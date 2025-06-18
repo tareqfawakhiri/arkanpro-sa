@@ -30,12 +30,6 @@
         </div>
     </div>
 
-    <section class="about-section section-padding fix bg-cover">
-        <div class="container">
-            {!! $page->getTranslatedAttribute('body') !!}
-        </div>
-    </section>
-
     <!-- Project Section Start -->
     <section class="project-section section-padding fix">
         <div class="container">
@@ -43,7 +37,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="project-items">
                         <div class="project-image">
-                            <img data-src="{{ Voyager::image($section->image) }}" alt="project-img">
+                            <a href="{{ route('quroosh') }}"><img data-src="{{ Voyager::image($section->image) }}" alt="{{ $section->getTranslatedAttribute('title') }}"></a>
                             <div class="project-content style2">
                                 <p>{{ $section->getTranslatedAttribute('sub_title') }}</p>
                                 <h4>
@@ -57,7 +51,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="project-items">
                         <div class="project-image">
-                            <img data-src="{{ Voyager::image($product->image) }}" alt="project-img">
+                            <a href="{{ route('product.details',$product->slug) }}"><img data-src="{{ Voyager::image($product->image) }}" alt="{{ $section->getTranslatedAttribute('title') }}"></a>
                             <div class="project-content style2">
                                 <p>{{ $product->getTranslatedAttribute('excerpt') }}</p>
                                 <h4>

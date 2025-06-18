@@ -291,13 +291,13 @@
                     <div class="project-wrapper style1">
                         <div class="row gy-5 gx-60" id="portfolio-1000"
                                  style="{{ $count++ == 0 ? 'display: flex' : 'display: none' }}">
-                                <div class="col-xl-5">
+                                <div class="col-xl-4">
                                     <div class="project-thumb img-custom-anim-left">
                                         <img data-src="{{ Voyager::image($section->image) }}"
                                              alt="{{ $section->getTranslatedAttribute('sub_title') }}">
                                     </div>
                                 </div>
-                                <div class="col-xl-7">
+                                <div class="col-xl-8">
                                     <div class="project-content-wrapper style1">
                                         <div class="project-content style1">
                                             <div class="row">
@@ -319,13 +319,13 @@
                         @foreach($products as $product)
                             <div class="row gy-5 gx-60" id="portfolio-{{ $product->id }}"
                                  style="{{ $count++ == 0 ? 'display: flex' : 'display: none' }}">
-                                <div class="col-xl-5">
+                                <div class="col-xl-4">
                                     <div class="project-thumb img-custom-anim-left">
                                         <img data-src="{{ Voyager::image($product->image) }}"
                                              alt="{{ $product->getTranslatedAttribute('sub_title') }}">
                                     </div>
                                 </div>
-                                <div class="col-xl-7">
+                                <div class="col-xl-8">
                                     <div class="project-content-wrapper style1">
                                         <div class="project-content style1">
                                             <div class="row">
@@ -351,11 +351,9 @@
         </section>
     @endif
 
-    @include('sections.pricing')
-
     @if($section2)
     <!-- Cta Section   S T A R T -->
-    <section class="cta-section space pb-0">
+    <section class="cta-section space ">
         <div class="container">
             <div class="cta-wrap style1 fix">
                 <div class="shape"><img data-src="{{ asset('assets/img/shape/ctaShape1_1.png') }}" alt="shape"></div>

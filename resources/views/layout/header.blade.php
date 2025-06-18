@@ -76,9 +76,6 @@
                                             <a href="{{ route('products') }}">{{ trans('general.products') }}</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('customer.service') }}">{{ trans('general.customer-service') }}</a>
-                                        </li>
-                                        <li>
                                             <a href="{{ route('page.details',['about-us']) }}">{{ trans('general.about-us') }}</a>
                                         </li>
                                         <li>
@@ -86,6 +83,9 @@
                                         </li>
                                         <li>
                                             <a href="{{ route('blog.all') }}">{{ trans('general.blog') }}</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('customer.service') }}">{{ trans('general.customer-service') }}</a>
                                         </li>
                                     </ul>
                                 </nav>

@@ -48,7 +48,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
     <!--<< Main.css >>-->
     @if(app()->getLocale() == 'ar')
-        <link rel="stylesheet" href="{{ asset('assets/css/rtl-main.css') }}?2">
+        <link rel="stylesheet" href="{{ asset('assets/css/rtl-main.css') }}?3">
     @else
         <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     @endif
